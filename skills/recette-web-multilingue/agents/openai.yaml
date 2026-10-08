@@ -1,5 +1,5 @@
 interface:
-  display_name: "Multilingual Website Release QA"
+  display_name: "Multilingual Website Release QA ChatGPT"
   short_description: "Test multilingual journeys and document release defects"
   default_prompt: "Use $recette-web-multilingue to test the priority journeys of this multilingual website and produce reproducible tickets with evidence."
 policy:

@@ -21,7 +21,7 @@ The baseline and corrected public freeze manifests were rechecked; original repo
 
 ## Publication and updates
 
-The target repository is https://github.com/MrBridgeHQ/recette-web-multilingue-chatgpt. After pushing, delivery verification checks its public visibility, anonymous access to the README and skill, and equality between the remote default-branch commit, local HEAD, and installed runtime files.
+The target repository is https://github.com/MrBridgeHQ/multilingual-website-release-qa-chatgpt. After pushing, delivery verification checks its public visibility, anonymous access to the README and skill, and equality between the remote default-branch commit, local HEAD, and installed runtime files.
 
 For updates, inspect local changes and upstream changes, follow the host preservation policy, and then use git pull --ff-only when authorized. The discovery symlink follows the checkout. Repeat configuration validation, contract checks, and an explicit Codex invocation after a meaningful update.
 

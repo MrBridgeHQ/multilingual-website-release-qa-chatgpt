@@ -5,7 +5,7 @@ metadata:
   version: "1.0.0"
 ---
 
-# Multilingual Website Release QA
+# Multilingual Website Release QA ChatGPT
 
 Test essential journeys and produce actionable tickets with real evidence, explained severity, and verifiable acceptance criteria. Interpret requests in the user's language, including French. Instructions and templates are in English. Report language, site languages, browser locale, device profile, and network country are independent settings.
 

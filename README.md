@@ -1,8 +1,8 @@
-# Multilingual Website Release QA
+# Multilingual Website Release QA ChatGPT
 
 A reusable Codex skill for agencies, product teams, and developers: execute the essential journeys of a multilingual website and turn observed defects into reproducible tickets with evidence, impact-based severity, and acceptance criteria.
 
-The technical skill name is `recette-web-multilingue`. This repository is the ChatGPT/Codex edition, `recette-web-multilingue-chatgpt`.
+The technical skill name is `recette-web-multilingue`. This repository is the ChatGPT/Codex edition, `multilingual-website-release-qa-chatgpt`.
 
 ## What it does
 
@@ -33,8 +33,8 @@ The skill does not depend on the test website, this repository's absolute locati
 Clone this repository into a location you intend to retain:
 
 ```sh
-git clone https://github.com/MrBridgeHQ/recette-web-multilingue-chatgpt.git
-cd recette-web-multilingue-chatgpt
+git clone https://github.com/MrBridgeHQ/multilingual-website-release-qa-chatgpt.git
+cd multilingual-website-release-qa-chatgpt
 ```
 
 Link the skill folder into the discovery location supported by your Codex installation. The validation host uses `~/.codex/skills`; this link method was used there:
