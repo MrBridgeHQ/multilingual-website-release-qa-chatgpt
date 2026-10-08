@@ -1,0 +1,279 @@
+{
+  "at": "2026-10-08T12:10:33.676Z",
+  "case_id": "J01-fr",
+  "attempt": 1,
+  "step": 1,
+  "action": "Open /fr/",
+  "expected": "HTTP 200 and the requested home URL",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "HTTP status",
+      "passed": true,
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "check": "home URL",
+      "passed": true,
+      "expected": "http://127.0.0.1:39176/fr/",
+      "actual": "http://127.0.0.1:39176/fr/"
+    }
+  ],
+  "details": {},
+  "state": {
+    "url": "http://127.0.0.1:39176/fr/",
+    "title": "Bienvenue chez Atlas Studio",
+    "html_lang": "fr",
+    "heading": "Bienvenue chez Atlas Studio",
+    "canonical": "http://127.0.0.1:39176/fr/",
+    "alternates": [
+      {
+        "language": "en",
+        "url": "http://127.0.0.1:39176/en/"
+      },
+      {
+        "language": "fr",
+        "url": "http://127.0.0.1:39176/fr/"
+      }
+    ],
+    "active_id": null,
+    "active_tag": "BODY",
+    "scroll_width": 1440,
+    "inner_width": 1440,
+    "inner_height": 900,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "result_count": 0,
+    "body_text": "Aller au contenu\nAtlas Studio\nAccueil\nÀ propos\nRecherche\nContact\nOffre\nEnglish\nBienvenue chez Atlas Studio\n\nUn studio fictif et un site de démonstration entièrement local.\n\nOffre\n\nAtlas Studio",
+    "elements": {
+      "page-heading": {
+        "present": true,
+        "text": "Bienvenue chez Atlas Studio",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 90.5,
+          "width": 1072,
+          "height": 40.796875,
+          "right": 1256,
+          "bottom": 131.296875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": true,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 236.6875,
+          "y": 16,
+          "width": 74.890625,
+          "height": 25.5,
+          "right": 311.578125,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "language-switch": {
+        "present": true,
+        "text": "English",
+        "value": null,
+        "visible": true,
+        "href": "/en/",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 1354.609375,
+          "y": 16,
+          "width": 61.390625,
+          "height": 25.5,
+          "right": 1416,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "menu-toggle": {
+        "present": true,
+        "text": "Menu",
+        "value": "",
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": "false",
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-menu": {
+        "present": true,
+        "text": "AccueilÀ proposRechercheContactOffre",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": false,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-content": {
+        "present": true,
+        "text": "Bienvenue chez Atlas Studio\n\nUn studio fictif et un site de démonstration entièrement local.\n\nOffre",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 160,
+          "y": 58.5,
+          "width": 1120,
+          "height": 233.359375,
+          "right": 1280,
+          "bottom": 291.859375
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "search-query": {
+        "present": false
+      },
+      "search-submit": {
+        "present": false
+      },
+      "search-results": {
+        "present": false
+      },
+      "empty-state": {
+        "present": false
+      },
+      "result-about": {
+        "present": false
+      },
+      "contact-name": {
+        "present": false
+      },
+      "contact-email": {
+        "present": false
+      },
+      "contact-submit": {
+        "present": false
+      },
+      "name-error": {
+        "present": false
+      },
+      "email-error": {
+        "present": false
+      },
+      "confirmation": {
+        "present": false
+      },
+      "offer-title": {
+        "present": false
+      },
+      "offer-price": {
+        "present": false
+      },
+      "offer-date": {
+        "present": false
+      },
+      "offer-cta": {
+        "present": false
+      }
+    }
+  }
+}

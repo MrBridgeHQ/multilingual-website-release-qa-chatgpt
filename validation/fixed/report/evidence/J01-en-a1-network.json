@@ -1,0 +1,14 @@
+{
+  "case_id": "J01-en",
+  "attempt": 1,
+  "responses": [
+    {
+      "at": "2026-10-08T12:10:33.047Z",
+      "url": "http://127.0.0.1:39176/en/",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    }
+  ]
+}

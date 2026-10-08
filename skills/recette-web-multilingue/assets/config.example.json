@@ -1,0 +1,584 @@
+{
+  "schema_version": "1.0",
+  "campaign_id": "atlas-baseline",
+  "start_url": "http://127.0.0.1:39175/en/",
+  "environment": "LOCAL",
+  "scope": {
+    "allowed_origins": [
+      "http://127.0.0.1:39175"
+    ],
+    "allowed_paths": [
+      "/"
+    ],
+    "excluded_origins": [],
+    "excluded_paths": [
+      "/auth-required"
+    ]
+  },
+  "languages": [
+    {
+      "code": "en",
+      "entry_url": "http://127.0.0.1:39175/en/",
+      "browser_locale": "en-GB"
+    },
+    {
+      "code": "fr",
+      "entry_url": "http://127.0.0.1:39175/fr/",
+      "browser_locale": "fr-FR"
+    }
+  ],
+  "url_mappings": [
+    {
+      "id": "home",
+      "urls": {
+        "en": "http://127.0.0.1:39175/en/",
+        "fr": "http://127.0.0.1:39175/fr/"
+      }
+    },
+    {
+      "id": "about",
+      "urls": {
+        "en": "http://127.0.0.1:39175/en/about",
+        "fr": "http://127.0.0.1:39175/fr/about"
+      }
+    },
+    {
+      "id": "search",
+      "urls": {
+        "en": "http://127.0.0.1:39175/en/search",
+        "fr": "http://127.0.0.1:39175/fr/search"
+      }
+    },
+    {
+      "id": "contact",
+      "urls": {
+        "en": "http://127.0.0.1:39175/en/contact",
+        "fr": "http://127.0.0.1:39175/fr/contact"
+      }
+    },
+    {
+      "id": "offer",
+      "urls": {
+        "en": "http://127.0.0.1:39175/en/offer",
+        "fr": "http://127.0.0.1:39175/fr/offer"
+      }
+    },
+    {
+      "id": "legacy",
+      "urls": {
+        "en": "http://127.0.0.1:39175/en/legacy",
+        "fr": "http://127.0.0.1:39175/fr/legacy"
+      }
+    }
+  ],
+  "countries": [],
+  "profiles": [
+    {
+      "id": "desktop",
+      "device_class": "DESKTOP",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "browser": {
+        "name": "chromium",
+        "version": null
+      },
+      "physical_device": false
+    },
+    {
+      "id": "mobile",
+      "device_class": "MOBILE_EMULATION",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "browser": {
+        "name": "chromium",
+        "version": null
+      },
+      "physical_device": false
+    }
+  ],
+  "journeys": [
+    {
+      "id": "J01",
+      "title": "Open the requested home page",
+      "critical": true,
+      "priority": "P0",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/ in a fresh context.",
+          "expected": "HTTP 200 and the requested language route load.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 2,
+          "action": "Inspect html[lang], #page-heading, canonical, and hreflang links.",
+          "expected": "The localized heading and all language/route metadata match tests/demo/product-contract.md.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J02",
+      "title": "Follow primary navigation",
+      "critical": true,
+      "priority": "P0",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/ and click #main-about.",
+          "expected": "The destination is /<language>/about with HTTP 200 and the localized About heading.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J03",
+      "title": "Switch language from an internal page",
+      "critical": true,
+      "priority": "P0",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/about and click #language-switch.",
+          "expected": "The other language's /about route opens, preserving the internal page.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J04",
+      "title": "Preserve language through a redirect",
+      "critical": true,
+      "priority": "P0",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/legacy and inspect its redirect when network collection is available.",
+          "expected": "HTTP 302 redirects to /<language>/about; the original language and localized heading remain correct.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J05",
+      "title": "Search with matching results",
+      "critical": true,
+      "priority": "P0",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/search; type atlas in #search-query and click #search-submit.",
+          "expected": "Exactly one .search-result is visible, the query remains, and #empty-state is absent.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 2,
+          "action": "Click #result-about.",
+          "expected": "The matching-language /about route and localized heading appear.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J06",
+      "title": "Search without a matching result",
+      "critical": false,
+      "priority": "P1",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Search for zzzz-no-match using #search-query and #search-submit.",
+          "expected": "No .search-result appears; the retained query and localized empty state are visible: No results found. / Aucun résultat.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J07",
+      "title": "Validate an empty local form",
+      "critical": false,
+      "priority": "P1",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/contact; leave both inputs empty and click #contact-submit.",
+          "expected": "Name and email errors are visible; fields have aria-invalid=true and confirmation is hidden.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 2,
+          "action": "Compare both messages with the approved localized error strings.",
+          "expected": "English: Enter your name. / Enter a valid email address. French: Saisissez votre nom. / Saisissez une adresse e-mail valide.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J08",
+      "title": "Complete the local form by keyboard",
+      "critical": true,
+      "priority": "P0",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Focus #contact-name and type Alex Test; press Tab.",
+          "expected": "Focus reaches #contact-email with a visible outline.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 2,
+          "action": "Type alex@example.test; press Tab and then Enter.",
+          "expected": "Focus reaches #contact-submit; activation shows the localized confirmation without validation errors.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J09",
+      "title": "Use and close the mobile menu",
+      "critical": true,
+      "priority": "P0",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/ with the mobile profile; click #menu-toggle.",
+          "expected": "The hidden menu becomes visible and aria-expanded changes from false to true.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 2,
+          "action": "Click #mobile-about.",
+          "expected": "The same-language /about page appears with the menu closed.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 3,
+          "action": "Reopen the menu and press Escape.",
+          "expected": "The menu closes, aria-expanded is false, and focus returns to #menu-toggle.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    },
+    {
+      "id": "J10",
+      "title": "Read a localized offer on mobile",
+      "critical": false,
+      "priority": "P1",
+      "preconditions": [
+        "Start in a fresh browser context.",
+        "Read the public product contract before execution."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /<language>/offer with the mobile profile.",
+          "expected": "Title, currency, and date match the exact approved strings in tests/demo/product-contract.md.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 2,
+          "action": "Measure document.documentElement.scrollWidth and window.innerWidth.",
+          "expected": "scrollWidth is no more than innerWidth + 1; the offer CTA is inside the viewport.",
+          "expectation_basis": "SUPPLIED"
+        },
+        {
+          "number": 3,
+          "action": "Click #offer-cta.",
+          "expected": "The same-language /contact route opens.",
+          "expectation_basis": "SUPPLIED"
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "J01-en",
+      "journey_id": "J01",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J01-fr",
+      "journey_id": "J01",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J02-en",
+      "journey_id": "J02",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J02-fr",
+      "journey_id": "J02",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J03-en",
+      "journey_id": "J03",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J03-fr",
+      "journey_id": "J03",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J04-en",
+      "journey_id": "J04",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J04-fr",
+      "journey_id": "J04",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J05-en",
+      "journey_id": "J05",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J05-fr",
+      "journey_id": "J05",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J06-en",
+      "journey_id": "J06",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J06-fr",
+      "journey_id": "J06",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J07-en",
+      "journey_id": "J07",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J07-fr",
+      "journey_id": "J07",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J08-en",
+      "journey_id": "J08",
+      "language": "en",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J08-fr",
+      "journey_id": "J08",
+      "language": "fr",
+      "profile_id": "desktop",
+      "country": null
+    },
+    {
+      "id": "J09-en",
+      "journey_id": "J09",
+      "language": "en",
+      "profile_id": "mobile",
+      "country": null
+    },
+    {
+      "id": "J09-fr",
+      "journey_id": "J09",
+      "language": "fr",
+      "profile_id": "mobile",
+      "country": null
+    },
+    {
+      "id": "J10-en",
+      "journey_id": "J10",
+      "language": "en",
+      "profile_id": "mobile",
+      "country": null
+    },
+    {
+      "id": "J10-fr",
+      "journey_id": "J10",
+      "language": "fr",
+      "profile_id": "mobile",
+      "country": null
+    }
+  ],
+  "authentication": {
+    "mode": "NONE",
+    "reference": null,
+    "authorization_note": "The synthetic local demo has no account and stores no contact-form submission."
+  },
+  "authorized_actions": [
+    {
+      "action": "NAVIGATE",
+      "scope": "http://127.0.0.1:39175",
+      "authorization": "The user requested local demo verification."
+    },
+    {
+      "action": "CLICK",
+      "scope": "http://127.0.0.1:39175",
+      "authorization": "Read-only navigation and local interface controls are authorized."
+    },
+    {
+      "action": "TYPE",
+      "scope": "http://127.0.0.1:39175",
+      "authorization": "Use only the fictional test data in this configuration."
+    },
+    {
+      "action": "SUBMIT_FORM",
+      "scope": "http://127.0.0.1:39175/<language>/contact",
+      "authorization": "The local synthetic form only updates its page and has no external effect."
+    }
+  ],
+  "budgets": {
+    "time_seconds": 1200,
+    "max_pages": 180,
+    "max_requests": 600,
+    "max_retries": 1
+  },
+  "output": {
+    "directory": "./campaigns/atlas-baseline",
+    "formats": [
+      "JSON",
+      "MARKDOWN",
+      "CSV"
+    ],
+    "output_language": "en"
+  },
+  "assumptions": [
+    "This demo configuration defines exactly twenty journey-language pairs, not every device-language combination.",
+    "The mobile profile is an emulated viewport, not a physical phone.",
+    "No network country is requested or inferred.",
+    "Atlas Studio, Atlas, Alex Test, and the fictional email are intentional retained terms.",
+    "Record the observed browser version at execution; null here means the exact installed version has not yet been selected."
+  ]
+}

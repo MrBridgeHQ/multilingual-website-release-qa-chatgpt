@@ -1,0 +1,15 @@
+{
+  "actual_url": "http://127.0.0.1:39175/fr/",
+  "document_language": "fr",
+  "browser_locale": "fr-FR",
+  "timezone": "Europe/Paris",
+  "heading": "Bienvenue chez Atlas Studio",
+  "viewport_width": 1440,
+  "viewport_height": 900,
+  "requested_country": "FR",
+  "verified_country": null,
+  "same_network_context_country_proof": false,
+  "http_status": 200,
+  "measurement_available": "Document language, configured locale/timezone, and local page response only.",
+  "limitation": "No provider or measurement ties a network exit country to this loopback website request. These language and timezone observations are not country proof."
+}

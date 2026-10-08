@@ -1,0 +1,60 @@
+{
+  "case_id": "J08-en",
+  "attempt": 1,
+  "started_at": "2026-10-08T11:43:57.829Z",
+  "finished_at": "2026-10-08T11:43:58.338Z",
+  "status": "FAIL",
+  "incident": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open /en/contact",
+      "expected": "HTTP 200 with visible associated labels",
+      "observed": "{\"url\": \"http://127.0.0.1:39175/en/contact\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"contact-name has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-email has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J08-en-a1-s1-state",
+        "J08-en-a1-s1-viewport"
+      ]
+    },
+    {
+      "number": 2,
+      "action": "Focus #contact-name, type Alex Test and press Tab once",
+      "expected": "Actual keyboard input and Tab event",
+      "observed": "{\"url\": \"http://127.0.0.1:39175/en/contact\", \"checks\": [], \"details\": {\"key_sequence\": [\"focus #contact-name\", \"type Alex Test\", \"Tab\"]}, \"active_id\": \"contact-submit\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J08-en-a1-s2-state",
+        "J08-en-a1-s2-viewport"
+      ]
+    },
+    {
+      "number": 3,
+      "action": "Inspect focus",
+      "expected": "#contact-email focused with a visible outline",
+      "observed": "{\"url\": \"http://127.0.0.1:39175/en/contact\", \"checks\": [{\"check\": \"active element after first Tab\", \"passed\": false, \"expected\": \"contact-email\", \"actual\": \"contact-submit\"}, {\"check\": \"email visible focus outline\", \"passed\": false, \"expected\": true, \"actual\": false}], \"details\": {\"email_outline\": {\"style\": \"none\", \"width\": \"3px\", \"color\": \"rgb(0, 0, 0)\"}}, \"active_id\": \"contact-submit\"}",
+      "status": "FAIL",
+      "evidence_ids": [
+        "J08-en-a1-s3-state",
+        "J08-en-a1-s3-viewport"
+      ]
+    },
+    {
+      "number": 4,
+      "action": "Type alex@example.test, press Tab once and Enter",
+      "expected": "#contact-submit focused before Enter",
+      "observed": "Not executed: the first Tab skipped the required email field. No direct fill or click workaround was used.",
+      "status": "NOT_RUN",
+      "evidence_ids": []
+    },
+    {
+      "number": 5,
+      "action": "Inspect confirmation",
+      "expected": "Approved localized confirmation visible with no visible validation errors",
+      "observed": "Not executed: the contracted keyboard submission could not continue after the failed focus transition.",
+      "status": "NOT_RUN",
+      "evidence_ids": []
+    }
+  ],
+  "final_url": "http://127.0.0.1:39175/en/contact"
+}

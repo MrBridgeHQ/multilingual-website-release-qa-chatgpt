@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-08T12:10:33.665969Z",
+  "actual_url": "http://127.0.0.1:39175/fr/contact",
+  "actual_language": "fr",
+  "profile": {
+    "id": "mobile",
+    "device_class": "MOBILE_EMULATION",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "browser": {
+      "name": "Chromium",
+      "version": "151.0.7922.34"
+    },
+    "locale": "en-GB",
+    "timezone": "UTC",
+    "physical_device": false
+  },
+  "browser_version": "151.0.7922.34",
+  "playwright_version": "1.62.0",
+  "description": "Console and page-error observations from this replay attempt.",
+  "data": []
+}

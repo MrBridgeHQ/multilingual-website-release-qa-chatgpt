@@ -1,0 +1,8 @@
+{
+  "scenario_type": "CONTROLLED_MISSING_EXECUTABLE",
+  "attempted_operation": "Execute a deliberately absent browser path with --version.",
+  "error_type": "FileNotFoundError",
+  "errno": 2,
+  "message": "[Errno 2] No such file or directory: '<PROJECT_ROOT>/.work/negative-browser/deliberately-missing-browser'",
+  "environment_interpretation": "Intentional capability-failure injection; the actual installed Chromium remains available for independent cases."
+}

@@ -1,0 +1,39 @@
+# Local work products and credentials are never published.
+.work/
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.log
+node_modules/
+playwright-report/
+test-results/
+
+# Raw runs and machine-specific receipts stay local; finalized synthetic bundles are publishable.
+validation/**/source/
+
+# Private host receipts and preserved development artifacts.
+tests/contracts/runs/
+tests/replay_tickets.py
+validation/baseline/baseline-freeze-manifest.json
+validation/baseline/campaign-config.json
+validation/baseline/independent-review.json
+validation/baseline/independent-review.md
+validation/fixed/campaign-config.json
+validation/fixed/receipts/
+validation/negative/helper-command-1.json
+validation/negative/helper-command-2.json
+validation/negative/helper-command-3.json
+validation/selection-check.json
+validation/selection-check-in-project.json
+
+# Preserve development candidates locally until exact archival approval.
+skills/recette-web-multilingue/scripts/qa-v2.py
+skills/recette-web-multilingue/scripts/qa-v3.py
+skills/recette-web-multilingue/scripts/qa-v4.py
+
+# Deliberate synthetic ticket-only reproduction input; other raw files stay private.
+!validation/baseline/source/
+validation/baseline/source/*
+!validation/baseline/source/tickets-reviewed.json

@@ -1,0 +1,640 @@
+{
+  "schema_version": "1.0",
+  "assessed_at": "2026-10-08T12:12:26.448Z",
+  "reviewer": "Independent first auditor",
+  "baseline_campaign_id": "baseline-blind-20261008",
+  "retest_campaign_id": "fixed-retest-20261008",
+  "baseline_public_manifest_sha256": "73636b8e894afbea9029ef209fca149ad80d757956acbfa4844fe5cd2f238824",
+  "baseline_results_sha256": "95369853a04de1f55008ab64cc22cb79cdba96944747d9ab1f42e9d12069d0c6",
+  "retest_results": "report/results.json",
+  "retest_results_sha256": "93bbf95e7edfe386d1004e35c8ba62b23a41f77ff2faa2a203152f7cd5d668a9",
+  "original_tickets": [
+    {
+      "ticket_id": "QA-001",
+      "title": "French desktop About navigation opens Search",
+      "baseline_case_ids": [
+        "J02-fr"
+      ],
+      "retest_case_ids": [
+        "J02-fr",
+        "J02-en",
+        "J09-fr"
+      ],
+      "status": "VERIFIED_FIXED",
+      "acceptance_criteria": [
+        {
+          "number": 1,
+          "criterion": "Clicking #main-about from /fr/ reaches /fr/about and the approved localized heading.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J02-fr",
+              "step": 3
+            }
+          ],
+          "evidence_ids": [
+            "J02-fr-a1-s3-state",
+            "J02-fr-a1-s3-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 2,
+          "criterion": "The English desktop primary navigation continues to reach /en/about.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J02-en",
+              "step": 3
+            }
+          ],
+          "evidence_ids": [
+            "J02-en-a1-s3-state",
+            "J02-en-a1-s3-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 3,
+          "criterion": "The already working French mobile #mobile-about route remains /fr/about.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J09-fr",
+              "step": 3
+            }
+          ],
+          "evidence_ids": [
+            "J09-fr-a1-s3-state",
+            "J09-fr-a1-s3-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"panel closed after navigation\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": []
+        }
+      ],
+      "limitations": [
+        "Applies to the corrected loopback fixture, Chromium and the original assigned viewports only."
+      ]
+    },
+    {
+      "ticket_id": "QA-002",
+      "title": "Switching About from English to French loses the internal page",
+      "baseline_case_ids": [
+        "J03-en"
+      ],
+      "retest_case_ids": [
+        "J03-en",
+        "J03-fr"
+      ],
+      "status": "VERIFIED_FIXED",
+      "acceptance_criteria": [
+        {
+          "number": 1,
+          "criterion": "EN About → Français reaches /fr/about, preserving page identity.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J03-en",
+              "step": 3
+            },
+            {
+              "case_id": "J03-en",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J03-en-a1-s3-state",
+            "J03-en-a1-s3-viewport",
+            "J03-en-a1-s4-state",
+            "J03-en-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"equivalent other-language route\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}], \"details\": {}, \"active_id\": null}",
+            "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 2,
+          "criterion": "FR About → English still reaches /en/about.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J03-fr",
+              "step": 3
+            },
+            {
+              "case_id": "J03-fr",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J03-fr-a1-s3-state",
+            "J03-fr-a1-s3-viewport",
+            "J03-fr-a1-s4-state",
+            "J03-fr-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"equivalent other-language route\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}], \"details\": {}, \"active_id\": null}",
+            "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 3,
+          "criterion": "Both destination headings and html languages match their target routes.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J03-en",
+              "step": 4
+            },
+            {
+              "case_id": "J03-fr",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J03-en-a1-s4-state",
+            "J03-en-a1-s4-viewport",
+            "J03-fr-a1-s4-state",
+            "J03-fr-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+            "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": []
+        }
+      ],
+      "limitations": [
+        "Applies to the corrected loopback fixture, Chromium and the original assigned viewports only."
+      ]
+    },
+    {
+      "ticket_id": "QA-003",
+      "title": "French legacy redirect switches the visitor to English",
+      "baseline_case_ids": [
+        "J04-fr"
+      ],
+      "retest_case_ids": [
+        "J04-fr",
+        "J04-en"
+      ],
+      "status": "VERIFIED_FIXED",
+      "acceptance_criteria": [
+        {
+          "number": 1,
+          "criterion": "French legacy returns HTTP 302 to /fr/about, followed by a 200 French About document.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J04-fr",
+              "step": 2
+            },
+            {
+              "case_id": "J04-fr",
+              "step": 3
+            }
+          ],
+          "evidence_ids": [
+            "J04-fr-a1-s2-state",
+            "J04-fr-a1-s2-viewport",
+            "J04-fr-a1-s3-state",
+            "J04-fr-a1-s3-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+            "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"redirect HTTP status\", \"passed\": true, \"expected\": 302, \"actual\": 302}, {\"check\": \"redirect Location\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}], \"details\": {\"redirects\": [{\"at\": \"2026-10-08T12:10:37.378Z\", \"url\": \"http://127.0.0.1:39176/fr/legacy\", \"status\": 302, \"resource_type\": \"document\", \"location\": \"/fr/about\", \"redirected_from\": null}]}, \"active_id\": null}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 2,
+          "criterion": "English legacy still returns HTTP 302 to /en/about, followed by a 200 English About document.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J04-en",
+              "step": 2
+            },
+            {
+              "case_id": "J04-en",
+              "step": 3
+            }
+          ],
+          "evidence_ids": [
+            "J04-en-a1-s2-state",
+            "J04-en-a1-s2-viewport",
+            "J04-en-a1-s3-state",
+            "J04-en-a1-s3-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+            "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"redirect HTTP status\", \"passed\": true, \"expected\": 302, \"actual\": 302}, {\"check\": \"redirect Location\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}], \"details\": {\"redirects\": [{\"at\": \"2026-10-08T12:10:36.824Z\", \"url\": \"http://127.0.0.1:39176/en/legacy\", \"status\": 302, \"resource_type\": \"document\", \"location\": \"/en/about\", \"redirected_from\": null}]}, \"active_id\": null}"
+          ],
+          "notes": []
+        }
+      ],
+      "limitations": [
+        "Applies to the corrected loopback fixture, Chromium and the original assigned viewports only."
+      ]
+    },
+    {
+      "ticket_id": "QA-004",
+      "title": "French form validation errors are displayed in English",
+      "baseline_case_ids": [
+        "J07-fr"
+      ],
+      "retest_case_ids": [
+        "J07-fr",
+        "J07-en",
+        "J08-fr"
+      ],
+      "status": "VERIFIED_FIXED",
+      "acceptance_criteria": [
+        {
+          "number": 1,
+          "criterion": "Empty French submission displays both exact approved French messages.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J07-fr",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J07-fr-a1-s4-state",
+            "J07-fr-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"name error copy\", \"passed\": true, \"expected\": \"Saisissez votre nom.\", \"actual\": \"Saisissez votre nom.\"}, {\"check\": \"email error copy\", \"passed\": true, \"expected\": \"Saisissez une adresse e-mail valide.\", \"actual\": \"Saisissez une adresse e-mail valide.\"}], \"details\": {}, \"active_id\": \"contact-submit\"}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 2,
+          "criterion": "Invalid fields remain marked aria-invalid=true; confirmation remains hidden.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J07-fr",
+              "step": 3
+            }
+          ],
+          "evidence_ids": [
+            "J07-fr-a1-s3-state",
+            "J07-fr-a1-s3-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"name-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"email-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-name aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"contact-email aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"confirmation hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 3,
+          "criterion": "English empty validation and the French valid keyboard submission continue to work.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J07-en",
+              "step": 3
+            },
+            {
+              "case_id": "J07-en",
+              "step": 4
+            },
+            {
+              "case_id": "J08-fr",
+              "step": 5
+            }
+          ],
+          "evidence_ids": [
+            "J07-en-a1-s3-state",
+            "J07-en-a1-s3-viewport",
+            "J07-en-a1-s4-state",
+            "J07-en-a1-s4-viewport",
+            "J08-fr-a1-s5-state",
+            "J08-fr-a1-s5-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"name-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"email-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-name aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"contact-email aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"confirmation hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"name error copy\", \"passed\": true, \"expected\": \"Enter your name.\", \"actual\": \"Enter your name.\"}, {\"check\": \"email error copy\", \"passed\": true, \"expected\": \"Enter a valid email address.\", \"actual\": \"Enter a valid email address.\"}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+            "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"confirmation visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized confirmation\", \"passed\": true, \"expected\": \"Merci, Alex Test. Votre demande locale est confirmée.\", \"actual\": \"Merci, Alex Test. Votre demande locale est confirmée.\"}, {\"check\": \"name-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"email-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}"
+          ],
+          "notes": []
+        }
+      ],
+      "limitations": [
+        "Applies to the corrected loopback fixture, Chromium and the original assigned viewports only."
+      ]
+    },
+    {
+      "ticket_id": "QA-005",
+      "title": "English contact form skips the required email field during keyboard entry",
+      "baseline_case_ids": [
+        "J08-en"
+      ],
+      "retest_case_ids": [
+        "J08-en",
+        "J08-fr"
+      ],
+      "status": "VERIFIED_FIXED",
+      "acceptance_criteria": [
+        {
+          "number": 1,
+          "criterion": "The forward order is contact-name → contact-email → contact-submit.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J08-en",
+              "step": 3
+            },
+            {
+              "case_id": "J08-en",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J08-en-a1-s3-state",
+            "J08-en-a1-s3-viewport",
+            "J08-en-a1-s4-state",
+            "J08-en-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after first Tab\", \"passed\": true, \"expected\": \"contact-email\", \"actual\": \"contact-email\"}, {\"check\": \"email visible focus outline\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"email_outline\": {\"style\": \"solid\", \"width\": \"3px\", \"color\": \"rgb(195, 79, 0)\"}}, \"active_id\": \"contact-email\"}",
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after second Tab\", \"passed\": true, \"expected\": \"contact-submit\", \"actual\": \"contact-submit\"}], \"details\": {\"key_sequence\": [\"type alex@example.test\", \"Tab\", \"Enter\"], \"active_before_enter\": \"contact-submit\"}, \"active_id\": \"contact-submit\"}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 2,
+          "criterion": "The focused email field and submit control have visible focus indications.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J08-en",
+              "step": 3
+            },
+            {
+              "case_id": "J08-en",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J08-en-a1-s3-state",
+            "J08-en-a1-s3-viewport",
+            "J08-en-a1-s4-state",
+            "J08-en-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after first Tab\", \"passed\": true, \"expected\": \"contact-email\", \"actual\": \"contact-email\"}, {\"check\": \"email visible focus outline\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"email_outline\": {\"style\": \"solid\", \"width\": \"3px\", \"color\": \"rgb(195, 79, 0)\"}}, \"active_id\": \"contact-email\"}",
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after second Tab\", \"passed\": true, \"expected\": \"contact-submit\", \"actual\": \"contact-submit\"}], \"details\": {\"key_sequence\": [\"type alex@example.test\", \"Tab\", \"Enter\"], \"active_before_enter\": \"contact-submit\"}, \"active_id\": \"contact-submit\"}"
+          ],
+          "notes": [
+            "Inspected captured submit focus: {\"active_id\": \"contact-submit\", \"outline\": {\"style\": \"solid\", \"width\": \"3px\", \"color\": \"rgb(195, 79, 0)\"}}"
+          ]
+        },
+        {
+          "number": 3,
+          "criterion": "Typing the supplied synthetic data and pressing Enter shows Thank you, Alex Test. Your local request is confirmed. without visible validation errors.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J08-en",
+              "step": 5
+            }
+          ],
+          "evidence_ids": [
+            "J08-en-a1-s5-state",
+            "J08-en-a1-s5-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"confirmation visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized confirmation\", \"passed\": true, \"expected\": \"Thank you, Alex Test. Your local request is confirmed.\", \"actual\": \"Thank you, Alex Test. Your local request is confirmed.\"}, {\"check\": \"name-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"email-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 4,
+          "criterion": "The French keyboard form remains functional.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J08-fr",
+              "step": 3
+            },
+            {
+              "case_id": "J08-fr",
+              "step": 4
+            },
+            {
+              "case_id": "J08-fr",
+              "step": 5
+            }
+          ],
+          "evidence_ids": [
+            "J08-fr-a1-s3-state",
+            "J08-fr-a1-s3-viewport",
+            "J08-fr-a1-s4-state",
+            "J08-fr-a1-s4-viewport",
+            "J08-fr-a1-s5-state",
+            "J08-fr-a1-s5-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"active element after first Tab\", \"passed\": true, \"expected\": \"contact-email\", \"actual\": \"contact-email\"}, {\"check\": \"email visible focus outline\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"email_outline\": {\"style\": \"solid\", \"width\": \"3px\", \"color\": \"rgb(195, 79, 0)\"}}, \"active_id\": \"contact-email\"}",
+            "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"active element after second Tab\", \"passed\": true, \"expected\": \"contact-submit\", \"actual\": \"contact-submit\"}], \"details\": {\"key_sequence\": [\"type alex@example.test\", \"Tab\", \"Enter\"], \"active_before_enter\": \"contact-submit\"}, \"active_id\": \"contact-submit\"}",
+            "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"confirmation visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized confirmation\", \"passed\": true, \"expected\": \"Merci, Alex Test. Votre demande locale est confirmée.\", \"actual\": \"Merci, Alex Test. Votre demande locale est confirmée.\"}, {\"check\": \"name-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"email-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}"
+          ],
+          "notes": []
+        }
+      ],
+      "limitations": [
+        "Applies to the corrected loopback fixture, Chromium and the original assigned viewports only."
+      ]
+    },
+    {
+      "ticket_id": "QA-006",
+      "title": "French mobile offer overflows horizontally and clips its description",
+      "baseline_case_ids": [
+        "J10-fr"
+      ],
+      "retest_case_ids": [
+        "J10-fr",
+        "J10-en"
+      ],
+      "status": "VERIFIED_FIXED",
+      "acceptance_criteria": [
+        {
+          "number": 1,
+          "criterion": "At 390 × 844, document scrollWidth <= innerWidth + 1 and the full description fits without horizontal page scrolling.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J10-fr",
+              "step": 3
+            }
+          ],
+          "evidence_ids": [
+            "J10-fr-a1-s3-state",
+            "J10-fr-a1-s3-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/offer\", \"checks\": [{\"check\": \"horizontal overflow\", \"passed\": true, \"expected\": \"scrollWidth <= innerWidth + 1\", \"actual\": {\"scrollWidth\": 390, \"innerWidth\": 390}}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": [
+            "The auditor visually reviewed the corrected French offer viewport screenshot alongside the actual width check."
+          ]
+        },
+        {
+          "number": 2,
+          "criterion": "Approved French title, price and date remain unchanged.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J10-fr",
+              "step": 2
+            }
+          ],
+          "evidence_ids": [
+            "J10-fr-a1-s2-state",
+            "J10-fr-a1-s2-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/offer\", \"checks\": [{\"check\": \"offer-title\", \"passed\": true, \"expected\": \"Offre Découverte\", \"actual\": \"Offre Découverte\"}, {\"check\": \"offer-price\", \"passed\": true, \"expected\": \"19,90 € / mois\", \"actual\": \"19,90 € / mois\"}, {\"check\": \"offer-date\", \"passed\": true, \"expected\": \"8 octobre 2026\", \"actual\": \"8 octobre 2026\"}, {\"check\": \"offer-cta\", \"passed\": true, \"expected\": \"Contactez-nous\", \"actual\": \"Contactez-nous\"}], \"details\": {}, \"active_id\": null}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 3,
+          "criterion": "The CTA remains inside the viewport, can be clicked and reaches /fr/contact.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J10-fr",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J10-fr-a1-s4-state",
+            "J10-fr-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"CTA initially within viewport\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/contact\", \"actual\": \"http://127.0.0.1:39176/fr/contact\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {\"cta_before_click\": {\"present\": true, \"text\": \"Contactez-nous\", \"value\": null, \"visible\": true, \"href\": \"/fr/contact\", \"aria_invalid\": null, \"aria_expanded\": null, \"tabindex\": null, \"disabled\": false, \"rect\": {\"x\": 33, \"y\": 494.578125, \"width\": 166.46875, \"height\": 49.875, \"right\": 199.46875, \"bottom\": 544.453125}, \"outline\": {\"style\": \"none\", \"width\": \"3px\", \"color\": \"rgb(255, 255, 255)\"}, \"box_shadow\": \"none\", \"labels\": []}, \"viewport_before_click\": {\"width\": 390, \"height\": 844}, \"actual_click\": true}, \"active_id\": null}"
+          ],
+          "notes": []
+        },
+        {
+          "number": 4,
+          "criterion": "English offer layout and CTA continue to pass.",
+          "status": "PASS",
+          "case_steps": [
+            {
+              "case_id": "J10-en",
+              "step": 2
+            },
+            {
+              "case_id": "J10-en",
+              "step": 3
+            },
+            {
+              "case_id": "J10-en",
+              "step": 4
+            }
+          ],
+          "evidence_ids": [
+            "J10-en-a1-s2-state",
+            "J10-en-a1-s2-viewport",
+            "J10-en-a1-s3-state",
+            "J10-en-a1-s3-viewport",
+            "J10-en-a1-s4-state",
+            "J10-en-a1-s4-viewport"
+          ],
+          "actual_step_observations": [
+            "{\"url\": \"http://127.0.0.1:39176/en/offer\", \"checks\": [{\"check\": \"offer-title\", \"passed\": true, \"expected\": \"Starter plan\", \"actual\": \"Starter plan\"}, {\"check\": \"offer-price\", \"passed\": true, \"expected\": \"€19.90 / month\", \"actual\": \"€19.90 / month\"}, {\"check\": \"offer-date\", \"passed\": true, \"expected\": \"October 8, 2026\", \"actual\": \"October 8, 2026\"}, {\"check\": \"offer-cta\", \"passed\": true, \"expected\": \"Contact us\", \"actual\": \"Contact us\"}], \"details\": {}, \"active_id\": null}",
+            "{\"url\": \"http://127.0.0.1:39176/en/offer\", \"checks\": [{\"check\": \"horizontal overflow\", \"passed\": true, \"expected\": \"scrollWidth <= innerWidth + 1\", \"actual\": {\"scrollWidth\": 390, \"innerWidth\": 390}}], \"details\": {}, \"active_id\": null}",
+            "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"CTA initially within viewport\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/contact\", \"actual\": \"http://127.0.0.1:39176/en/contact\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {\"cta_before_click\": {\"present\": true, \"text\": \"Contact us\", \"value\": null, \"visible\": true, \"href\": \"/en/contact\", \"aria_invalid\": null, \"aria_expanded\": null, \"tabindex\": null, \"disabled\": false, \"rect\": {\"x\": 33, \"y\": 494.578125, \"width\": 125.1875, \"height\": 49.875, \"right\": 158.1875, \"bottom\": 544.453125}, \"outline\": {\"style\": \"none\", \"width\": \"3px\", \"color\": \"rgb(255, 255, 255)\"}, \"box_shadow\": \"none\", \"labels\": []}, \"viewport_before_click\": {\"width\": 390, \"height\": 844}, \"actual_click\": true}, \"active_id\": null}"
+          ],
+          "notes": []
+        }
+      ],
+      "limitations": [
+        "Applies to the corrected loopback fixture, Chromium and the original assigned viewports only."
+      ]
+    }
+  ],
+  "original_passing_controls": [
+    {
+      "case_id": "J01-en",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J01-fr",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J02-en",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J03-fr",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J04-en",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J05-en",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J05-fr",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J06-en",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J06-fr",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J07-en",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J08-fr",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J09-en",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J09-fr",
+      "status": "PASS"
+    },
+    {
+      "case_id": "J10-en",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "original_tickets": 6,
+    "verified_fixed": 6,
+    "controls": 14,
+    "passing_controls": 14
+  },
+  "oracle_accessed": false,
+  "new_defect_tickets": 0,
+  "note": "Original stable ticket IDs are linked here; they are not inserted as new defects into passing retest results."
+}

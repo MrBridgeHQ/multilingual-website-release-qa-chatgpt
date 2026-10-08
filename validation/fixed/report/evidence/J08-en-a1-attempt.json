@@ -1,0 +1,66 @@
+{
+  "case_id": "J08-en",
+  "attempt": 1,
+  "started_at": "2026-10-08T12:10:42.524Z",
+  "finished_at": "2026-10-08T12:10:43.288Z",
+  "status": "PASS",
+  "incident": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open /en/contact",
+      "expected": "HTTP 200 with visible associated labels",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"contact-name has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-email has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J08-en-a1-s1-state",
+        "J08-en-a1-s1-viewport"
+      ]
+    },
+    {
+      "number": 2,
+      "action": "Focus #contact-name, type Alex Test and press Tab once",
+      "expected": "Actual keyboard input and Tab event",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [], \"details\": {\"key_sequence\": [\"focus #contact-name\", \"type Alex Test\", \"Tab\"]}, \"active_id\": \"contact-email\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J08-en-a1-s2-state",
+        "J08-en-a1-s2-viewport"
+      ]
+    },
+    {
+      "number": 3,
+      "action": "Inspect focus",
+      "expected": "#contact-email focused with a visible outline",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after first Tab\", \"passed\": true, \"expected\": \"contact-email\", \"actual\": \"contact-email\"}, {\"check\": \"email visible focus outline\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"email_outline\": {\"style\": \"solid\", \"width\": \"3px\", \"color\": \"rgb(195, 79, 0)\"}}, \"active_id\": \"contact-email\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J08-en-a1-s3-state",
+        "J08-en-a1-s3-viewport"
+      ]
+    },
+    {
+      "number": 4,
+      "action": "Type alex@example.test, press Tab once and Enter",
+      "expected": "#contact-submit focused before Enter",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after second Tab\", \"passed\": true, \"expected\": \"contact-submit\", \"actual\": \"contact-submit\"}], \"details\": {\"key_sequence\": [\"type alex@example.test\", \"Tab\", \"Enter\"], \"active_before_enter\": \"contact-submit\"}, \"active_id\": \"contact-submit\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J08-en-a1-s4-state",
+        "J08-en-a1-s4-viewport"
+      ]
+    },
+    {
+      "number": 5,
+      "action": "Inspect confirmation",
+      "expected": "Approved localized confirmation visible with no visible validation errors",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"confirmation visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized confirmation\", \"passed\": true, \"expected\": \"Thank you, Alex Test. Your local request is confirmed.\", \"actual\": \"Thank you, Alex Test. Your local request is confirmed.\"}, {\"check\": \"name-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"email-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J08-en-a1-s5-state",
+        "J08-en-a1-s5-viewport"
+      ]
+    }
+  ],
+  "final_url": "http://127.0.0.1:39176/en/contact"
+}

@@ -1,0 +1,8 @@
+{
+  "operation": "Playwright APIRequestContext GET attached to the browser context.",
+  "url": "http://127.0.0.1:39175/auth-required",
+  "status": 401,
+  "authentication_challenge_present": true,
+  "body_excerpt": "<!doctype html><html lang='en'><title>Authentication required</title><h1>Authentication required</h1><p>This local negative-test endpoint requires unavailable credentials.</p></html>",
+  "interpretation": "An observed authentication obstacle. No credentials were supplied and no bypass was attempted."
+}

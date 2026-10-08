@@ -1,0 +1,435 @@
+{
+  "at": "2026-10-08T12:10:43.465Z",
+  "case_id": "J08-fr",
+  "attempt": 1,
+  "step": 1,
+  "action": "Open /fr/contact",
+  "expected": "HTTP 200 with visible associated labels",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "HTTP status",
+      "passed": true,
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "check": "contact-name has visible associated label",
+      "passed": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "check": "contact-email has visible associated label",
+      "passed": true,
+      "expected": true,
+      "actual": true
+    }
+  ],
+  "details": {},
+  "state": {
+    "url": "http://127.0.0.1:39176/fr/contact",
+    "title": "Contacter Atlas Studio",
+    "html_lang": "fr",
+    "heading": "Contacter Atlas Studio",
+    "canonical": "http://127.0.0.1:39176/fr/contact",
+    "alternates": [
+      {
+        "language": "en",
+        "url": "http://127.0.0.1:39176/en/contact"
+      },
+      {
+        "language": "fr",
+        "url": "http://127.0.0.1:39176/fr/contact"
+      }
+    ],
+    "active_id": null,
+    "active_tag": "BODY",
+    "scroll_width": 1440,
+    "inner_width": 1440,
+    "inner_height": 900,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "result_count": 0,
+    "body_text": "Aller au contenu\nAtlas Studio\nAccueil\nÀ propos\nRecherche\nContact\nOffre\nEnglish\nContacter Atlas Studio\n\nCe formulaire fictif n’envoie aucun message et ne conserve aucune donnée.\n\nNom\nE-mail\nEnvoyer la demande locale\nAtlas Studio",
+    "elements": {
+      "page-heading": {
+        "present": true,
+        "text": "Contacter Atlas Studio",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 90.5,
+          "width": 1072,
+          "height": 40.796875,
+          "right": 1256,
+          "bottom": 131.296875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": true,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 236.6875,
+          "y": 16,
+          "width": 74.890625,
+          "height": 25.5,
+          "right": 311.578125,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "language-switch": {
+        "present": true,
+        "text": "English",
+        "value": null,
+        "visible": true,
+        "href": "/en/contact",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 1354.609375,
+          "y": 16,
+          "width": 61.390625,
+          "height": 25.5,
+          "right": 1416,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "menu-toggle": {
+        "present": true,
+        "text": "Menu",
+        "value": "",
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": "false",
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-menu": {
+        "present": true,
+        "text": "AccueilÀ proposRechercheContactOffre",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": false,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-content": {
+        "present": true,
+        "text": "Contacter Atlas Studio\n\nCe formulaire fictif n’envoie aucun message et ne conserve aucune donnée.\n\nNom\nE-mail\nEnvoyer la demande locale",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 160,
+          "y": 58.5,
+          "width": 1120,
+          "height": 415.078125,
+          "right": 1280,
+          "bottom": 473.578125
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "search-query": {
+        "present": false
+      },
+      "search-submit": {
+        "present": false
+      },
+      "search-results": {
+        "present": false
+      },
+      "empty-state": {
+        "present": false
+      },
+      "result-about": {
+        "present": false
+      },
+      "contact-name": {
+        "present": true,
+        "text": "",
+        "value": "",
+        "visible": true,
+        "href": null,
+        "aria_invalid": "false",
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 224.875,
+          "width": 560,
+          "height": 48.28125,
+          "right": 744,
+          "bottom": 273.15625
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(0, 0, 0)"
+        },
+        "box_shadow": "none",
+        "labels": [
+          {
+            "text": "Nom",
+            "visible": true,
+            "for": "contact-name"
+          }
+        ]
+      },
+      "contact-email": {
+        "present": true,
+        "text": "",
+        "value": "",
+        "visible": true,
+        "href": null,
+        "aria_invalid": "false",
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 324.234375,
+          "width": 560,
+          "height": 48.28125,
+          "right": 744,
+          "bottom": 372.515625
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(0, 0, 0)"
+        },
+        "box_shadow": "none",
+        "labels": [
+          {
+            "text": "E-mail",
+            "visible": true,
+            "for": "contact-email"
+          }
+        ]
+      },
+      "contact-submit": {
+        "present": true,
+        "text": "Envoyer la demande locale",
+        "value": "",
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 391.703125,
+          "width": 265.171875,
+          "height": 49.875,
+          "right": 449.171875,
+          "bottom": 441.578125
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "name-error": {
+        "present": true,
+        "text": "",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(168, 24, 36)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "email-error": {
+        "present": true,
+        "text": "",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(168, 24, 36)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "confirmation": {
+        "present": true,
+        "text": "",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "offer-title": {
+        "present": false
+      },
+      "offer-price": {
+        "present": false
+      },
+      "offer-date": {
+        "present": false
+      },
+      "offer-cta": {
+        "present": false
+      }
+    }
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "created_at": "2026-10-08T12:17:35.805988+00:00",
+  "comparison_type": "Deterministic comparison after independent baseline freeze",
+  "inputs": {
+    "baseline": {
+      "path": "validation/baseline/report/results.json",
+      "sha256": "95369853a04de1f55008ab64cc22cb79cdba96944747d9ab1f42e9d12069d0c6"
+    },
+    "fixed": {
+      "path": "validation/fixed/report/results.json",
+      "sha256": "93bbf95e7edfe386d1004e35c8ba62b23a41f77ff2faa2a203152f7cd5d668a9"
+    },
+    "oracle": {
+      "path": "tests/oracle/expected-defects.json",
+      "sha256": "573fad4d4c31718c6d6359ab1870dc2be23142a0f02d549a1b185e473ba20a85"
+    },
+    "freeze": {
+      "path": "validation/comparison-input-manifest.json",
+      "sha256": "d8e14912f47163fd3c8f440468e2bea27a2b0efbc3cffccf5406d4896ebc07ac"
+    }
+  },
+  "freeze_files_verified": 262,
+  "baseline": {
+    "planned": 20,
+    "counts": {
+      "PASS": 14,
+      "FAIL": 6,
+      "BLOCKED": 0,
+      "NOT_RUN": 0,
+      "NOT_APPLICABLE": 0
+    },
+    "tickets": 6
+  },
+  "fixed": {
+    "planned": 20,
+    "counts": {
+      "PASS": 20,
+      "FAIL": 0,
+      "BLOCKED": 0,
+      "NOT_RUN": 0,
+      "NOT_APPLICABLE": 0
+    },
+    "tickets": 0
+  },
+  "defects": [
+    {
+      "oracle_id": "SEED-001",
+      "title": "French primary About navigation opens search",
+      "detected": true,
+      "observations": [
+        {
+          "case_id": "J02-fr",
+          "status": "FAIL",
+          "ticket_ids": [
+            "QA-001"
+          ],
+          "evidence_ids": [
+            "J02-fr-a1-s1-state",
+            "J02-fr-a1-s1-viewport",
+            "J02-fr-a1-s2-state",
+            "J02-fr-a1-s2-viewport",
+            "J02-fr-a1-s3-state",
+            "J02-fr-a1-s3-viewport",
+            "J02-fr-a1-network",
+            "J02-fr-a1-console",
+            "J02-fr-a1-attempt",
+            "J02-fr-a2-s1-state",
+            "J02-fr-a2-s1-viewport",
+            "J02-fr-a2-s2-state",
+            "J02-fr-a2-s2-viewport",
+            "J02-fr-a2-s3-state",
+            "J02-fr-a2-s3-viewport",
+            "J02-fr-a2-network",
+            "J02-fr-a2-console",
+            "J02-fr-a2-attempt"
+          ],
+          "retest_status": "PASS"
+        }
+      ]
+    },
+    {
+      "oracle_id": "SEED-002",
+      "title": "Language switching from English About loses the internal route",
+      "detected": true,
+      "observations": [
+        {
+          "case_id": "J03-en",
+          "status": "FAIL",
+          "ticket_ids": [
+            "QA-002"
+          ],
+          "evidence_ids": [
+            "J03-en-a1-s1-state",
+            "J03-en-a1-s1-viewport",
+            "J03-en-a1-s2-state",
+            "J03-en-a1-s2-viewport",
+            "J03-en-a1-s3-state",
+            "J03-en-a1-s3-viewport",
+            "J03-en-a1-s4-state",
+            "J03-en-a1-s4-viewport",
+            "J03-en-a1-network",
+            "J03-en-a1-console",
+            "J03-en-a1-attempt",
+            "J03-en-a2-s1-state",
+            "J03-en-a2-s1-viewport",
+            "J03-en-a2-s2-state",
+            "J03-en-a2-s2-viewport",
+            "J03-en-a2-s3-state",
+            "J03-en-a2-s3-viewport",
+            "J03-en-a2-s4-state",
+            "J03-en-a2-s4-viewport",
+            "J03-en-a2-network",
+            "J03-en-a2-console",
+            "J03-en-a2-attempt"
+          ],
+          "retest_status": "PASS"
+        }
+      ]
+    },
+    {
+      "oracle_id": "SEED-003",
+      "title": "French legacy redirect lands on English About",
+      "detected": true,
+      "observations": [
+        {
+          "case_id": "J04-fr",
+          "status": "FAIL",
+          "ticket_ids": [
+            "QA-003"
+          ],
+          "evidence_ids": [
+            "J04-fr-a1-s1-state",
+            "J04-fr-a1-s1-viewport",
+            "J04-fr-a1-s2-state",
+            "J04-fr-a1-s2-viewport",
+            "J04-fr-a1-s3-state",
+            "J04-fr-a1-s3-viewport",
+            "J04-fr-a1-network",
+            "J04-fr-a1-console",
+            "J04-fr-a1-attempt",
+            "J04-fr-a2-network",
+            "J04-fr-a2-console",
+            "J04-fr-a2-attempt",
+            "J04-fr-a2-s1-state"
+          ],
+          "retest_status": "PASS"
+        }
+      ]
+    },
+    {
+      "oracle_id": "SEED-004",
+      "title": "French empty-form validation errors are English",
+      "detected": true,
+      "observations": [
+        {
+          "case_id": "J07-fr",
+          "status": "FAIL",
+          "ticket_ids": [
+            "QA-004"
+          ],
+          "evidence_ids": [
+            "J07-fr-a1-s1-state",
+            "J07-fr-a1-s1-viewport",
+            "J07-fr-a1-s2-state",
+            "J07-fr-a1-s2-viewport",
+            "J07-fr-a1-s3-state",
+            "J07-fr-a1-s3-viewport",
+            "J07-fr-a1-s4-state",
+            "J07-fr-a1-s4-viewport",
+            "J07-fr-a1-network",
+            "J07-fr-a1-console",
+            "J07-fr-a1-attempt",
+            "J07-fr-a2-s1-state",
+            "J07-fr-a2-s1-viewport",
+            "J07-fr-a2-s2-state",
+            "J07-fr-a2-s2-viewport",
+            "J07-fr-a2-s3-state",
+            "J07-fr-a2-s3-viewport",
+            "J07-fr-a2-s4-state",
+            "J07-fr-a2-s4-viewport",
+            "J07-fr-a2-network",
+            "J07-fr-a2-console",
+            "J07-fr-a2-attempt"
+          ],
+          "retest_status": "PASS"
+        }
+      ]
+    },
+    {
+      "oracle_id": "SEED-005",
+      "title": "English email field is skipped by forward keyboard navigation",
+      "detected": true,
+      "observations": [
+        {
+          "case_id": "J08-en",
+          "status": "FAIL",
+          "ticket_ids": [
+            "QA-005"
+          ],
+          "evidence_ids": [
+            "J08-en-a1-s1-state",
+            "J08-en-a1-s1-viewport",
+            "J08-en-a1-s2-state",
+            "J08-en-a1-s2-viewport",
+            "J08-en-a1-s3-state",
+            "J08-en-a1-s3-viewport",
+            "J08-en-a1-network",
+            "J08-en-a1-console",
+            "J08-en-a1-attempt",
+            "J08-en-a2-s1-state",
+            "J08-en-a2-s1-viewport",
+            "J08-en-a2-s2-state",
+            "J08-en-a2-s2-viewport",
+            "J08-en-a2-s3-state",
+            "J08-en-a2-s3-viewport",
+            "J08-en-a2-network",
+            "J08-en-a2-console",
+            "J08-en-a2-attempt"
+          ],
+          "retest_status": "PASS"
+        }
+      ]
+    },
+    {
+      "oracle_id": "SEED-006",
+      "title": "French offer exceeds the 390-pixel mobile viewport",
+      "detected": true,
+      "observations": [
+        {
+          "case_id": "J10-fr",
+          "status": "FAIL",
+          "ticket_ids": [
+            "QA-006"
+          ],
+          "evidence_ids": [
+            "J10-fr-a1-s1-state",
+            "J10-fr-a1-s1-viewport",
+            "J10-fr-a1-s2-state",
+            "J10-fr-a1-s2-viewport",
+            "J10-fr-a1-s3-state",
+            "J10-fr-a1-s3-viewport",
+            "J10-fr-a1-s4-state",
+            "J10-fr-a1-s4-viewport",
+            "J10-fr-a1-network",
+            "J10-fr-a1-console",
+            "J10-fr-a1-attempt",
+            "J10-fr-a2-s1-state",
+            "J10-fr-a2-s1-viewport",
+            "J10-fr-a2-s2-state",
+            "J10-fr-a2-s2-viewport",
+            "J10-fr-a2-s3-state",
+            "J10-fr-a2-s3-viewport",
+            "J10-fr-a2-s4-state",
+            "J10-fr-a2-s4-viewport",
+            "J10-fr-a2-network",
+            "J10-fr-a2-console",
+            "J10-fr-a2-attempt"
+          ],
+          "retest_status": "PASS"
+        }
+      ]
+    }
+  ],
+  "detected": 6,
+  "expected_defects": 6,
+  "missed": [],
+  "unexpected_failed_cases": [],
+  "control_false_failures": [],
+  "controls_not_passed": [],
+  "control_cases": 14,
+  "fixed_control_passes": 14,
+  "transitions": [
+    {
+      "case_id": "J02-fr",
+      "from": "FAIL",
+      "to": "PASS",
+      "ticket_ids": [
+        "QA-001"
+      ]
+    },
+    {
+      "case_id": "J03-en",
+      "from": "FAIL",
+      "to": "PASS",
+      "ticket_ids": [
+        "QA-002"
+      ]
+    },
+    {
+      "case_id": "J04-fr",
+      "from": "FAIL",
+      "to": "PASS",
+      "ticket_ids": [
+        "QA-003"
+      ]
+    },
+    {
+      "case_id": "J07-fr",
+      "from": "FAIL",
+      "to": "PASS",
+      "ticket_ids": [
+        "QA-004"
+      ]
+    },
+    {
+      "case_id": "J08-en",
+      "from": "FAIL",
+      "to": "PASS",
+      "ticket_ids": [
+        "QA-005"
+      ]
+    },
+    {
+      "case_id": "J10-fr",
+      "from": "FAIL",
+      "to": "PASS",
+      "ticket_ids": [
+        "QA-006"
+      ]
+    }
+  ],
+  "fail_to_pass": 6,
+  "limitations": [
+    "Manifestation matching uses case identifiers, ticket linkage, and collected evidence; it does not prove a shared root cause.",
+    "Unexpected failures require investigation and are not automatically false positives.",
+    "The oracle describes this synthetic fixture only; this is not a measurement of general defect recall.",
+    "Agent separation was procedural on a shared filesystem."
+  ],
+  "checks_passed": true
+}

@@ -1,0 +1,5 @@
+* text=auto eol=lf
+*.png binary
+*.zip binary
+# Preserve generated CSV bytes so evidence manifests survive a Git checkout.
+*.csv -text

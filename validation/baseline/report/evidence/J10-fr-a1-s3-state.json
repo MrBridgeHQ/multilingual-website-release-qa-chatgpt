@@ -1,0 +1,368 @@
+{
+  "at": "2026-10-08T11:44:02.557Z",
+  "case_id": "J10-fr",
+  "attempt": 1,
+  "step": 3,
+  "action": "Measure horizontal page overflow",
+  "expected": "Document scrollWidth <= window.innerWidth + 1",
+  "status": "FAIL",
+  "checks": [
+    {
+      "check": "horizontal overflow",
+      "passed": false,
+      "expected": "scrollWidth <= innerWidth + 1",
+      "actual": {
+        "scrollWidth": 556,
+        "innerWidth": 390
+      }
+    }
+  ],
+  "details": {},
+  "state": {
+    "url": "http://127.0.0.1:39175/fr/offer",
+    "title": "Notre offre",
+    "html_lang": "fr",
+    "heading": "Notre offre",
+    "canonical": "http://127.0.0.1:39175/fr/offer",
+    "alternates": [
+      {
+        "language": "en",
+        "url": "http://127.0.0.1:39175/en/offer"
+      },
+      {
+        "language": "fr",
+        "url": "http://127.0.0.1:39175/fr/offer"
+      }
+    ],
+    "active_id": null,
+    "active_tag": "BODY",
+    "scroll_width": 556,
+    "inner_width": 390,
+    "inner_height": 844,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "result_count": 0,
+    "body_text": "Aller au contenu\nAtlas Studio\nMenu\nEnglish\nNotre offre\nOffre Découverte\n\n19,90 € / mois\n\n8 octobre 2026\n\nUn point de départ clair pour votre prochain site web.\n\nContactez-nous\nAtlas Studio",
+    "elements": {
+      "page-heading": {
+        "present": true,
+        "text": "Notre offre",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 16,
+          "y": 137.15625,
+          "width": 358,
+          "height": 34.546875,
+          "right": 374,
+          "bottom": 171.703125
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": false,
+        "href": "/fr/search",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "language-switch": {
+        "present": true,
+        "text": "English",
+        "value": null,
+        "visible": true,
+        "href": "/en/offer",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 312.609375,
+          "y": 61.671875,
+          "width": 61.390625,
+          "height": 25.5,
+          "right": 374,
+          "bottom": 87.171875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "menu-toggle": {
+        "present": true,
+        "text": "Menu",
+        "value": "",
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": "false",
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 16,
+          "y": 49.484375,
+          "width": 80.6875,
+          "height": 49.875,
+          "right": 96.6875,
+          "bottom": 99.359375
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-menu": {
+        "present": true,
+        "text": "AccueilÀ proposRechercheContactOffre",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": false,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-content": {
+        "present": true,
+        "text": "Notre offre\nOffre Découverte\n\n19,90 € / mois\n\n8 octobre 2026\n\nUn point de départ clair pour votre prochain site web.\n\nContactez-nous",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 113.15625,
+          "width": 390,
+          "height": 446.796875,
+          "right": 390,
+          "bottom": 559.953125
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "search-query": {
+        "present": false
+      },
+      "search-submit": {
+        "present": false
+      },
+      "search-results": {
+        "present": false
+      },
+      "empty-state": {
+        "present": false
+      },
+      "result-about": {
+        "present": false
+      },
+      "contact-name": {
+        "present": false
+      },
+      "contact-email": {
+        "present": false
+      },
+      "contact-submit": {
+        "present": false
+      },
+      "name-error": {
+        "present": false
+      },
+      "email-error": {
+        "present": false
+      },
+      "confirmation": {
+        "present": false
+      },
+      "offer-title": {
+        "present": true,
+        "text": "Offre Découverte",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 33,
+          "y": 229.046875,
+          "width": 506,
+          "height": 38.25,
+          "right": 539,
+          "bottom": 267.296875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "offer-price": {
+        "present": true,
+        "text": "19,90 € / mois",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 33,
+          "y": 296.09375,
+          "width": 506,
+          "height": 43.1875,
+          "right": 539,
+          "bottom": 339.28125
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "offer-date": {
+        "present": true,
+        "text": "8 octobre 2026",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 33,
+          "y": 368.078125,
+          "width": 506,
+          "height": 25.5,
+          "right": 539,
+          "bottom": 393.578125
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "offer-cta": {
+        "present": true,
+        "text": "Contactez-nous",
+        "value": null,
+        "visible": true,
+        "href": "/fr/contact",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 33,
+          "y": 469.078125,
+          "width": 166.46875,
+          "height": 49.875,
+          "right": 199.46875,
+          "bottom": 518.953125
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      }
+    }
+  }
+}

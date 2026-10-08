@@ -1,0 +1,82 @@
+{
+  "started_at": "2026-10-08T12:19:04.393933+00:00",
+  "finished_at": "2026-10-08T12:21:20.917496+00:00",
+  "command": [
+    "codex",
+    "exec",
+    "--sandbox",
+    "read-only",
+    "--ephemeral",
+    "--json",
+    "--color",
+    "never",
+    "-C",
+    "<canonical-project>",
+    "-o",
+    "<private-log>",
+    "<explicit-skill-invocation>"
+  ],
+  "returncode": 0,
+  "skill_name": "recette-web-multilingue",
+  "public_title": "Multilingual Website Release QA",
+  "resolved_to_canonical_skill": true,
+  "resources_actually_read": [
+    "SKILL.md",
+    "assets/config.example.json",
+    "references/data-contract.md",
+    "references/execution.md",
+    "references/checks.md",
+    "references/statuses-and-severity.md",
+    "references/evidence-and-safety.md",
+    "assets/ticket-template.md",
+    "assets/report-template.md"
+  ],
+  "resource_paths_verified": true,
+  "output_artifacts": {
+    "documented": {
+      "audit-report.md": "Scope, coverage, findings, detailed tickets, limitations and next actions.",
+      "results.json": "Authoritative cases, steps, attempts, tickets, evidence and computed summary.",
+      "tickets.csv": "Triage and import export derived from results.json.",
+      "evidence/": "Only collected, registered evidence with portable relative paths."
+    },
+    "created": []
+  },
+  "scope_limits": {
+    "installation": "The available-skills entry and all listed resources were accessible.",
+    "resolved_skill_path": "/home/emmanuel/projects/skills/recette-web-multilingue-chatgpt/skills/recette-web-multilingue/SKILL.md",
+    "resolution": "The installed skill directory is a symlink to the supplied project skill directory.",
+    "documented_workflow": "Establish scope and capabilities; validate configuration and plan explicit cases; execute with evidence; triage defects into tickets; validate coherent exports; retest in a new campaign while preserving history.",
+    "skill_boundaries": [
+      "Functional acceptance, multilingual checks and evidence-backed defect reporting.",
+      "Translation-only work, complete SEO audits, penetration tests and legal certification require different workflows.",
+      "Accessibility observations do not certify conformance; performance and regulatory work require explicit scope.",
+      "Missing capabilities require BLOCKED or NOT_RUN outcomes; zero executed checks cannot approve a site.",
+      "Geography requires network-country evidence from the same request context.",
+      "Automatic export headings support English and French; narrative translation remains separate.",
+      "External ticket publication requires an explicit request."
+    ],
+    "check_boundaries": "Local instruction and resource reads only. No websites browsed, files written, software installed, tests or helper scripts executed, or work delegated. Runtime capabilities and schema validity were not verified."
+  },
+  "source_matches_installation": true,
+  "installed_files_sha256": {
+    "SKILL.md": "8172a6af18f0585ce37360121da8f77000fe7705c1e5eb0e35b6438f7c1b3479",
+    "agents/openai.yaml": "08e7b064b4c15779d199286fceee3dc72b17cdb38c943cf05fca2594acf8974f",
+    "assets/config.example.json": "9894b3ab379b7e124fc249c4aace639ba1dc7cedf479624ad07f5a5fafe26d6f",
+    "assets/report-template.md": "b021ae8bae3377093b9c4e4e757c9a3324575435c5c172a35532cc354004a0c4",
+    "assets/ticket-template.md": "393a9226d3dcef583b83e19c24b6a7de71de47ff0150567575b2c153d9de73d1",
+    "references/checks.md": "d8104ccb53194fac8c249106bb89fbe3753dfd2846263036aaaeca1f1017aa15",
+    "references/data-contract.md": "83f00e0cb6c29c136c1fca31c9873473c736c97e3d09f4abbd9fa297214a6392",
+    "references/evidence-and-safety.md": "1ffc3858f46c5b232236f4dbbd5cab4d7e3ffd898e1491aadb38405b8baee7e2",
+    "references/execution.md": "6f6e7f3e9e2bae2ab4fb11ad2a6b7dc2227a95d27db1563299da6a137f9b52b7",
+    "references/statuses-and-severity.md": "2e27f50ee8ea6057696933c6b89e19137749613ae1fdd5d5b58db9efbc756b05",
+    "schemas/config.schema.json": "2f70b3bdd5b36e3503e271f7efbd7a1ad37710234c6917ddc5a3b1ae21f2bd18",
+    "schemas/results.schema.json": "70e6cbd3b3f882660b1b07e2e426bf5b8be4f74ac92071eee27a8d9e9371dc85",
+    "scripts/qa-v2.py": "e69e5140ff08feb0bd9e7f7d82814684024f5fe489d74c386365dce5a33e59c1",
+    "scripts/qa-v3.py": "665f14de4abaa40a6764846b36c59d1a366780d63b1c7bd5d7b20ca239df31aa",
+    "scripts/qa-v4.py": "87d8b9f9d5217ca164b7cb8d141722c68b45debae40c955647b649577350b31d",
+    "scripts/qa.py": "971efb8e26c4fa4b5622bd0ad78df5a7e2d7243d5303eea61aa057ddbb8cffc3"
+  },
+  "transcript_sha256": "3ab8e83d4ef81d905224b4d0b96b69ed61bd264d30acde9da7b7f4b6c1c47718",
+  "probe_passed": true,
+  "limitation": "This checks explicit invocation and resource access, not implicit selection or browser behavior."
+}

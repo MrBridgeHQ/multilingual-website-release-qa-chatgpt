@@ -1,0 +1,30 @@
+{
+  "case_id": "J05-fr",
+  "attempt": 1,
+  "responses": [
+    {
+      "at": "2026-10-08T11:43:53.785Z",
+      "url": "http://127.0.0.1:39175/fr/search",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    },
+    {
+      "at": "2026-10-08T11:43:54.063Z",
+      "url": "http://127.0.0.1:39175/fr/search?q=atlas",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    },
+    {
+      "at": "2026-10-08T11:43:54.377Z",
+      "url": "http://127.0.0.1:39175/fr/about",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    }
+  ]
+}

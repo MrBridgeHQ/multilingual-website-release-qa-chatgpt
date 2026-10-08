@@ -1,0 +1,150 @@
+{
+  "snapshot_at": "2026-10-08T13:56:09.994460+00:00",
+  "campaigns": {
+    "baseline": {
+      "results": "baseline/report/results.json",
+      "report": "baseline/report/audit-report.md",
+      "summary": {
+        "planned": 20,
+        "counts": {
+          "PASS": 14,
+          "FAIL": 6,
+          "BLOCKED": 0,
+          "NOT_RUN": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "executed": 20,
+        "attempted": 20,
+        "coverage": {
+          "numerator": 20,
+          "denominator": 20
+        },
+        "critical_uncovered": [],
+        "verdict": "ISSUES_FOUND",
+        "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+      },
+      "tickets": 6,
+      "evidence_files": 259,
+      "attempts": 26,
+      "browsers": [
+        "151.0.7922.34"
+      ],
+      "started_at": "2026-10-08T11:43:40.730Z",
+      "finished_at": "2026-10-08T11:44:03.494Z"
+    },
+    "fixed": {
+      "results": "fixed/report/results.json",
+      "report": "fixed/report/audit-report.md",
+      "summary": {
+        "planned": 20,
+        "counts": {
+          "PASS": 20,
+          "FAIL": 0,
+          "BLOCKED": 0,
+          "NOT_RUN": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "executed": 20,
+        "attempted": 20,
+        "coverage": {
+          "numerator": 20,
+          "denominator": 20
+        },
+        "critical_uncovered": [],
+        "verdict": "READY_FOR_TESTED_SCOPE",
+        "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+      },
+      "tickets": 0,
+      "evidence_files": 208,
+      "attempts": 20,
+      "browsers": [
+        "151.0.7922.34"
+      ],
+      "started_at": "2026-10-08T12:10:32.238Z",
+      "finished_at": "2026-10-08T12:10:46.860Z"
+    },
+    "replay": {
+      "results": "replay/report/results.json",
+      "report": "replay/report/audit-report.md",
+      "summary": {
+        "planned": 6,
+        "counts": {
+          "PASS": 0,
+          "FAIL": 6,
+          "BLOCKED": 0,
+          "NOT_RUN": 0,
+          "NOT_APPLICABLE": 0
+        },
+        "executed": 6,
+        "attempted": 6,
+        "coverage": {
+          "numerator": 6,
+          "denominator": 6
+        },
+        "critical_uncovered": [],
+        "verdict": "ISSUES_FOUND",
+        "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+      },
+      "tickets": 6,
+      "evidence_files": 31,
+      "attempts": 6,
+      "browsers": [
+        "151.0.7922.34"
+      ],
+      "started_at": "2026-10-08T12:10:30.223057Z",
+      "finished_at": "2026-10-08T12:10:33.676519Z"
+    },
+    "negative": {
+      "results": "negative/delivery/results.json",
+      "report": "negative/delivery/audit-report.md",
+      "summary": {
+        "planned": 5,
+        "counts": {
+          "PASS": 0,
+          "FAIL": 0,
+          "BLOCKED": 4,
+          "NOT_RUN": 1,
+          "NOT_APPLICABLE": 0
+        },
+        "executed": 0,
+        "attempted": 4,
+        "coverage": {
+          "numerator": 0,
+          "denominator": 5
+        },
+        "critical_uncovered": [
+          "N01",
+          "N02",
+          "N03",
+          "N04",
+          "N05"
+        ],
+        "verdict": "NO_EXECUTION",
+        "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+      },
+      "tickets": 0,
+      "evidence_files": 6,
+      "attempts": 4,
+      "browsers": [
+        "153.0.8010.12"
+      ],
+      "started_at": "2026-10-08T11:49:07.953827Z",
+      "finished_at": "2026-10-08T11:49:09.534002Z"
+    }
+  },
+  "candidate_contract_checks": 37,
+  "candidate_checks_passed": true,
+  "candidate_helper_sha256": "87d8b9f9d5217ca164b7cb8d141722c68b45debae40c955647b649577350b31d",
+  "detected_seeded_defects": 6,
+  "expected_seeded_defects": 6,
+  "missed": [],
+  "control_false_failures": [],
+  "fail_to_pass": 6,
+  "retest_acceptance_criteria": 19,
+  "retest_acceptance_criteria_passed": 19,
+  "explicit_invocation_passed": true,
+  "selection_checks_passed": true,
+  "runtime_promotion": "AWAITING_EXPLICIT_FILE_REPLACEMENT_APPROVAL",
+  "publication": "NOT_PUBLISHED",
+  "limitation": "Candidate qa-v4.py passed verification. Canonical qa.py and two instruction files still await the precise approved replacement operation; this snapshot is not a final release claim."
+}

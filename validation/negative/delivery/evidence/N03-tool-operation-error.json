@@ -1,0 +1,8 @@
+{
+  "scenario_type": "CONTROLLED_INVALID_CDP_METHOD",
+  "method": "NegativeScenario.intentionallyMissingMethod",
+  "url": "http://127.0.0.1:39175/en/",
+  "error_type": "Error",
+  "message": "CDPSession.send: Protocol error (NegativeScenario.intentionallyMissingMethod): 'NegativeScenario.intentionallyMissingMethod' wasn't found",
+  "interpretation": "A deliberate client/protocol operation error, not evidence of a website defect."
+}

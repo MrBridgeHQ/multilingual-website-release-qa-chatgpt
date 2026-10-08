@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "kind": "ADDITIVE_TICKET_CLARIFICATIONS",
+  "created_at": "2026-10-08T12:18:44.055275Z",
+  "campaign_id": "independent-ticket-replay-20261008-a1",
+  "scope_note": "These facts supplement the historical tickets. Frozen tickets, replay observations, results, assessments and evidence are unchanged. No browser campaign was rerun.",
+  "clarifications": {
+    "QA-004": {
+      "case_id": "REPLAY-QA-004",
+      "omission_addressed": "The original steps did not name the element used to check that confirmation remains hidden.",
+      "supplemental_instruction": "After opening /fr/contact, leaving both fields empty and clicking #contact-submit once, inspect #confirmation alongside #name-error and #email-error.",
+      "observed_confirmation": {
+        "selector": "#confirmation",
+        "unique_matches_in_recorded_id_elements": 1,
+        "tag": "P",
+        "role": "status",
+        "hidden": true,
+        "visible": false,
+        "text": "",
+        "bounds_css_pixels": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        }
+      },
+      "observed_url": "http://127.0.0.1:39175/fr/contact",
+      "observed_document_language": "fr",
+      "basis": "The selector and state come from the recorded DOM after one empty submission, not from application source.",
+      "evidence": [
+        {
+          "evidence_id": "REPLAY-QA-004-a1-validation",
+          "path": "report/evidence/REPLAY-QA-004-a1-validation.json",
+          "sha256": "687a79ea936383bc24667fd59721a8b452f7ebb2067dc0d22afa6a24cb6576b7",
+          "captured_at": "2026-10-08T12:10:32.541249Z"
+        }
+      ],
+      "limits": [
+        "This identifies the confirmation element in the tested local build; successful-submission behavior was not exercised by this ticket."
+      ]
+    },
+    "QA-006": {
+      "case_id": "REPLAY-QA-006",
+      "omission_addressed": "The original ticket supplied viewport dimensions but did not fully specify browser emulation.",
+      "supplemental_instruction": "To reproduce the independently observed environment, create a fresh Chromium context with the explicit settings below and open /fr/offer. Treat the profile as a narrow desktop Chromium viewport; do not claim a physical mobile-device test.",
+      "observed": {
+        "url": "http://127.0.0.1:39175/fr/offer",
+        "document_language": "fr",
+        "viewport_css_pixels": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "navigator_language": "en-GB",
+        "timezone": "UTC",
+        "scroll_width_css_pixels": 556
+      },
+      "configured": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "locale": "en-GB",
+        "timezone_id": "UTC",
+        "device_scale_factor": 1,
+        "is_mobile": false,
+        "has_touch": false,
+        "service_workers": "block",
+        "headless_new": true,
+        "user_agent_override_supplied": false,
+        "playwright_version": "1.62.0",
+        "physical_device": false
+      },
+      "configuration_basis": {
+        "path": "../../tests/replay_from_tickets.py",
+        "line": 126,
+        "sha256": "4a8eb44f4fe91e72f7981505dfc7d719e7fb299e27d3d66d6e1b99b2caa22a74",
+        "note": "The frozen portable driver has the same context settings as the executed retained driver; only ROOT resolution differs. Explicit context settings are configuration facts, not independent measurements of runtime browser properties."
+      },
+      "unavailable": {
+        "user_agent_string": {
+          "value": null,
+          "availability": "UNAVAILABLE",
+          "reason": "navigator.userAgent was not captured in the frozen evidence."
+        },
+        "device_pixel_ratio": {
+          "value": null,
+          "availability": "UNAVAILABLE",
+          "reason": "window.devicePixelRatio was not captured; the configured device_scale_factor is recorded separately."
+        },
+        "touch_capability": {
+          "value": null,
+          "availability": "UNAVAILABLE",
+          "reason": "Runtime touch APIs such as navigator.maxTouchPoints were not captured; configured has_touch is recorded separately."
+        },
+        "physical_device_model": {
+          "value": null,
+          "availability": "NOT_APPLICABLE",
+          "reason": "This run used Chromium viewport emulation and did not use a physical mobile device."
+        },
+        "original_baseline_mobile_settings": {
+          "value": null,
+          "availability": "UNAVAILABLE",
+          "reason": "The ticket did not specify the full original emulation profile. These supplemental settings describe the independent replay only."
+        }
+      },
+      "evidence": [
+        {
+          "evidence_id": "REPLAY-QA-006-a1-opened",
+          "path": "report/evidence/REPLAY-QA-006-a1-opened.json",
+          "sha256": "cc771ea2e69dd0ff46a5c44c12f1d9c45896e04c05d362b1f9f14bafa948e648",
+          "captured_at": "2026-10-08T12:10:33.249014Z"
+        }
+      ],
+      "limits": [
+        "No custom device descriptor or user-agent override was supplied to browser.new_context.",
+        "The exact configuration of the original baseline attempts is not inferred from this replay."
+      ]
+    }
+  }
+}

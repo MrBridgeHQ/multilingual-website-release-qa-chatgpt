@@ -1,0 +1,53 @@
+[
+  {
+    "id": "FIXTURE-001",
+    "title": "Synthetic submit control remains disabled",
+    "impact": "The hypothetical fixture user cannot submit.",
+    "severity": "MAJOR",
+    "severity_rationale": "The modeled primary form action is unavailable.",
+    "confidence": "HIGH",
+    "scope": {
+      "pages": [
+        "http://127.0.0.1:39175/en/contact"
+      ],
+      "languages": [
+        "en"
+      ],
+      "profiles": [
+        "desktop"
+      ]
+    },
+    "preconditions": [
+      "Use the synthetic validator fixture only."
+    ],
+    "test_data": {
+      "name": "Alex Test"
+    },
+    "steps": [
+      "Inspect the synthetic fixture text.",
+      "Compare the disabled state with the declared expected state."
+    ],
+    "expected": "The fixture submit control is enabled.",
+    "observed": "The fixture submit control is disabled.",
+    "evidence_ids": [
+      "fixture-text"
+    ],
+    "case_ids": [
+      "fixture-case"
+    ],
+    "reproduction": {
+      "reproduced": 1,
+      "attempted": 1
+    },
+    "correction": {
+      "hypothesis": true,
+      "note": "Inspect the hypothetical control-state binding; no real implementation was diagnosed."
+    },
+    "acceptance_criteria": [
+      "The synthetic expected state is enabled."
+    ],
+    "retest_steps": [
+      "Rerun the synthetic case and compare the recorded state."
+    ]
+  }
+]

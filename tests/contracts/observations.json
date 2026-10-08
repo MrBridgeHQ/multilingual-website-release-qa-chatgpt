@@ -1,0 +1,104 @@
+{
+  "schema_version": "1.0",
+  "campaign": {
+    "id": "contract-test-fixture",
+    "started_at": "2026-10-08T12:00:00Z",
+    "finished_at": "2026-10-08T12:01:00Z",
+    "base_url": "http://127.0.0.1:39175",
+    "environment": "LOCAL",
+    "output_language": "en",
+    "capabilities": {
+      "extraction": false,
+      "interaction": false,
+      "screenshots": false,
+      "network": false,
+      "console": false,
+      "traces": false,
+      "geography": false
+    },
+    "limitations": [
+      "This is a synthetic data-contract fixture; no browser was executed to create it."
+    ]
+  },
+  "evidence": [
+    {
+      "id": "fixture-text",
+      "path": "evidence/synthetic-observation.txt",
+      "sha256": "7aa3e7c687490f8cee3c5bc91ff0856168630e0a79f7bd623626a21a938062a0",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:00:00Z",
+      "description": "Synthetic validator fixture, not evidence of a real browser run."
+    }
+  ],
+  "cases": [
+    {
+      "id": "fixture-case",
+      "journey_id": "fixture-submit",
+      "title": "Synthetic contract example",
+      "critical": true,
+      "started_at": "2026-10-08T12:00:00Z",
+      "finished_at": "2026-10-08T12:00:30Z",
+      "url": "http://127.0.0.1:39175/en/contact",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "synthetic",
+          "version": "fixture-1"
+        }
+      },
+      "preconditions": [
+        "Use only this synthetic validator fixture."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Inspect the synthetic fixture.",
+          "expected": "The fixture submit control is enabled.",
+          "observed": "The fixture submit control remains disabled.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "fixture-text"
+          ]
+        }
+      ],
+      "status": "FAIL",
+      "classification": "DEFECT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "FAIL",
+          "observed": "The fixture models one failed attempt.",
+          "evidence_ids": [
+            "fixture-text"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic test is requested."
+      },
+      "evidence_ids": [
+        "fixture-text"
+      ],
+      "limitations": [
+        "Synthetic contract fixture, not an observed browser defect."
+      ],
+      "uncertainties": []
+    }
+  ],
+  "tickets": []
+}

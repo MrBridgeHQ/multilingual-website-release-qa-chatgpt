@@ -1,0 +1,84 @@
+id,title,severity,severity_rationale,confidence,impact,pages,languages,profiles,preconditions,test_data,steps,expected,observed,evidence_ids,case_ids,reproduced,attempted,correction_hypothesis,correction_note,acceptance_criteria,retest_steps
+QA-001,French desktop About navigation opens Search,MAJOR,"An agreed primary navigation journey fails for the French desktop segment. Direct /fr/about and the tested French search-result route provide observed alternate access, so this is not a site-wide blocker.",HIGH,A French desktop visitor selecting À propos is taken to Search and cannot reach the intended information through that primary link.,"http://127.0.0.1:39175/fr/
+http://127.0.0.1:39175/fr/search",fr,desktop,"Fresh Chromium context, version 151.0.7922.34.
+Viewport 1440 × 900 CSS pixels; locale en-GB; time zone UTC.
+Use the public synthetic baseline on port 39175; no login.",{},"Open http://127.0.0.1:39175/fr/ at 1440 × 900.
+Click the visible À propos link #main-about.
+Inspect the actual URL and #page-heading.","The destination is /fr/about, HTTP 200, html[lang]=fr, heading À propos d’Atlas Studio.",The link has href=/fr/search. Clicking it reaches /fr/search with heading Rechercher chez Atlas Studio; the document remains French.,"J02-fr-a1-s1-state
+J02-fr-a1-s3-state
+J02-fr-a1-s3-viewport
+J02-fr-a2-s1-state
+J02-fr-a2-s3-state
+J02-fr-a2-s3-viewport",J02-fr,2,2,true,The observed desktop #main-about href points at the search route. Correcting its route binding to /fr/about is a hypothesis to verify in implementation; no source was inspected.,"Clicking #main-about from /fr/ reaches /fr/about and the approved localized heading.
+The English desktop primary navigation continues to reach /en/about.
+The already working French mobile #mobile-about route remains /fr/about.","In a new campaign on the corrected origin, repeat J02-fr exactly.
+Run J02-en and J09-fr as relevant navigation witnesses."
+QA-002,Switching About from English to French loses the internal page,MAJOR,The explicit context-preserving language-switch journey fails in one direction. The other direction and direct French About access work in the observed scope.,HIGH,A visitor reading the English About page loses that page when selecting French and arrives at the French home page.,"http://127.0.0.1:39175/en/about
+http://127.0.0.1:39175/fr/",en,desktop,"Fresh Chromium context, version 151.0.7922.34.
+Viewport 1440 × 900 CSS pixels; locale en-GB; time zone UTC.
+Use the public synthetic baseline on port 39175; no login.",{},"Open http://127.0.0.1:39175/en/about at 1440 × 900.
+Click the Français control #language-switch.
+Read the destination URL, html[lang] and #page-heading.",The destination is /fr/about with html[lang]=fr and heading À propos d’Atlas Studio.,#language-switch has href=/fr/. The actual destination is /fr/ and its heading is Bienvenue chez Atlas Studio. The language changes but the internal page is lost.,"J03-en-a1-s1-state
+J03-en-a1-s3-state
+J03-en-a1-s4-viewport
+J03-en-a2-s1-state
+J03-en-a2-s3-state
+J03-en-a2-s4-viewport",J03-en,2,2,true,The rendered language switch appears to use the French entry route rather than the equivalent About route. Derive the alternate target from the current route; root cause has not been inspected.,"EN About → Français reaches /fr/about, preserving page identity.
+FR About → English still reaches /en/about.
+Both destination headings and html languages match their target routes.","Repeat J03-en on the corrected origin with a fresh desktop context.
+Repeat J03-fr to check the opposite direction."
+QA-003,French legacy redirect switches the visitor to English,MAJOR,"A supplied language-preserving entrypoint fails for French. Direct /fr/about works, giving an observed alternate entry route.",HIGH,A visitor following the French legacy URL receives the English About page and loses the requested language.,"http://127.0.0.1:39175/fr/legacy
+http://127.0.0.1:39175/en/about",fr,desktop,"Fresh Chromium context, version 151.0.7922.34.
+Viewport 1440 × 900 CSS pixels; locale en-GB; time zone UTC.
+Use the public synthetic baseline on port 39175; no login.",{},"Open http://127.0.0.1:39175/fr/legacy at 1440 × 900.
+Capture the redirect status and Location.
+Inspect the final URL, document language and heading.","/fr/legacy returns HTTP 302 with Location /fr/about; the final page returns HTTP 200, html[lang]=fr and heading À propos d’Atlas Studio.","Both navigations return HTTP 302 Location /en/about, followed by HTTP 200 at /en/about, html[lang]=en and About Atlas Studio. Attempt 2 retained the actual DOM/network before a screenshot timeout; the timeout is not a website defect and no second screenshot is claimed.","J04-fr-a1-s2-state
+J04-fr-a1-s2-viewport
+J04-fr-a1-network
+J04-fr-a2-s1-state
+J04-fr-a2-network",J04-fr,2,2,true,The redirect Location is visibly bound to the English route. Preserve the incoming language when selecting the About target; this implementation hypothesis has not been source-verified.,"French legacy returns HTTP 302 to /fr/about, followed by a 200 French About document.
+English legacy still returns HTTP 302 to /en/about, followed by a 200 English About document.","Repeat J04-fr on the corrected origin, collecting the 302 response and final DOM.
+Repeat J04-en as the unchanged-language witness."
+QA-004,French form validation errors are displayed in English,MINOR,"Validation still prevents an empty confirmation and correctly exposes both invalid fields. The observed defect is localized guidance, with no demonstrated failure of validation itself.",HIGH,French visitors receive English instructions for correcting missing name and email fields.,http://127.0.0.1:39175/fr/contact,fr,desktop,"Fresh Chromium context, version 151.0.7922.34.
+Viewport 1440 × 900 CSS pixels; locale en-GB; time zone UTC.
+Use the public synthetic baseline on port 39175; no login.","{""email"": """", ""name"": """"}","Open http://127.0.0.1:39175/fr/contact at 1440 × 900.
+Leave #contact-name and #contact-email empty.
+Click #contact-submit once.
+Read #name-error and #email-error.",Visible messages are Saisissez votre nom. and Saisissez une adresse e-mail valide.; both fields have aria-invalid=true and confirmation stays hidden.,"Messages are Enter your name. and Enter a valid email address. on a French document. Both errors are visible, both aria-invalid values are true, and confirmation is hidden.","J07-fr-a1-s3-state
+J07-fr-a1-s4-state
+J07-fr-a1-s4-viewport
+J07-fr-a2-s4-state
+J07-fr-a2-s4-viewport",J07-fr,2,2,true,The validation messages may be selected independently of the document language. Bind missing-name and missing/invalid-email copy to the active French locale; no validation source was read.,"Empty French submission displays both exact approved French messages.
+Invalid fields remain marked aria-invalid=true; confirmation remains hidden.
+English empty validation and the French valid keyboard submission continue to work.","Repeat J07-fr with empty fields on the corrected origin.
+Run J07-en and J08-fr as validation and successful-submission witnesses."
+QA-005,English contact form skips the required email field during keyboard entry,MAJOR,A required field is skipped in an essential keyboard workflow. The French keyboard witness completes successfully. No working English keyboard workaround was verified.,HIGH,"The contracted forward keyboard sequence cannot enter the required email, preventing English keyboard-only completion.",http://127.0.0.1:39175/en/contact,en,desktop,"Fresh Chromium context, version 151.0.7922.34.
+Viewport 1440 × 900 CSS pixels; locale en-GB; time zone UTC.
+Use the public synthetic baseline on port 39175; no login.","{""email"": ""alex@example.test"", ""name"": ""Alex Test""}","Open http://127.0.0.1:39175/en/contact at 1440 × 900.
+Focus #contact-name and type Alex Test using keyboard input.
+Press Tab exactly once.
+Inspect document.activeElement.id and the visible focus outline. Do not click or fill the skipped email field.","The first Tab reaches #contact-email with a visible outline; after typing alex@example.test, the next Tab reaches #contact-submit and Enter displays the approved English confirmation.","The first Tab focuses #contact-submit, whose orange outline is visible. #contact-email stays empty and has tabindex=-1. The expected email step fails; subsequent email entry, submit and confirmation checks were NOT_RUN in both attempts.","J08-en-a1-s2-state
+J08-en-a1-s3-state
+J08-en-a1-s3-viewport
+J08-en-a2-s3-state
+J08-en-a2-s3-viewport",J08-en,2,2,true,The observed tabindex=-1 on #contact-email is consistent with exclusion from forward Tab order. Restore a normal focusable order and verify the visible focus indicator and complete keyboard submission; application source was not inspected.,"The forward order is contact-name → contact-email → contact-submit.
+The focused email field and submit control have visible focus indications.
+Typing the supplied synthetic data and pressing Enter shows Thank you, Alex Test. Your local request is confirmed. without visible validation errors.
+The French keyboard form remains functional.","Repeat J08-en exactly on the corrected origin, stopping if a focus transition is wrong.
+Check every previously unexecuted later step through confirmation.
+Repeat J08-fr as a keyboard witness."
+QA-006,French mobile offer overflows horizontally and clips its description,MINOR,"The visible presentation is impaired, but the title, price, date and CTA remain readable, and the CTA was clicked successfully to /fr/contact. Functional obstruction beyond the clipped content was not demonstrated.",HIGH,"At 390 CSS pixels, the offer card extends beyond the viewport and its description is clipped until the visitor scrolls horizontally.",http://127.0.0.1:39175/fr/offer,fr,mobile,"Fresh Chromium context, version 151.0.7922.34.
+Viewport 390 × 844 CSS pixels; locale en-GB; time zone UTC.
+Use the public synthetic baseline on port 39175; no login.",{},"Open http://127.0.0.1:39175/fr/offer with a 390 × 844 Chromium viewport.
+Compare document.documentElement.scrollWidth with window.innerWidth.
+Inspect the right edge of the offer card and description before interacting.
+Click #offer-cta and record whether it remains visible and reaches French Contact.","scrollWidth is no greater than innerWidth + 1, the offer content fits without horizontal scrolling, and the visible CTA reaches /fr/contact.","Both attempts measure scrollWidth=556 and innerWidth=390, exceeding the one-pixel allowance by 165 pixels. The viewport screenshot clips the card and the sentence Un point de départ clair pour votre prochain site web. at the right edge. The CTA is inside the viewport and successfully reaches /fr/contact.","J10-fr-a1-s3-state
+J10-fr-a1-s3-viewport
+J10-fr-a1-s4-state
+J10-fr-a2-s3-state
+J10-fr-a2-s3-viewport
+J10-fr-a2-s4-state",J10-fr,2,2,true,An offer-card width or minimum-width constraint may exceed the French mobile container. Constrain the card/content to available viewport width and allow wrapping; the CSS implementation was not inspected.,"At 390 × 844, document scrollWidth <= innerWidth + 1 and the full description fits without horizontal page scrolling.
+Approved French title, price and date remain unchanged.
+The CTA remains inside the viewport, can be clicked and reaches /fr/contact.
+English offer layout and CTA continue to pass.","Repeat all J10-fr checks on the corrected origin, capturing width measurements and a viewport screenshot.
+Repeat J10-en as the layout and CTA witness."

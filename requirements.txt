@@ -1,0 +1,4 @@
+# Versions used for the validation environment.
+playwright==1.62.0
+jsonschema==4.10.3
+PyYAML==6.0.1

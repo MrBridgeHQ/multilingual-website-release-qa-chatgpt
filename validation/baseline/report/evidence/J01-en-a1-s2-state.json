@@ -1,0 +1,291 @@
+{
+  "at": "2026-10-08T11:43:42.126Z",
+  "case_id": "J01-en",
+  "attempt": 1,
+  "step": 2,
+  "action": "Inspect language and heading",
+  "expected": "Requested language and approved localized home heading",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "URL",
+      "passed": true,
+      "expected": "http://127.0.0.1:39175/en/",
+      "actual": "http://127.0.0.1:39175/en/"
+    },
+    {
+      "check": "html language",
+      "passed": true,
+      "expected": "en",
+      "actual": "en"
+    },
+    {
+      "check": "localized heading",
+      "passed": true,
+      "expected": "Welcome to Atlas Studio",
+      "actual": "Welcome to Atlas Studio"
+    },
+    {
+      "check": "last document HTTP status",
+      "passed": true,
+      "expected": 200,
+      "actual": 200
+    }
+  ],
+  "details": {},
+  "state": {
+    "url": "http://127.0.0.1:39175/en/",
+    "title": "Welcome to Atlas Studio",
+    "html_lang": "en",
+    "heading": "Welcome to Atlas Studio",
+    "canonical": "http://127.0.0.1:39175/en/",
+    "alternates": [
+      {
+        "language": "en",
+        "url": "http://127.0.0.1:39175/en/"
+      },
+      {
+        "language": "fr",
+        "url": "http://127.0.0.1:39175/fr/"
+      }
+    ],
+    "active_id": null,
+    "active_tag": "BODY",
+    "scroll_width": 1440,
+    "inner_width": 1440,
+    "inner_height": 900,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "result_count": 0,
+    "body_text": "Skip to content\nAtlas Studio\nHome\nAbout\nSearch\nContact\nOffer\nFrançais\nWelcome to Atlas Studio\n\nA fictional studio with a fully local demonstration website.\n\nOffer\n\nAtlas Studio",
+    "elements": {
+      "page-heading": {
+        "present": true,
+        "text": "Welcome to Atlas Studio",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 90.5,
+          "width": 1072,
+          "height": 40.796875,
+          "right": 1256,
+          "bottom": 131.296875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-about": {
+        "present": true,
+        "text": "About",
+        "value": null,
+        "visible": true,
+        "href": "/en/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 226.171875,
+          "y": 16,
+          "width": 50.265625,
+          "height": 25.5,
+          "right": 276.4375,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "language-switch": {
+        "present": true,
+        "text": "Français",
+        "value": null,
+        "visible": true,
+        "href": "/fr/",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 1345.921875,
+          "y": 16,
+          "width": 70.078125,
+          "height": 25.5,
+          "right": 1416,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "menu-toggle": {
+        "present": true,
+        "text": "Menu",
+        "value": "",
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": "false",
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-menu": {
+        "present": true,
+        "text": "HomeAboutSearchContactOffer",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-about": {
+        "present": true,
+        "text": "About",
+        "value": null,
+        "visible": false,
+        "href": "/en/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-content": {
+        "present": true,
+        "text": "Welcome to Atlas Studio\n\nA fictional studio with a fully local demonstration website.\n\nOffer",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 160,
+          "y": 58.5,
+          "width": 1120,
+          "height": 233.359375,
+          "right": 1280,
+          "bottom": 291.859375
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "search-query": {
+        "present": false
+      },
+      "search-submit": {
+        "present": false
+      },
+      "search-results": {
+        "present": false
+      },
+      "empty-state": {
+        "present": false
+      },
+      "result-about": {
+        "present": false
+      },
+      "contact-name": {
+        "present": false
+      },
+      "contact-email": {
+        "present": false
+      },
+      "contact-submit": {
+        "present": false
+      },
+      "name-error": {
+        "present": false
+      },
+      "email-error": {
+        "present": false
+      },
+      "confirmation": {
+        "present": false
+      },
+      "offer-title": {
+        "present": false
+      },
+      "offer-price": {
+        "present": false
+      },
+      "offer-date": {
+        "present": false
+      },
+      "offer-cta": {
+        "present": false
+      }
+    }
+  }
+}

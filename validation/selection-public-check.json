@@ -1,0 +1,28 @@
+{
+  "selection_results": [
+    {
+      "id": "project-french-functional",
+      "expected_selection": true,
+      "observed_skill_file_read": true,
+      "returncode": 0,
+      "passed": true,
+      "transcript_sha256": "f2d15c4edd32a940725c8ca227b8d2c346b8ce8083bbc254902596ce6879f47a"
+    },
+    {
+      "id": "project-translation-only",
+      "expected_selection": false,
+      "observed_skill_file_read": false,
+      "returncode": 0,
+      "passed": true,
+      "transcript_sha256": "197b9e881c3ab1e8921d1d6ed2d54455d542d618e5e017b48b134591c8da7589"
+    }
+  ],
+  "all_passed": true,
+  "method": "Fresh read-only Codex CLI sessions in the project Git directory, without naming or preloading the target skill in the selection prompts.",
+  "inputs": [
+    "A functional release QA request in French.",
+    "A translation-only request in English."
+  ],
+  "startup_limitation": "An earlier attempt from the non-Git parent directory was rejected before model execution. Its traces remain local.",
+  "scope": "Selection and local resource loading; no website execution in these probes."
+}

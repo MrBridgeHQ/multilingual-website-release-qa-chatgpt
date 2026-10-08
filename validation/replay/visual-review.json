@@ -1,0 +1,49 @@
+{
+  "reviewed_at": "2026-10-08T12:13:39.104614Z",
+  "reviewer": "Independent ticket replay agent",
+  "method": "Direct visual inspection with view_image of every registered screenshot.",
+  "items": [
+    {
+      "evidence_id": "REPLAY-QA-001-a1-destination-viewport",
+      "path": "report/evidence/REPLAY-QA-001-a1-destination-viewport.png",
+      "sha256": "c569c4f83cd559ee075f24a3394a8e33fdfecfd95b6a5f8f6274a864cab04ada",
+      "observation": "The French Search heading and search controls are visible."
+    },
+    {
+      "evidence_id": "REPLAY-QA-002-a1-destination-viewport",
+      "path": "report/evidence/REPLAY-QA-002-a1-destination-viewport.png",
+      "sha256": "87e05f75fb445c219d276b3ae7895b519db78ffa33f75e2b307b6fe39e367ab3",
+      "observation": "The French home heading and Offer CTA are visible."
+    },
+    {
+      "evidence_id": "REPLAY-QA-003-a1-final-viewport",
+      "path": "report/evidence/REPLAY-QA-003-a1-final-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "observation": "English navigation and About Atlas Studio are visible."
+    },
+    {
+      "evidence_id": "REPLAY-QA-004-a1-validation-viewport",
+      "path": "report/evidence/REPLAY-QA-004-a1-validation-viewport.png",
+      "sha256": "16c90583f756e3ea2ae62e5aec0641453bd06ef1707dfdcef270f95049458f27",
+      "observation": "French field labels accompany the visible red English messages Enter your name. and Enter a valid email address.; no confirmation is visible."
+    },
+    {
+      "evidence_id": "REPLAY-QA-005-a1-focus-viewport",
+      "path": "report/evidence/REPLAY-QA-005-a1-focus-viewport.png",
+      "sha256": "89c9639941a576f3d41eca92a2552b4645ffe7a7c48523fa6f923ba918513596",
+      "observation": "Alex Test appears in Name, Email is empty, and a visible orange outline surrounds Send local request."
+    },
+    {
+      "evidence_id": "REPLAY-QA-006-a1-offer-viewport",
+      "path": "report/evidence/REPLAY-QA-006-a1-offer-viewport.png",
+      "sha256": "5bb20195caec707634626cf8035fc96a61d5fb3e1e9b973f45201b085696560e",
+      "observation": "The card and description extend beyond the right edge. The title, 19,90 € / mois, 8 octobre 2026 and Contactez-nous CTA remain readable; a horizontal scrollbar is visible."
+    },
+    {
+      "evidence_id": "REPLAY-QA-006-a1-contact-viewport",
+      "path": "report/evidence/REPLAY-QA-006-a1-contact-viewport.png",
+      "sha256": "32500c021a264997f802bb9f0c381b3d818779a9e344bb53749dd552341700cc",
+      "observation": "The French Contact heading, French field labels and submission control are visible."
+    }
+  ]
+}

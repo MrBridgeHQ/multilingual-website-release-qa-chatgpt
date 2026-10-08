@@ -1,0 +1,22 @@
+{
+  "case_id": "J09-en",
+  "attempt": 1,
+  "responses": [
+    {
+      "at": "2026-10-08T12:10:44.338Z",
+      "url": "http://127.0.0.1:39176/en/",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    },
+    {
+      "at": "2026-10-08T12:10:44.659Z",
+      "url": "http://127.0.0.1:39176/en/about",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    }
+  ]
+}

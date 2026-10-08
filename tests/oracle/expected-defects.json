@@ -1,0 +1,111 @@
+{
+  "oracle_version": "1.0.0",
+  "fixture": "Atlas Studio",
+  "purpose": "Comparison oracle. Do not provide this file or server.py to the auditor before the baseline report is frozen.",
+  "business_contract": "../demo/product-contract.md",
+  "variants": {
+    "baseline": {
+      "base_url": "http://127.0.0.1:39175",
+      "expected_counts": {
+        "planned": 20,
+        "PASS": 14,
+        "FAIL": 6,
+        "BLOCKED": 0,
+        "NOT_RUN": 0,
+        "NOT_APPLICABLE": 0
+      }
+    },
+    "corrected": {
+      "base_url": "http://127.0.0.1:39176",
+      "expected_counts": {
+        "planned": 20,
+        "PASS": 20,
+        "FAIL": 0,
+        "BLOCKED": 0,
+        "NOT_RUN": 0,
+        "NOT_APPLICABLE": 0
+      }
+    }
+  },
+  "defects": [
+    {
+      "id": "SEED-001",
+      "case_ids": ["J02-fr"],
+      "category": "navigation_destination",
+      "title": "French primary About navigation opens search",
+      "expected": "Click #main-about from /fr/ and reach /fr/about.",
+      "baseline": "#main-about links to /fr/search.",
+      "corrected": "#main-about links to /fr/about.",
+      "required_observation": "A real click and the actual destination URL, with the wrong-page heading or link target as supporting evidence."
+    },
+    {
+      "id": "SEED-002",
+      "case_ids": ["J03-en"],
+      "category": "language_switch_route",
+      "title": "Language switching from English About loses the internal route",
+      "expected": "Click #language-switch from /en/about and reach /fr/about.",
+      "baseline": "The switch links to /fr/.",
+      "corrected": "The switch links to /fr/about.",
+      "required_observation": "A real switch click with starting and resulting URLs and document languages."
+    },
+    {
+      "id": "SEED-003",
+      "case_ids": ["J04-fr"],
+      "category": "redirect_language",
+      "title": "French legacy redirect lands on English About",
+      "expected": "Open /fr/legacy and retain French at /fr/about.",
+      "baseline": "HTTP 302 Location points to /en/about.",
+      "corrected": "HTTP 302 Location points to /fr/about.",
+      "required_observation": "The final URL and document language; record the actual redirect status and Location when the browser exposes them."
+    },
+    {
+      "id": "SEED-004",
+      "case_ids": ["J07-fr"],
+      "category": "localized_validation",
+      "title": "French empty-form validation errors are English",
+      "expected": "The errors read Saisissez votre nom. and Saisissez une adresse e-mail valide.",
+      "baseline": "The errors read Enter your name. and Enter a valid email address.",
+      "corrected": "Both validation errors use the approved French strings.",
+      "required_observation": "Click the empty form submit button and capture both displayed errors in their original language."
+    },
+    {
+      "id": "SEED-005",
+      "case_ids": ["J08-en"],
+      "category": "keyboard_navigation",
+      "title": "English email field is skipped by forward keyboard navigation",
+      "expected": "After filling #contact-name, one Tab focuses #contact-email; a second Tab after filling email focuses #contact-submit.",
+      "baseline": "#contact-email has tabindex=-1, so Tab from #contact-name focuses #contact-submit.",
+      "corrected": "The email field is in the normal forward tab order.",
+      "required_observation": "Record the actually focused element after a real Tab keystroke. A screenshot of the form alone is insufficient."
+    },
+    {
+      "id": "SEED-006",
+      "case_ids": ["J10-fr"],
+      "category": "mobile_overflow",
+      "title": "French offer exceeds the 390-pixel mobile viewport",
+      "expected": "At viewport width 390, documentElement.scrollWidth is at most window.innerWidth + 1.",
+      "baseline": "The French offer card has width and min-width 540px within the mobile layout, producing horizontal page overflow.",
+      "corrected": "The card uses the same responsive width as the English card.",
+      "required_observation": "Record actual scrollWidth and innerWidth at the specified viewport and include a corresponding screenshot."
+    }
+  ],
+  "control_cases": [
+    "J01-en", "J01-fr", "J02-en", "J03-fr", "J04-en",
+    "J05-en", "J05-fr", "J06-en", "J06-fr", "J07-en",
+    "J08-fr", "J09-en", "J09-fr", "J10-en"
+  ],
+  "negative_fixture": {
+    "path": "/auth-required",
+    "http_status": 401,
+    "expected_classification": "BLOCKED",
+    "reason": "Credentials are deliberately unavailable; this endpoint is outside the twenty baseline cases and does not imply a website defect."
+  },
+  "comparison_rules": [
+    "These counts are expected fixture behavior, not observed execution results.",
+    "Freeze the independent baseline audit before revealing this oracle.",
+    "Match observations to manifestations, not merely to guessed root causes or ticket wording.",
+    "Record detected, missed, and unsupported reported defects separately.",
+    "A tool failure is not a false positive when it is accurately classified as BLOCKED and not reported as a website defect.",
+    "After comparison, retest the corrected variant and preserve both baseline and retest evidence."
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "case_id": "J02-fr",
+  "attempt": 1,
+  "started_at": "2026-10-08T12:10:34.694Z",
+  "finished_at": "2026-10-08T12:10:35.255Z",
+  "status": "PASS",
+  "incident": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open /fr/",
+      "expected": "HTTP 200 home page",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/fr/\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J02-fr-a1-s1-state",
+        "J02-fr-a1-s1-viewport"
+      ]
+    },
+    {
+      "number": 2,
+      "action": "Click #main-about",
+      "expected": "Navigation actually occurs",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"navigation occurred\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J02-fr-a1-s2-state",
+        "J02-fr-a1-s2-viewport"
+      ]
+    },
+    {
+      "number": 3,
+      "action": "Inspect the destination",
+      "expected": "Same-language /about, HTTP 200 and localized About heading",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J02-fr-a1-s3-state",
+        "J02-fr-a1-s3-viewport"
+      ]
+    }
+  ],
+  "final_url": "http://127.0.0.1:39176/fr/about"
+}

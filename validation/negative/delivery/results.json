@@ -1,0 +1,463 @@
+{
+  "schema_version": "1.0",
+  "campaign": {
+    "id": "synthetic-negative-scenarios",
+    "started_at": "2026-10-08T11:49:07.953827Z",
+    "finished_at": "2026-10-08T11:49:09.534002Z",
+    "base_url": "http://127.0.0.1:39175",
+    "environment": "LOCAL",
+    "output_language": "en",
+    "capabilities": {
+      "extraction": true,
+      "interaction": true,
+      "screenshots": true,
+      "network": true,
+      "console": false,
+      "traces": false,
+      "geography": false
+    },
+    "limitations": [
+      "This is a negative-behavior validation campaign, separate from the twenty baseline release journeys.",
+      "N01 and N03 inject controlled tool failures. N04 supplies a controlled incomplete business requirement. N02 and N05 record actual authentication and country-proof limitations.",
+      "No complete release-check case is executed. Diagnostic observations and handling checks do not approve the website.",
+      "No console stream or trace was collected. No full accessibility, performance, legal, or production audit was attempted.",
+      "The Chromium process and its fresh profile are retained; no cleanup or deletion was requested."
+    ]
+  },
+  "cases": [
+    {
+      "id": "N01",
+      "journey_id": "N01",
+      "title": "Unavailable browser capability is reported as a tooling block",
+      "critical": true,
+      "started_at": "2026-10-08T11:49:07.953849Z",
+      "finished_at": "2026-10-08T11:49:07.954708Z",
+      "url": "http://127.0.0.1:39175/en/",
+      "language": "en",
+      "profile": {
+        "id": "negative-desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": null
+        },
+        "locale": "en-US",
+        "timezone": "Europe/Paris",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Synthetic local fixture only; no production site is under audit.",
+        "This scenario is separate from the twenty baseline journey-language pairs."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Start the configured missing browser executable.",
+          "expected": "A usable browser is required before functional site assertions.",
+          "observed": "Actual FileNotFoundError with errno 2; no website navigation occurred.",
+          "status": "BLOCKED",
+          "evidence_ids": [
+            "N01-browser-unavailable"
+          ]
+        }
+      ],
+      "status": "BLOCKED",
+      "classification": "TOOLING_INCIDENT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "BLOCKED",
+          "observed": "Actual FileNotFoundError with errno 2; no website navigation occurred.",
+          "evidence_ids": [
+            "N01-browser-unavailable"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No country assertion is requested for this scenario."
+      },
+      "evidence_ids": [
+        "N01-browser-unavailable"
+      ],
+      "limitations": [
+        "Controlled failure injection; this is not a claim that all browsers are unavailable in the environment.",
+        "The URL/profile are planned targets; browser version is unavailable because this executable never started."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "N02",
+      "journey_id": "N02",
+      "title": "Unavailable authentication blocks a protected journey",
+      "critical": true,
+      "started_at": "2026-10-08T11:49:09.071247Z",
+      "finished_at": "2026-10-08T11:49:09.082916Z",
+      "url": "http://127.0.0.1:39175/auth-required",
+      "language": "en",
+      "profile": {
+        "id": "negative-desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "153.0.8010.12"
+        },
+        "locale": "en-US",
+        "timezone": "Europe/Paris",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Synthetic local fixture only; no production site is under audit.",
+        "This scenario is separate from the twenty baseline journey-language pairs."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Request the protected local endpoint without credentials.",
+          "expected": "Authorized credentials are required before checking the protected journey.",
+          "observed": "The endpoint returned HTTP 401 with an authentication challenge. Protected journey steps were not executed.",
+          "status": "BLOCKED",
+          "evidence_ids": [
+            "N02-authentication-response"
+          ]
+        }
+      ],
+      "status": "BLOCKED",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "BLOCKED",
+          "observed": "The endpoint returned HTTP 401 with an authentication challenge. Protected journey steps were not executed.",
+          "evidence_ids": [
+            "N02-authentication-response"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No country assertion is requested for this scenario."
+      },
+      "evidence_ids": [
+        "N02-authentication-response"
+      ],
+      "limitations": [
+        "The actual HTTP response was collected through Playwright's API client; this is not a claim that a browser authentication dialog was visually inspected.",
+        "The fixture intentionally requires unavailable credentials; authentication failure is not a website defect."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "N03",
+      "journey_id": "N03",
+      "title": "A failed browser operation is a tooling incident",
+      "critical": true,
+      "started_at": "2026-10-08T11:49:09.082923Z",
+      "finished_at": "2026-10-08T11:49:09.247208Z",
+      "url": "http://127.0.0.1:39175/en/",
+      "language": "en",
+      "profile": {
+        "id": "negative-desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "153.0.8010.12"
+        },
+        "locale": "en-US",
+        "timezone": "Europe/Paris",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Synthetic local fixture only; no production site is under audit.",
+        "This scenario is separate from the twenty baseline journey-language pairs."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Issue the deliberately invalid CDP method after local navigation.",
+          "expected": "A working diagnostic operation is needed before relying on its claimed measurement.",
+          "observed": "CDPSession.send: Protocol error (NegativeScenario.intentionallyMissingMethod): 'NegativeScenario.intentionallyMissingMethod' wasn't found",
+          "status": "BLOCKED",
+          "evidence_ids": [
+            "N03-tool-operation-error"
+          ]
+        }
+      ],
+      "status": "BLOCKED",
+      "classification": "TOOLING_INCIDENT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "BLOCKED",
+          "observed": "CDPSession.send: Protocol error (NegativeScenario.intentionallyMissingMethod): 'NegativeScenario.intentionallyMissingMethod' wasn't found",
+          "evidence_ids": [
+            "N03-tool-operation-error"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No country assertion is requested for this scenario."
+      },
+      "evidence_ids": [
+        "N03-tool-operation-error"
+      ],
+      "limitations": [
+        "Controlled tool-error injection; the webpage was not assessed as defective.",
+        "No automatic retry was attempted because an invalid method is not a transient error."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "N04",
+      "journey_id": "N04",
+      "title": "Missing commercial expectations remain a product question",
+      "critical": true,
+      "started_at": "2026-10-08T11:49:09.247218Z",
+      "finished_at": "2026-10-08T11:49:09.247338Z",
+      "url": "http://127.0.0.1:39175/en/offer",
+      "language": "en",
+      "profile": {
+        "id": "negative-desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": null
+        },
+        "locale": "en-US",
+        "timezone": "Europe/Paris",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Synthetic local fixture only; no production site is under audit.",
+        "This scenario is separate from the twenty baseline journey-language pairs."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Resolve the acceptance criterion before asserting commercial correctness.",
+          "expected": "No required price, tax treatment, or market was supplied in this isolated negative input.",
+          "observed": "Which approved price, tax treatment, billing period, and market should this offer satisfy?",
+          "status": "NOT_RUN",
+          "evidence_ids": [
+            "N04-missing-expectation"
+          ]
+        }
+      ],
+      "status": "NOT_RUN",
+      "classification": "PRODUCT_QUESTION",
+      "attempts": [],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No country assertion is requested for this scenario."
+      },
+      "evidence_ids": [
+        "N04-missing-expectation"
+      ],
+      "limitations": [
+        "This controlled input intentionally omits expectations; it does not replace the complete public baseline business contract.",
+        "No browser operation or commercial correctness assertion was performed for this case; URL/profile are planned targets and browser version is not applicable."
+      ],
+      "uncertainties": [
+        "Commercial correctness cannot be assessed without approved product expectations."
+      ]
+    },
+    {
+      "id": "N05",
+      "journey_id": "N05",
+      "title": "French locale does not prove a French network country",
+      "critical": true,
+      "started_at": "2026-10-08T11:49:09.247343Z",
+      "finished_at": "2026-10-08T11:49:09.517164Z",
+      "url": "http://127.0.0.1:39175/fr/",
+      "language": "fr",
+      "profile": {
+        "id": "negative-desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "153.0.8010.12"
+        },
+        "locale": "fr-FR",
+        "timezone": "Europe/Paris",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Synthetic local fixture only; no production site is under audit.",
+        "This scenario is separate from the twenty baseline journey-language pairs."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open the French local page and inspect the actual context.",
+          "expected": "Collect only the language and browser facts the session exposes.",
+          "observed": "Observed document language fr, locale fr-FR, timezone Europe/Paris.",
+          "status": "PASS",
+          "evidence_ids": [
+            "N05-unproven-country-context",
+            "N05-french-page"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Verify that the website request uses the requested French network exit country.",
+          "expected": "Country evidence must concern the same network context as the website request.",
+          "observed": "No such measurement is available; verified country remains null and no geographic success is claimed.",
+          "status": "BLOCKED",
+          "evidence_ids": [
+            "N05-unproven-country-context"
+          ]
+        }
+      ],
+      "status": "BLOCKED",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "BLOCKED",
+          "observed": "No such measurement is available; verified country remains null and no geographic success is claimed.",
+          "evidence_ids": [
+            "N05-unproven-country-context",
+            "N05-french-page"
+          ]
+        }
+      ],
+      "country": {
+        "requested": "FR",
+        "verified": null,
+        "status": "BLOCKED",
+        "same_network_context": false,
+        "evidence_ids": [
+          "N05-unproven-country-context"
+        ],
+        "note": "French content, fr-FR locale, Europe/Paris timezone, and a loopback URL do not establish the country of a website request."
+      },
+      "evidence_ids": [
+        "N05-unproven-country-context",
+        "N05-french-page"
+      ],
+      "limitations": [
+        "Actual language observations were collected, but this case's requested geographic condition remains unverified.",
+        "No external geolocation service was contacted; the local browser is not a physical device."
+      ],
+      "uncertainties": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "N01-browser-unavailable",
+      "path": "evidence/N01-browser-unavailable.json",
+      "sha256": "0b4ac26039ccd0dafc57edc7638290699fc71783680637e3584c2458fcdaffc6",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T11:49:07.954502Z",
+      "description": "Actual FileNotFoundError from a controlled absent browser executable."
+    },
+    {
+      "id": "N02-authentication-response",
+      "path": "evidence/N02-authentication-response.json",
+      "sha256": "eca7bbb91e586dd3b894ee40dca89e9ee6c36255b464f72c31dddbca2bb50965",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T11:49:09.082713Z",
+      "description": "Actual HTTP 401 from the synthetic local endpoint using Playwright's browser-context API client."
+    },
+    {
+      "id": "N03-tool-operation-error",
+      "path": "evidence/N03-tool-operation-error.json",
+      "sha256": "d16f7658fcc243b925287f727c1f7cf8a97a6b064186892cce3467e571c19134",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T11:49:09.246974Z",
+      "description": "Actual CDP protocol error produced by an intentionally invalid tool method."
+    },
+    {
+      "id": "N04-missing-expectation",
+      "path": "evidence/N04-missing-expectation.json",
+      "sha256": "5cda168c0841385d602b9001f52a193c96db91bda53ba6625d709e4056308138",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T11:49:09.247230Z",
+      "description": "Declared negative-test input and the resulting unresolved product question; not a website observation."
+    },
+    {
+      "id": "N05-unproven-country-context",
+      "path": "evidence/N05-unproven-country-context.json",
+      "sha256": "c811bd1dea987b4b6207a8cd53b5e2e4bba50c4e50b7021b733f0e299751cbef",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T11:49:09.396984Z",
+      "description": "Actual French page and browser context observations, explicitly insufficient to verify network country."
+    },
+    {
+      "id": "N05-french-page",
+      "path": "evidence/N05-french-page.png",
+      "sha256": "87e05f75fb445c219d276b3ae7895b519db78ffa33f75e2b307b6fe39e367ab3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T11:49:09.516706Z",
+      "description": "Actual French local page screenshot; it is not proof of geographic network origin."
+    }
+  ],
+  "tickets": [],
+  "summary": {
+    "planned": 5,
+    "counts": {
+      "PASS": 0,
+      "FAIL": 0,
+      "BLOCKED": 4,
+      "NOT_RUN": 1,
+      "NOT_APPLICABLE": 0
+    },
+    "executed": 0,
+    "attempted": 4,
+    "coverage": {
+      "numerator": 0,
+      "denominator": 5
+    },
+    "critical_uncovered": [
+      "N01",
+      "N02",
+      "N03",
+      "N04",
+      "N05"
+    ],
+    "verdict": "NO_EXECUTION",
+    "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+  }
+}

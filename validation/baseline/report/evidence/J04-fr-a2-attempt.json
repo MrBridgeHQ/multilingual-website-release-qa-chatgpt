@@ -1,0 +1,35 @@
+{
+  "case_id": "J04-fr",
+  "attempt": 2,
+  "started_at": "2026-10-08T11:43:47.802Z",
+  "finished_at": "2026-10-08T11:43:52.855Z",
+  "status": "BLOCKED",
+  "incident": "TimeoutError: Page.screenshot: Timeout 5000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open /{language}/legacy",
+      "expected": "Redirect occurs",
+      "observed": "Browser/driver incident: TimeoutError: Page.screenshot: Timeout 5000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n",
+      "status": "BLOCKED",
+      "evidence_ids": []
+    },
+    {
+      "number": 2,
+      "action": "Inspect the final document",
+      "expected": "Same-language /about and localized About heading",
+      "observed": "Not executed after the browser/driver incident.",
+      "status": "NOT_RUN",
+      "evidence_ids": []
+    },
+    {
+      "number": 3,
+      "action": "Inspect redirect response",
+      "expected": "Initial HTTP 302, Location to same-language /about, final HTTP 200",
+      "observed": "Not executed after the browser/driver incident.",
+      "status": "NOT_RUN",
+      "evidence_ids": []
+    }
+  ],
+  "final_url": "http://127.0.0.1:39175/en/about"
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "J06-fr",
+  "attempt": 1,
+  "responses": [
+    {
+      "at": "2026-10-08T12:10:40.386Z",
+      "url": "http://127.0.0.1:39176/fr/search",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    },
+    {
+      "at": "2026-10-08T12:10:40.669Z",
+      "url": "http://127.0.0.1:39176/fr/search?q=zzzz-no-match",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": null
+    }
+  ]
+}

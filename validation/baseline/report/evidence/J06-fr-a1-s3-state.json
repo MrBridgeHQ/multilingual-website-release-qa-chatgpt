@@ -1,0 +1,389 @@
+{
+  "at": "2026-10-08T11:43:55.679Z",
+  "case_id": "J06-fr",
+  "attempt": 1,
+  "step": 3,
+  "action": "Inspect the empty state",
+  "expected": "Zero results, visible approved localized empty-state text",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "result count",
+      "passed": true,
+      "expected": 0,
+      "actual": 0
+    },
+    {
+      "check": "query retained",
+      "passed": true,
+      "expected": "zzzz-no-match",
+      "actual": "zzzz-no-match"
+    },
+    {
+      "check": "empty state visible",
+      "passed": true,
+      "expected": true,
+      "actual": true
+    },
+    {
+      "check": "localized empty message",
+      "passed": true,
+      "expected": "Aucun résultat.",
+      "actual": "Aucun résultat."
+    }
+  ],
+  "details": {},
+  "state": {
+    "url": "http://127.0.0.1:39175/fr/search?q=zzzz-no-match",
+    "title": "Rechercher chez Atlas Studio",
+    "html_lang": "fr",
+    "heading": "Rechercher chez Atlas Studio",
+    "canonical": "http://127.0.0.1:39175/fr/search",
+    "alternates": [
+      {
+        "language": "en",
+        "url": "http://127.0.0.1:39175/en/search"
+      },
+      {
+        "language": "fr",
+        "url": "http://127.0.0.1:39175/fr/search"
+      }
+    ],
+    "active_id": null,
+    "active_tag": "BODY",
+    "scroll_width": 1440,
+    "inner_width": 1440,
+    "inner_height": 900,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "result_count": 0,
+    "body_text": "Aller au contenu\nAtlas Studio\nAccueil\nÀ propos\nRecherche\nContact\nOffre\nEnglish\nRechercher chez Atlas Studio\nTermes de recherche\nRechercher\n\nAucun résultat.\n\nAtlas Studio",
+    "elements": {
+      "page-heading": {
+        "present": true,
+        "text": "Rechercher chez Atlas Studio",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 90.5,
+          "width": 1072,
+          "height": 40.796875,
+          "right": 1256,
+          "bottom": 131.296875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": true,
+        "href": "/fr/search",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 236.6875,
+          "y": 16,
+          "width": 74.890625,
+          "height": 25.5,
+          "right": 311.578125,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "language-switch": {
+        "present": true,
+        "text": "English",
+        "value": null,
+        "visible": true,
+        "href": "/en/search?q=zzzz-no-match",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 1354.609375,
+          "y": 16,
+          "width": 61.390625,
+          "height": 25.5,
+          "right": 1416,
+          "bottom": 41.5
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "menu-toggle": {
+        "present": true,
+        "text": "Menu",
+        "value": "",
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": "false",
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-menu": {
+        "present": true,
+        "text": "AccueilÀ proposRechercheContactOffre",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": false,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-content": {
+        "present": true,
+        "text": "Rechercher chez Atlas Studio\nTermes de recherche\nRechercher\n\nAucun résultat.",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 160,
+          "y": 58.5,
+          "width": 1120,
+          "height": 332.71875,
+          "right": 1280,
+          "bottom": 391.21875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "search-query": {
+        "present": true,
+        "text": "",
+        "value": "zzzz-no-match",
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 182.375,
+          "width": 560,
+          "height": 48.28125,
+          "right": 744,
+          "bottom": 230.65625
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(0, 0, 0)"
+        },
+        "box_shadow": "none",
+        "labels": [
+          {
+            "text": "Termes de recherche",
+            "visible": true,
+            "for": "search-query"
+          }
+        ]
+      },
+      "search-submit": {
+        "present": true,
+        "text": "Rechercher",
+        "value": "",
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 249.84375,
+          "width": 130.28125,
+          "height": 49.875,
+          "right": 314.28125,
+          "bottom": 299.71875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "search-results": {
+        "present": true,
+        "text": "Aucun résultat.",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 316.71875,
+          "width": 1072,
+          "height": 25.5,
+          "right": 1256,
+          "bottom": 342.21875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "empty-state": {
+        "present": true,
+        "text": "Aucun résultat.",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 184,
+          "y": 316.71875,
+          "width": 1072,
+          "height": 25.5,
+          "right": 1256,
+          "bottom": 342.21875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "result-about": {
+        "present": false
+      },
+      "contact-name": {
+        "present": false
+      },
+      "contact-email": {
+        "present": false
+      },
+      "contact-submit": {
+        "present": false
+      },
+      "name-error": {
+        "present": false
+      },
+      "email-error": {
+        "present": false
+      },
+      "confirmation": {
+        "present": false
+      },
+      "offer-title": {
+        "present": false
+      },
+      "offer-price": {
+        "present": false
+      },
+      "offer-date": {
+        "present": false
+      },
+      "offer-cta": {
+        "present": false
+      }
+    }
+  }
+}

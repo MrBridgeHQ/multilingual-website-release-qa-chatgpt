@@ -1,0 +1,783 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "campaign": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "started_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "finished_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "base_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "environment": {
+          "type": "string",
+          "enum": [
+            "LOCAL",
+            "STAGING",
+            "PRODUCTION"
+          ]
+        },
+        "output_language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]+)*$"
+        },
+        "capabilities": {
+          "type": "object",
+          "properties": {
+            "extraction": {
+              "type": "boolean"
+            },
+            "interaction": {
+              "type": "boolean"
+            },
+            "screenshots": {
+              "type": "boolean"
+            },
+            "network": {
+              "type": "boolean"
+            },
+            "console": {
+              "type": "boolean"
+            },
+            "traces": {
+              "type": "boolean"
+            },
+            "geography": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "extraction",
+            "interaction",
+            "screenshots",
+            "network",
+            "console",
+            "traces",
+            "geography"
+          ],
+          "additionalProperties": false
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "id",
+        "started_at",
+        "finished_at",
+        "base_url",
+        "environment",
+        "output_language",
+        "capabilities",
+        "limitations"
+      ],
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^evidence/.+"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "SCREENSHOT",
+              "DOM",
+              "NETWORK",
+              "CONSOLE",
+              "TRACE",
+              "TEXT"
+            ]
+          },
+          "captured_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "path",
+          "sha256",
+          "kind",
+          "captured_at",
+          "description"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "journey_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "critical": {
+            "type": "boolean"
+          },
+          "started_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finished_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "language": {
+            "type": "string",
+            "minLength": 1
+          },
+          "profile": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "device_class": {
+                "type": "string",
+                "enum": [
+                  "DESKTOP",
+                  "MOBILE_EMULATION",
+                  "REAL_MOBILE"
+                ]
+              },
+              "viewport": {
+                "type": "object",
+                "properties": {
+                  "width": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "height": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "width",
+                  "height"
+                ],
+                "additionalProperties": false
+              },
+              "browser": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "version": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "required": [
+                  "name",
+                  "version"
+                ],
+                "additionalProperties": false
+              },
+              "locale": {
+                "type": "string",
+                "minLength": 1
+              },
+              "timezone": {
+                "type": "string",
+                "minLength": 1
+              },
+              "physical_device": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "id",
+              "device_class",
+              "viewport",
+              "browser"
+            ],
+            "additionalProperties": false
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "test_data": {
+            "type": "object"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "number": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "action": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "observed": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "PASS",
+                    "FAIL",
+                    "BLOCKED",
+                    "NOT_RUN",
+                    "NOT_APPLICABLE"
+                  ]
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "number",
+                "action",
+                "expected",
+                "observed",
+                "status",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "PASS",
+              "FAIL",
+              "BLOCKED",
+              "NOT_RUN",
+              "NOT_APPLICABLE"
+            ]
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "NONE",
+              "DEFECT",
+              "SUSPECTED_INCONSISTENCY",
+              "PRODUCT_QUESTION",
+              "TOOLING_INCIDENT"
+            ]
+          },
+          "attempts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "number": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "PASS",
+                    "FAIL",
+                    "BLOCKED",
+                    "NOT_RUN",
+                    "NOT_APPLICABLE"
+                  ]
+                },
+                "observed": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "number",
+                "status",
+                "observed",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "country": {
+            "type": "object",
+            "properties": {
+              "requested": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[A-Z]{2}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "verified": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[A-Z]{2}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "PASS",
+                  "FAIL",
+                  "BLOCKED",
+                  "NOT_RUN",
+                  "NOT_APPLICABLE"
+                ]
+              },
+              "same_network_context": {
+                "type": "boolean"
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "note": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "requested",
+              "verified",
+              "status",
+              "same_network_context",
+              "evidence_ids",
+              "note"
+            ],
+            "additionalProperties": false
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "uncertainties": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "id",
+          "journey_id",
+          "title",
+          "critical",
+          "started_at",
+          "finished_at",
+          "url",
+          "language",
+          "profile",
+          "preconditions",
+          "test_data",
+          "steps",
+          "status",
+          "classification",
+          "attempts",
+          "country",
+          "evidence_ids",
+          "limitations",
+          "uncertainties"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "tickets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "impact": {
+            "type": "string",
+            "minLength": 1
+          },
+          "severity": {
+            "type": "string",
+            "enum": [
+              "BLOCKER",
+              "MAJOR",
+              "MINOR",
+              "COSMETIC"
+            ]
+          },
+          "severity_rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW"
+            ]
+          },
+          "scope": {
+            "type": "object",
+            "properties": {
+              "pages": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "minItems": 1
+              },
+              "languages": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              },
+              "profiles": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "minItems": 1
+              }
+            },
+            "required": [
+              "pages",
+              "languages",
+              "profiles"
+            ],
+            "additionalProperties": false
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "test_data": {
+            "type": "object"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "expected": {
+            "type": "string",
+            "minLength": 1
+          },
+          "observed": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "case_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "reproduction": {
+            "type": "object",
+            "properties": {
+              "reproduced": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "attempted": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "reproduced",
+              "attempted"
+            ],
+            "additionalProperties": false
+          },
+          "correction": {
+            "type": "object",
+            "properties": {
+              "hypothesis": {
+                "type": "boolean"
+              },
+              "note": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "hypothesis",
+              "note"
+            ],
+            "additionalProperties": false
+          },
+          "acceptance_criteria": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          },
+          "retest_steps": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "impact",
+          "severity",
+          "severity_rationale",
+          "confidence",
+          "scope",
+          "preconditions",
+          "test_data",
+          "steps",
+          "expected",
+          "observed",
+          "evidence_ids",
+          "case_ids",
+          "reproduction",
+          "correction",
+          "acceptance_criteria",
+          "retest_steps"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "planned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "counts": {
+          "type": "object",
+          "properties": {
+            "PASS": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "FAIL": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "BLOCKED": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "NOT_RUN": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "NOT_APPLICABLE": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "PASS",
+            "FAIL",
+            "BLOCKED",
+            "NOT_RUN",
+            "NOT_APPLICABLE"
+          ],
+          "additionalProperties": false
+        },
+        "executed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attempted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coverage": {
+          "type": "object",
+          "properties": {
+            "numerator": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "denominator": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "numerator",
+            "denominator"
+          ],
+          "additionalProperties": false
+        },
+        "critical_uncovered": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "verdict": {
+          "type": "string",
+          "enum": [
+            "NO_EXECUTION",
+            "ISSUES_FOUND",
+            "INCOMPLETE",
+            "READY_FOR_TESTED_SCOPE"
+          ]
+        },
+        "scope_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "planned",
+        "counts",
+        "executed",
+        "attempted",
+        "coverage",
+        "critical_uncovered",
+        "verdict",
+        "scope_note"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "campaign",
+    "evidence",
+    "cases",
+    "tickets",
+    "summary"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Multilingual Website Release QA results"
+}

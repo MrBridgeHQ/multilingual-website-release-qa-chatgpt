@@ -1,0 +1,481 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "campaign_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "start_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "environment": {
+      "type": "string",
+      "enum": [
+        "LOCAL",
+        "STAGING",
+        "PRODUCTION"
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "properties": {
+        "allowed_origins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1
+        },
+        "allowed_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "excluded_origins": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 0
+        },
+        "excluded_paths": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "required": [
+        "allowed_origins",
+        "allowed_paths",
+        "excluded_origins",
+        "excluded_paths"
+      ],
+      "additionalProperties": false
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "minLength": 1
+          },
+          "entry_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "browser_locale": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "code",
+          "entry_url",
+          "browser_locale"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "url_mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "urls": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string",
+              "format": "uri"
+            },
+            "minProperties": 1
+          }
+        },
+        "required": [
+          "id",
+          "urls"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "countries": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2}$"
+      },
+      "minItems": 0
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "device_class": {
+            "type": "string",
+            "enum": [
+              "DESKTOP",
+              "MOBILE_EMULATION",
+              "REAL_MOBILE"
+            ]
+          },
+          "viewport": {
+            "type": "object",
+            "properties": {
+              "width": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "height": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "browser": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "name",
+              "version"
+            ],
+            "additionalProperties": false
+          },
+          "locale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "timezone": {
+            "type": "string",
+            "minLength": 1
+          },
+          "physical_device": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "device_class",
+          "viewport",
+          "browser"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "journeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "critical": {
+            "type": "boolean"
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "P0",
+              "P1",
+              "P2"
+            ]
+          },
+          "preconditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "test_data": {
+            "type": "object"
+          },
+          "steps": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "number": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "action": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "expectation_basis": {
+                  "type": "string",
+                  "enum": [
+                    "SUPPLIED",
+                    "ASSUMED",
+                    "PRODUCT_QUESTION"
+                  ]
+                }
+              },
+              "required": [
+                "number",
+                "action",
+                "expected",
+                "expectation_basis"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "critical",
+          "priority",
+          "preconditions",
+          "test_data",
+          "steps"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "journey_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "language": {
+            "type": "string",
+            "minLength": 1
+          },
+          "profile_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "country": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[A-Z]{2}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "journey_id",
+          "language",
+          "profile_id",
+          "country"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "authentication": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "ENVIRONMENT_REFERENCE",
+            "MANUAL_SESSION",
+            "EXTERNAL_SECRET_MANAGER"
+          ]
+        },
+        "reference": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "authorization_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "mode",
+        "reference",
+        "authorization_note"
+      ],
+      "additionalProperties": false
+    },
+    "authorized_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scope": {
+            "type": "string",
+            "minLength": 1
+          },
+          "authorization": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "action",
+          "scope",
+          "authorization"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "budgets": {
+      "type": "object",
+      "properties": {
+        "time_seconds": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_requests": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "max_retries": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "time_seconds",
+        "max_pages",
+        "max_requests",
+        "max_retries"
+      ],
+      "additionalProperties": false
+    },
+    "output": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string",
+          "minLength": 1
+        },
+        "formats": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "JSON",
+              "MARKDOWN",
+              "CSV"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 3
+        },
+        "output_language": {
+          "type": "string",
+          "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]+)*$",
+          "default": "en"
+        }
+      },
+      "required": [
+        "directory",
+        "formats",
+        "output_language"
+      ],
+      "additionalProperties": false
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "campaign_id",
+    "start_url",
+    "environment",
+    "scope",
+    "languages",
+    "url_mappings",
+    "countries",
+    "profiles",
+    "journeys",
+    "cases",
+    "authentication",
+    "authorized_actions",
+    "budgets",
+    "output",
+    "assumptions"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Multilingual Website Release QA campaign configuration"
+}

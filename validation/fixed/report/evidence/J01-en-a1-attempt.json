@@ -1,0 +1,44 @@
+{
+  "case_id": "J01-en",
+  "attempt": 1,
+  "started_at": "2026-10-08T12:10:33.031Z",
+  "finished_at": "2026-10-08T12:10:33.457Z",
+  "status": "PASS",
+  "incident": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open /en/",
+      "expected": "HTTP 200 and the requested home URL",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"home URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J01-en-a1-s1-state",
+        "J01-en-a1-s1-viewport"
+      ]
+    },
+    {
+      "number": 2,
+      "action": "Inspect language and heading",
+      "expected": "Requested language and approved localized home heading",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"Welcome to Atlas Studio\", \"actual\": \"Welcome to Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J01-en-a1-s2-state",
+        "J01-en-a1-s2-viewport"
+      ]
+    },
+    {
+      "number": 3,
+      "action": "Inspect canonical and alternate links",
+      "expected": "Current-route canonical without query and equivalent en/fr routes",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"canonical\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}, {\"check\": \"alternate en\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}, {\"check\": \"alternate fr\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/\", \"actual\": \"http://127.0.0.1:39176/fr/\"}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J01-en-a1-s3-state",
+        "J01-en-a1-s3-viewport"
+      ]
+    }
+  ],
+  "final_url": "http://127.0.0.1:39176/en/"
+}

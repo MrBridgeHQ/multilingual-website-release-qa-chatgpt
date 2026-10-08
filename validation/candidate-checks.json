@@ -1,0 +1,146 @@
+{
+  "helper": "skills/recette-web-multilingue/scripts/qa-v4.py",
+  "helper_sha256": "87d8b9f9d5217ca164b7cb8d141722c68b45debae40c955647b649577350b31d",
+  "commands": [
+    {
+      "id": "skill-format",
+      "command": [
+        "python3",
+        "-B",
+        "<system-skills>/skill-creator/scripts/quick_validate.py",
+        "<repository>/skills/recette-web-multilingue"
+      ],
+      "started_at": "2026-10-08T13:51:01.877945+00:00",
+      "finished_at": "2026-10-08T13:51:01.933266+00:00",
+      "returncode": 0,
+      "stdout": "Skill is valid!\n",
+      "stderr": ""
+    },
+    {
+      "id": "configuration",
+      "command": [
+        "python3",
+        "-B",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py",
+        "validate-config",
+        "<repository>/skills/recette-web-multilingue/assets/config.example.json"
+      ],
+      "started_at": "2026-10-08T13:51:01.933552+00:00",
+      "finished_at": "2026-10-08T13:51:02.077998+00:00",
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"planned_cases\": 20,\n  \"profiles\": 2,\n  \"languages\": 2\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "core-contracts",
+      "command": [
+        "python3",
+        "-B",
+        "tests/test_contracts.py",
+        "run",
+        "--helper",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py"
+      ],
+      "started_at": "2026-10-08T13:51:02.078393+00:00",
+      "finished_at": "2026-10-08T13:51:02.272893+00:00",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "test_action_authorization_note_is_not_a_secret_header (__main__.ContractTests.test_action_authorization_note_is_not_a_secret_header) ... ok\ntest_config_does_not_infer_requested_country (__main__.ContractTests.test_config_does_not_infer_requested_country) ... ok\ntest_config_rejects_blank_expectation (__main__.ContractTests.test_config_rejects_blank_expectation) ... ok\ntest_config_rejects_duplicate_cases_and_zero_budget (__main__.ContractTests.test_config_rejects_duplicate_cases_and_zero_budget) ... ok\ntest_config_rejects_excluded_path_and_prefix_collision (__main__.ContractTests.test_config_rejects_excluded_path_and_prefix_collision) ... ok\ntest_config_rejects_external_scope (__main__.ContractTests.test_config_rejects_external_scope) ... ok\ntest_config_rejects_unknown_matrix_reference (__main__.ContractTests.test_config_rejects_unknown_matrix_reference) ... ok\ntest_config_unknown_expectation_becomes_product_question (__main__.ContractTests.test_config_unknown_expectation_becomes_product_question) ... ok\ntest_country_claim_requires_same_context_network_proof (__main__.ContractTests.test_country_claim_requires_same_context_network_proof) ... ok\ntest_csv_formula_prefix_is_neutralized (__main__.ContractTests.test_csv_formula_prefix_is_neutralized) ... ok\ntest_evidence_path_traversal_is_rejected (__main__.ContractTests.test_evidence_path_traversal_is_rejected) ... ok\ntest_evidence_symlink_is_rejected (__main__.ContractTests.test_evidence_symlink_is_rejected) ... ok\ntest_example_config_has_exact_twenty_cases (__main__.ContractTests.test_example_config_has_exact_twenty_cases) ... ok\ntest_exports_are_derived_and_relocatable (__main__.ContractTests.test_exports_are_derived_and_relocatable) ... ok\ntest_failed_step_needs_evidence (__main__.ContractTests.test_failed_step_needs_evidence) ... ok\ntest_failure_remains_failure_when_later_steps_are_not_run (__main__.ContractTests.test_failure_remains_failure_when_later_steps_are_not_run) ... ok\ntest_french_headings_preserve_english_enums_and_original_quotes (__main__.ContractTests.test_french_headings_preserve_english_enums_and_original_quotes) ... ok\ntest_inapplicable_is_not_execution_or_automatic_approval (__main__.ContractTests.test_inapplicable_is_not_execution_or_automatic_approval) ... ok\ntest_invalid_status_is_rejected_by_schema (__main__.ContractTests.test_invalid_status_is_rejected_by_schema) ... ok\ntest_masked_secret_is_allowed_but_actual_secret_is_not (__main__.ContractTests.test_masked_secret_is_allowed_but_actual_secret_is_not) ... ok\ntest_missing_evidence_and_checksum_mismatch_are_reported (__main__.ContractTests.test_missing_evidence_and_checksum_mismatch_are_reported) ... ok\ntest_observations_without_tickets_are_valid_before_triage (__main__.ContractTests.test_observations_without_tickets_are_valid_before_triage) ... ok\ntest_partial_journey_cannot_be_pass (__main__.ContractTests.test_partial_journey_cannot_be_pass) ... ok\ntest_stale_evidence_timestamp_is_rejected (__main__.ContractTests.test_stale_evidence_timestamp_is_rejected) ... ok\ntest_summary_must_reconcile (__main__.ContractTests.test_summary_must_reconcile) ... ok\ntest_ticket_scope_cannot_claim_untested_language (__main__.ContractTests.test_ticket_scope_cannot_claim_untested_language) ... ok\ntest_ticket_unknown_case_and_invented_frequency_are_rejected (__main__.ContractTests.test_ticket_unknown_case_and_invented_frequency_are_rejected) ... ok\ntest_tool_failure_cannot_be_reported_as_site_defect (__main__.ContractTests.test_tool_failure_cannot_be_reported_as_site_defect) ... ok\ntest_unknown_output_language_is_an_explicit_export_limitation (__main__.ContractTests.test_unknown_output_language_is_an_explicit_export_limitation) ... ok\ntest_unproven_country_blocks_a_passing_case (__main__.ContractTests.test_unproven_country_blocks_a_passing_case) ... ok\ntest_zero_executed_cases_cannot_be_ready (__main__.ContractTests.test_zero_executed_cases_cannot_be_ready) ... ok\n\n----------------------------------------------------------------------\nRan 31 tests in 0.071s\n\nOK\n",
+      "checks": 31
+    },
+    {
+      "id": "country-contracts",
+      "command": [
+        "python3",
+        "-B",
+        "tests/contracts/test_country_mismatch.py",
+        "--helper",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py"
+      ],
+      "started_at": "2026-10-08T13:51:02.273459+00:00",
+      "finished_at": "2026-10-08T13:51:02.388490+00:00",
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"checks\": 2,\n  \"cases\": [\n    \"country_mismatch_is_tooling_block\",\n    \"country_mismatch_cannot_pass\"\n  ]\n}\n",
+      "stderr": "",
+      "checks": 2
+    },
+    {
+      "id": "retry-contracts",
+      "command": [
+        "python3",
+        "-B",
+        "tests/contracts/test_retry_outcomes.py",
+        "--helper",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py"
+      ],
+      "started_at": "2026-10-08T13:51:02.388670+00:00",
+      "finished_at": "2026-10-08T13:51:02.530955+00:00",
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"checks\": 4,\n  \"cases\": [\n    \"failure_then_tool_block_remains_failure\",\n    \"failure_then_pass_is_intermittent_one_of_two\",\n    \"passing_retry_cannot_erase_failure\",\n    \"failed_attempt_requires_evidence\"\n  ]\n}\n",
+      "stderr": "",
+      "checks": 4
+    },
+    {
+      "id": "baseline",
+      "command": [
+        "python3",
+        "-B",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py",
+        "validate-results",
+        "validation/baseline/report/results.json"
+      ],
+      "started_at": "2026-10-08T13:51:02.531384+00:00",
+      "finished_at": "2026-10-08T13:51:02.748909+00:00",
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"summary\": {\n    \"planned\": 20,\n    \"counts\": {\n      \"PASS\": 14,\n      \"FAIL\": 6,\n      \"BLOCKED\": 0,\n      \"NOT_RUN\": 0,\n      \"NOT_APPLICABLE\": 0\n    },\n    \"executed\": 20,\n    \"attempted\": 20,\n    \"coverage\": {\n      \"numerator\": 20,\n      \"denominator\": 20\n    },\n    \"critical_uncovered\": [],\n    \"verdict\": \"ISSUES_FOUND\",\n    \"scope_note\": \"This verdict applies only to the explicitly planned cases and observed environment.\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "fixed",
+      "command": [
+        "python3",
+        "-B",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py",
+        "validate-results",
+        "validation/fixed/report/results.json"
+      ],
+      "started_at": "2026-10-08T13:51:02.749250+00:00",
+      "finished_at": "2026-10-08T13:51:02.943202+00:00",
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"summary\": {\n    \"planned\": 20,\n    \"counts\": {\n      \"PASS\": 20,\n      \"FAIL\": 0,\n      \"BLOCKED\": 0,\n      \"NOT_RUN\": 0,\n      \"NOT_APPLICABLE\": 0\n    },\n    \"executed\": 20,\n    \"attempted\": 20,\n    \"coverage\": {\n      \"numerator\": 20,\n      \"denominator\": 20\n    },\n    \"critical_uncovered\": [],\n    \"verdict\": \"READY_FOR_TESTED_SCOPE\",\n    \"scope_note\": \"This verdict applies only to the explicitly planned cases and observed environment.\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "replay",
+      "command": [
+        "python3",
+        "-B",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py",
+        "validate-results",
+        "validation/replay/report/results.json"
+      ],
+      "started_at": "2026-10-08T13:51:02.943517+00:00",
+      "finished_at": "2026-10-08T13:51:03.086730+00:00",
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"summary\": {\n    \"planned\": 6,\n    \"counts\": {\n      \"PASS\": 0,\n      \"FAIL\": 6,\n      \"BLOCKED\": 0,\n      \"NOT_RUN\": 0,\n      \"NOT_APPLICABLE\": 0\n    },\n    \"executed\": 6,\n    \"attempted\": 6,\n    \"coverage\": {\n      \"numerator\": 6,\n      \"denominator\": 6\n    },\n    \"critical_uncovered\": [],\n    \"verdict\": \"ISSUES_FOUND\",\n    \"scope_note\": \"This verdict applies only to the explicitly planned cases and observed environment.\"\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "id": "negative",
+      "command": [
+        "python3",
+        "-B",
+        "<repository>/skills/recette-web-multilingue/scripts/qa-v4.py",
+        "validate-results",
+        "validation/negative/delivery/results.json"
+      ],
+      "started_at": "2026-10-08T13:51:03.087167+00:00",
+      "finished_at": "2026-10-08T13:51:03.203426+00:00",
+      "returncode": 0,
+      "stdout": "{\n  \"valid\": true,\n  \"summary\": {\n    \"planned\": 5,\n    \"counts\": {\n      \"PASS\": 0,\n      \"FAIL\": 0,\n      \"BLOCKED\": 4,\n      \"NOT_RUN\": 1,\n      \"NOT_APPLICABLE\": 0\n    },\n    \"executed\": 0,\n    \"attempted\": 4,\n    \"coverage\": {\n      \"numerator\": 0,\n      \"denominator\": 5\n    },\n    \"critical_uncovered\": [\n      \"N01\",\n      \"N02\",\n      \"N03\",\n      \"N04\",\n      \"N05\"\n    ],\n    \"verdict\": \"NO_EXECUTION\",\n    \"scope_note\": \"This verdict applies only to the explicitly planned cases and observed environment.\"\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "all_passed": true,
+  "contract_checks": 37
+}

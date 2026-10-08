@@ -1,0 +1,1329 @@
+{
+  "schema_version": "1.0",
+  "campaign": {
+    "id": "independent-ticket-replay-20261008-a1",
+    "started_at": "2026-10-08T12:10:30.223057Z",
+    "finished_at": "2026-10-08T12:10:33.676519Z",
+    "base_url": "http://127.0.0.1:39175",
+    "environment": "LOCAL",
+    "output_language": "en",
+    "capabilities": {
+      "extraction": true,
+      "interaction": true,
+      "screenshots": true,
+      "network": true,
+      "console": true,
+      "traces": false,
+      "geography": false
+    },
+    "limitations": [
+      "Ticket-only replay of six specified defects; application source, product oracle and prior case evidence were not read.",
+      "One fresh isolated browser context and one attempt per ticket; original reproduction counts were not reused.",
+      "Only local port 39175 was visited. Corrected port 39176 and acceptance witness journeys were not tested.",
+      "All profiles and evidence are retained. Mobile means the stated viewport, without a physical-device claim.",
+      "Raw screenshots require visual reviewer inspection in addition to the DOM measurements."
+    ]
+  },
+  "cases": [
+    {
+      "id": "REPLAY-QA-001",
+      "journey_id": "REPLAY-QA-001",
+      "title": "Independent replay: French desktop About navigation opens Search",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:30.852725Z",
+      "finished_at": "2026-10-08T12:10:31.363985Z",
+      "url": "http://127.0.0.1:39175/fr/search",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open http://127.0.0.1:39175/fr/ at 1440 × 900.",
+          "expected": "The specified page loads in the requested language and viewport.",
+          "observed": "HTTP 200; actual URL http://127.0.0.1:39175/fr/; html[lang]=fr; viewport {'width': 1440, 'height': 900}.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-001-a1-opened"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click the visible À propos link #main-about.",
+          "expected": "The control reaches /fr/about.",
+          "observed": "#main-about href=/fr/search; actual destination http://127.0.0.1:39175/fr/search.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-001-a1-opened",
+            "REPLAY-QA-001-a1-destination",
+            "REPLAY-QA-001-a1-destination-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect the actual URL and #page-heading.",
+          "expected": "The destination is /fr/about, HTTP 200, html[lang]=fr, heading À propos d’Atlas Studio.",
+          "observed": "Final URL http://127.0.0.1:39175/fr/search; HTTP 200; html[lang]=fr; heading Rechercher chez Atlas Studio.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-001-a1-destination",
+            "REPLAY-QA-001-a1-destination-viewport"
+          ]
+        }
+      ],
+      "status": "FAIL",
+      "classification": "DEFECT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "FAIL",
+          "observed": "#main-about href=/fr/search; actual destination http://127.0.0.1:39175/fr/search. Final URL http://127.0.0.1:39175/fr/search; HTTP 200; html[lang]=fr; heading Rechercher chez Atlas Studio.",
+          "evidence_ids": [
+            "REPLAY-QA-001-a1-opened",
+            "REPLAY-QA-001-a1-destination",
+            "REPLAY-QA-001-a1-destination-viewport",
+            "REPLAY-QA-001-a1-network",
+            "REPLAY-QA-001-a1-console"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No network-country requirement was specified for this loopback replay."
+      },
+      "evidence_ids": [
+        "REPLAY-QA-001-a1-opened",
+        "REPLAY-QA-001-a1-destination",
+        "REPLAY-QA-001-a1-destination-viewport",
+        "REPLAY-QA-001-a1-network",
+        "REPLAY-QA-001-a1-console"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "REPLAY-QA-002",
+      "journey_id": "REPLAY-QA-002",
+      "title": "Independent replay: Switching About from English to French loses the internal page",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:31.364674Z",
+      "finished_at": "2026-10-08T12:10:31.883847Z",
+      "url": "http://127.0.0.1:39175/fr/",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open http://127.0.0.1:39175/en/about at 1440 × 900.",
+          "expected": "The specified page loads in the requested language and viewport.",
+          "observed": "HTTP 200; actual URL http://127.0.0.1:39175/en/about; html[lang]=en; viewport {'width': 1440, 'height': 900}.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-002-a1-opened"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click the Français control #language-switch.",
+          "expected": "The control reaches /fr/about.",
+          "observed": "#language-switch href=/fr/; actual destination http://127.0.0.1:39175/fr/.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-002-a1-opened",
+            "REPLAY-QA-002-a1-destination",
+            "REPLAY-QA-002-a1-destination-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Read the destination URL, html[lang] and #page-heading.",
+          "expected": "The destination is /fr/about with html[lang]=fr and heading À propos d’Atlas Studio.",
+          "observed": "Final URL http://127.0.0.1:39175/fr/; HTTP 200; html[lang]=fr; heading Bienvenue chez Atlas Studio.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-002-a1-destination",
+            "REPLAY-QA-002-a1-destination-viewport"
+          ]
+        }
+      ],
+      "status": "FAIL",
+      "classification": "DEFECT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "FAIL",
+          "observed": "#language-switch href=/fr/; actual destination http://127.0.0.1:39175/fr/. Final URL http://127.0.0.1:39175/fr/; HTTP 200; html[lang]=fr; heading Bienvenue chez Atlas Studio.",
+          "evidence_ids": [
+            "REPLAY-QA-002-a1-opened",
+            "REPLAY-QA-002-a1-destination",
+            "REPLAY-QA-002-a1-destination-viewport",
+            "REPLAY-QA-002-a1-network",
+            "REPLAY-QA-002-a1-console"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No network-country requirement was specified for this loopback replay."
+      },
+      "evidence_ids": [
+        "REPLAY-QA-002-a1-opened",
+        "REPLAY-QA-002-a1-destination",
+        "REPLAY-QA-002-a1-destination-viewport",
+        "REPLAY-QA-002-a1-network",
+        "REPLAY-QA-002-a1-console"
+      ],
+      "limitations": [
+        "The case language records the requested starting language; evidence records the actual final document language fr."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "REPLAY-QA-003",
+      "journey_id": "REPLAY-QA-003",
+      "title": "Independent replay: French legacy redirect switches the visitor to English",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:31.884608Z",
+      "finished_at": "2026-10-08T12:10:32.264545Z",
+      "url": "http://127.0.0.1:39175/en/about",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open http://127.0.0.1:39175/fr/legacy at 1440 × 900.",
+          "expected": "The supplied French legacy URL initiates navigation.",
+          "observed": "Requested http://127.0.0.1:39175/fr/legacy; final document HTTP 200.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-003-a1-opened"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Capture the redirect status and Location.",
+          "expected": "HTTP 302 with Location /fr/about.",
+          "observed": "Legacy response HTTP 302; Location /en/about.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-003-a1-opened",
+            "REPLAY-QA-003-a1-network"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect the final URL, document language and heading.",
+          "expected": "Final /fr/about returns HTTP 200, html[lang]=fr and heading À propos d’Atlas Studio.",
+          "observed": "Final URL http://127.0.0.1:39175/en/about; HTTP 200; html[lang]=en; heading About Atlas Studio.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-003-a1-opened",
+            "REPLAY-QA-003-a1-final-viewport",
+            "REPLAY-QA-003-a1-network"
+          ]
+        }
+      ],
+      "status": "FAIL",
+      "classification": "DEFECT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "FAIL",
+          "observed": "Legacy response HTTP 302; Location /en/about. Final URL http://127.0.0.1:39175/en/about; HTTP 200; html[lang]=en; heading About Atlas Studio.",
+          "evidence_ids": [
+            "REPLAY-QA-003-a1-opened",
+            "REPLAY-QA-003-a1-final-viewport",
+            "REPLAY-QA-003-a1-network",
+            "REPLAY-QA-003-a1-console"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No network-country requirement was specified for this loopback replay."
+      },
+      "evidence_ids": [
+        "REPLAY-QA-003-a1-opened",
+        "REPLAY-QA-003-a1-final-viewport",
+        "REPLAY-QA-003-a1-network",
+        "REPLAY-QA-003-a1-console"
+      ],
+      "limitations": [
+        "The case language records the requested starting language; evidence records the actual final document language en."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "REPLAY-QA-004",
+      "journey_id": "REPLAY-QA-004",
+      "title": "Independent replay: French form validation errors are displayed in English",
+      "critical": false,
+      "started_at": "2026-10-08T12:10:32.265176Z",
+      "finished_at": "2026-10-08T12:10:32.689701Z",
+      "url": "http://127.0.0.1:39175/fr/contact",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {
+        "name": "",
+        "email": ""
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open http://127.0.0.1:39175/fr/contact at 1440 × 900.",
+          "expected": "The specified page loads in the requested language and viewport.",
+          "observed": "HTTP 200; actual URL http://127.0.0.1:39175/fr/contact; html[lang]=fr; viewport {'width': 1440, 'height': 900}.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-004-a1-opened"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Leave #contact-name and #contact-email empty.",
+          "expected": "Name and email remain empty.",
+          "observed": "contact-name value=''; contact-email value=''.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-004-a1-opened"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Click #contact-submit once.",
+          "expected": "Empty values are rejected, both fields are invalid, and confirmation remains hidden.",
+          "observed": "contact-name aria-invalid=true; contact-email aria-invalid=true; confirmation candidates=[{'id': 'confirmation', 'visible': False}].",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-004-a1-validation"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Read #name-error and #email-error.",
+          "expected": "Visible messages are Saisissez votre nom. and Saisissez une adresse e-mail valide.",
+          "observed": "#name-error='Enter your name.'; visible=True; #email-error='Enter a valid email address.'; visible=True.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-004-a1-validation",
+            "REPLAY-QA-004-a1-validation-viewport"
+          ]
+        }
+      ],
+      "status": "FAIL",
+      "classification": "DEFECT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "FAIL",
+          "observed": "contact-name aria-invalid=true; contact-email aria-invalid=true; confirmation candidates=[{'id': 'confirmation', 'visible': False}]. #name-error='Enter your name.'; visible=True; #email-error='Enter a valid email address.'; visible=True.",
+          "evidence_ids": [
+            "REPLAY-QA-004-a1-opened",
+            "REPLAY-QA-004-a1-validation",
+            "REPLAY-QA-004-a1-validation-viewport",
+            "REPLAY-QA-004-a1-network",
+            "REPLAY-QA-004-a1-console"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No network-country requirement was specified for this loopback replay."
+      },
+      "evidence_ids": [
+        "REPLAY-QA-004-a1-opened",
+        "REPLAY-QA-004-a1-validation",
+        "REPLAY-QA-004-a1-validation-viewport",
+        "REPLAY-QA-004-a1-network",
+        "REPLAY-QA-004-a1-console"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "REPLAY-QA-005",
+      "journey_id": "REPLAY-QA-005",
+      "title": "Independent replay: English contact form skips the required email field during keyboard entry",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:32.690080Z",
+      "finished_at": "2026-10-08T12:10:33.079232Z",
+      "url": "http://127.0.0.1:39175/en/contact",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open http://127.0.0.1:39175/en/contact at 1440 × 900.",
+          "expected": "The specified page loads in the requested language and viewport.",
+          "observed": "HTTP 200; actual URL http://127.0.0.1:39175/en/contact; html[lang]=en; viewport {'width': 1440, 'height': 900}.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-005-a1-opened"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Focus #contact-name and type Alex Test using keyboard input.",
+          "expected": "#contact-name is focused and contains Alex Test.",
+          "observed": "Active element contact-name; name value='Alex Test'.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-005-a1-name-keyboard"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Press Tab exactly once.",
+          "expected": "Exactly one Tab moves focus to #contact-email.",
+          "observed": "Active element after one Tab is #contact-submit.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-005-a1-after-one-tab",
+            "REPLAY-QA-005-a1-focus-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Inspect document.activeElement.id and the visible focus outline. Do not click or fill the skipped email field.",
+          "expected": "The email field has visible keyboard focus; inspect without clicking or filling the skipped field.",
+          "observed": "Active element #contact-submit; outline={'style': 'solid', 'width': '3px', 'color': 'rgb(195, 79, 0)', 'offset': '3px'}; email value=''; email tabIndex=-1.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-005-a1-after-one-tab",
+            "REPLAY-QA-005-a1-focus-viewport"
+          ]
+        },
+        {
+          "number": 5,
+          "action": "Continue the expected keyboard completion only after the email focus transition succeeds.",
+          "expected": "Type alex@example.test, Tab to #contact-submit, press Enter, and observe Thank you, Alex Test. Your local request is confirmed.",
+          "observed": "Not run because the first Tab did not reach the email field. No click or direct fill was used to bypass the failed transition.",
+          "status": "NOT_RUN",
+          "evidence_ids": [
+            "REPLAY-QA-005-a1-after-one-tab"
+          ]
+        }
+      ],
+      "status": "FAIL",
+      "classification": "DEFECT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "FAIL",
+          "observed": "Active element after one Tab is #contact-submit. Active element #contact-submit; outline={'style': 'solid', 'width': '3px', 'color': 'rgb(195, 79, 0)', 'offset': '3px'}; email value=''; email tabIndex=-1. Not run because the first Tab did not reach the email field. No click or direct fill was used to bypass the failed transition.",
+          "evidence_ids": [
+            "REPLAY-QA-005-a1-opened",
+            "REPLAY-QA-005-a1-name-keyboard",
+            "REPLAY-QA-005-a1-after-one-tab",
+            "REPLAY-QA-005-a1-focus-viewport",
+            "REPLAY-QA-005-a1-network",
+            "REPLAY-QA-005-a1-console"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No network-country requirement was specified for this loopback replay."
+      },
+      "evidence_ids": [
+        "REPLAY-QA-005-a1-opened",
+        "REPLAY-QA-005-a1-name-keyboard",
+        "REPLAY-QA-005-a1-after-one-tab",
+        "REPLAY-QA-005-a1-focus-viewport",
+        "REPLAY-QA-005-a1-network",
+        "REPLAY-QA-005-a1-console"
+      ],
+      "limitations": [
+        "Email entry, submission and confirmation were not executed after the failed required focus transition."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "REPLAY-QA-006",
+      "journey_id": "REPLAY-QA-006",
+      "title": "Independent replay: French mobile offer overflows horizontally and clips its description",
+      "critical": false,
+      "started_at": "2026-10-08T12:10:33.079878Z",
+      "finished_at": "2026-10-08T12:10:33.675861Z",
+      "url": "http://127.0.0.1:39175/fr/contact",
+      "language": "fr",
+      "profile": {
+        "id": "mobile",
+        "device_class": "MOBILE_EMULATION",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 390 x 844 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open http://127.0.0.1:39175/fr/offer with a 390 × 844 Chromium viewport.",
+          "expected": "The specified page loads in the requested language and viewport.",
+          "observed": "HTTP 200; actual URL http://127.0.0.1:39175/fr/offer; html[lang]=fr; viewport {'width': 390, 'height': 844}.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-006-a1-opened"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Compare document.documentElement.scrollWidth with window.innerWidth.",
+          "expected": "scrollWidth <= innerWidth + 1.",
+          "observed": "scrollWidth=556; innerWidth=390; overflow=166 CSS pixels.",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-006-a1-opened",
+            "REPLAY-QA-006-a1-offer-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect the right edge of the offer card and description before interacting.",
+          "expected": "The offer card and full description fit in the viewport without horizontal scrolling.",
+          "observed": "Visible content boxes extending beyond the right viewport edge: [{'id': '', 'text': 'Offre Découverte\\n19,90 € / mois\\n8 octobre 2026\\nUn point de départ clair pour votre prochain site web.\\nContactez-nous', 'right': 556}, {'id': 'offer-title', 'text': 'Offre Découverte', 'right': 539}, {'id': 'offer-price', 'text': '19,90 € / mois', 'right': 539}, {'id': 'offer-date', 'text': '8 octobre 2026', 'right': 539}, {'id': '', 'text': 'Un point de départ clair pour votre prochain site web.', 'right': 539}].",
+          "status": "FAIL",
+          "evidence_ids": [
+            "REPLAY-QA-006-a1-opened",
+            "REPLAY-QA-006-a1-offer-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Click #offer-cta and record whether it remains visible and reaches French Contact.",
+          "expected": "The CTA remains visible and reaches /fr/contact in French.",
+          "observed": "CTA initially visible=True; within horizontal viewport=True; final URL http://127.0.0.1:39175/fr/contact; html[lang]=fr; heading Contacter Atlas Studio.",
+          "status": "PASS",
+          "evidence_ids": [
+            "REPLAY-QA-006-a1-opened",
+            "REPLAY-QA-006-a1-cta-destination",
+            "REPLAY-QA-006-a1-contact-viewport"
+          ]
+        }
+      ],
+      "status": "FAIL",
+      "classification": "DEFECT",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "FAIL",
+          "observed": "scrollWidth=556; innerWidth=390; overflow=166 CSS pixels. Visible content boxes extending beyond the right viewport edge: [{'id': '', 'text': 'Offre Découverte\\n19,90 € / mois\\n8 octobre 2026\\nUn point de départ clair pour votre prochain site web.\\nContactez-nous', 'right': 556}, {'id': 'offer-title', 'text': 'Offre Découverte', 'right': 539}, {'id': 'offer-price', 'text': '19,90 € / mois', 'right': 539}, {'id': 'offer-date', 'text': '8 octobre 2026', 'right': 539}, {'id': '', 'text': 'Un point de départ clair pour votre prochain site web.', 'right': 539}]. CTA initially visible=True; within horizontal viewport=True; final URL http://127.0.0.1:39175/fr/contact; html[lang]=fr; heading Contacter Atlas Studio.",
+          "evidence_ids": [
+            "REPLAY-QA-006-a1-opened",
+            "REPLAY-QA-006-a1-offer-viewport",
+            "REPLAY-QA-006-a1-cta-destination",
+            "REPLAY-QA-006-a1-contact-viewport",
+            "REPLAY-QA-006-a1-network",
+            "REPLAY-QA-006-a1-console"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No network-country requirement was specified for this loopback replay."
+      },
+      "evidence_ids": [
+        "REPLAY-QA-006-a1-opened",
+        "REPLAY-QA-006-a1-offer-viewport",
+        "REPLAY-QA-006-a1-cta-destination",
+        "REPLAY-QA-006-a1-contact-viewport",
+        "REPLAY-QA-006-a1-network",
+        "REPLAY-QA-006-a1-console"
+      ],
+      "limitations": [
+        "Mobile profile is a 390 by 844 desktop Chromium viewport, not a physical device; touch/mobile user-agent settings were not specified by the ticket."
+      ],
+      "uncertainties": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "REPLAY-QA-001-a1-opened",
+      "path": "evidence/REPLAY-QA-001-a1-opened.json",
+      "sha256": "4c2b2db7359ad909689409a7d66b54878d1595daf4a4e8c2927e8c3c6de28f77",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:31.053407Z",
+      "description": "Initial document after the ticket's opening navigation. | URL http://127.0.0.1:39175/fr/ | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.053407Z"
+    },
+    {
+      "id": "REPLAY-QA-001-a1-destination",
+      "path": "evidence/REPLAY-QA-001-a1-destination.json",
+      "sha256": "c751a434131c96e74d3cf6bed65c29a0720f69f26bbdca45f44d30b746500b2b",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:31.188980Z",
+      "description": "Rendered destination after activating #main-about. | URL http://127.0.0.1:39175/fr/search | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.188980Z"
+    },
+    {
+      "id": "REPLAY-QA-001-a1-destination-viewport",
+      "path": "evidence/REPLAY-QA-001-a1-destination-viewport.png",
+      "sha256": "c569c4f83cd559ee075f24a3394a8e33fdfecfd95b6a5f8f6274a864cab04ada",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:31.340500Z",
+      "description": "Viewport after activating #main-about. | URL http://127.0.0.1:39175/fr/search | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.340500Z"
+    },
+    {
+      "id": "REPLAY-QA-001-a1-network",
+      "path": "evidence/REPLAY-QA-001-a1-network.json",
+      "sha256": "83cf62e43a8707368a36e0bbb652575a4da422ec266c7de6bc83c4bad80a8a2e",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:31.345080Z",
+      "description": "Main-document responses from this replay attempt, including redirect status and Location. | URL http://127.0.0.1:39175/fr/search | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.345080Z"
+    },
+    {
+      "id": "REPLAY-QA-001-a1-console",
+      "path": "evidence/REPLAY-QA-001-a1-console.json",
+      "sha256": "89953a1e8f1e9d7d4d34548a98797e403115f7d75acc5cd1c2e4a3da9878ff7d",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:31.353131Z",
+      "description": "Console and page-error observations from this replay attempt. | URL http://127.0.0.1:39175/fr/search | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.353131Z"
+    },
+    {
+      "id": "REPLAY-QA-002-a1-opened",
+      "path": "evidence/REPLAY-QA-002-a1-opened.json",
+      "sha256": "3f69a1b09b37724c3fd07f5fd8e44bd667a34ced8659b1657fd2294d3428f908",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:31.513242Z",
+      "description": "Initial document after the ticket's opening navigation. | URL http://127.0.0.1:39175/en/about | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.513242Z"
+    },
+    {
+      "id": "REPLAY-QA-002-a1-destination",
+      "path": "evidence/REPLAY-QA-002-a1-destination.json",
+      "sha256": "99d3c150168f4aa4d7abf13087cf7243f324dbd8297ce519000b8476ce052478",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:31.722961Z",
+      "description": "Rendered destination after activating #language-switch. | URL http://127.0.0.1:39175/fr/ | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.722961Z"
+    },
+    {
+      "id": "REPLAY-QA-002-a1-destination-viewport",
+      "path": "evidence/REPLAY-QA-002-a1-destination-viewport.png",
+      "sha256": "87e05f75fb445c219d276b3ae7895b519db78ffa33f75e2b307b6fe39e367ab3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:31.859025Z",
+      "description": "Viewport after activating #language-switch. | URL http://127.0.0.1:39175/fr/ | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.859025Z"
+    },
+    {
+      "id": "REPLAY-QA-002-a1-network",
+      "path": "evidence/REPLAY-QA-002-a1-network.json",
+      "sha256": "7e57172c053786ba03969ebe07a7d6d1418a35f1b671e92c8818ffc00ebe48c9",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:31.863418Z",
+      "description": "Main-document responses from this replay attempt, including redirect status and Location. | URL http://127.0.0.1:39175/fr/ | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.863418Z"
+    },
+    {
+      "id": "REPLAY-QA-002-a1-console",
+      "path": "evidence/REPLAY-QA-002-a1-console.json",
+      "sha256": "ad37eea2abf80cc12250b6e42b0561f8b298ec8e6e50d32f4fd29dae5126dc59",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:31.871526Z",
+      "description": "Console and page-error observations from this replay attempt. | URL http://127.0.0.1:39175/fr/ | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:31.871526Z"
+    },
+    {
+      "id": "REPLAY-QA-003-a1-opened",
+      "path": "evidence/REPLAY-QA-003-a1-opened.json",
+      "sha256": "f1db7fa5d7080483ce7c9379616ccb2b4bd17cefe62ccb134d22e91006309d3e",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:32.094665Z",
+      "description": "Initial document after the ticket's opening navigation. | URL http://127.0.0.1:39175/en/about | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.094665Z"
+    },
+    {
+      "id": "REPLAY-QA-003-a1-final-viewport",
+      "path": "evidence/REPLAY-QA-003-a1-final-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:32.247642Z",
+      "description": "Final page after the French legacy redirect. | URL http://127.0.0.1:39175/en/about | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.247642Z"
+    },
+    {
+      "id": "REPLAY-QA-003-a1-network",
+      "path": "evidence/REPLAY-QA-003-a1-network.json",
+      "sha256": "72aea3e567e2bf1b51265635ebb6aa98387e01b9e1eaafefe451fc34234780c1",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:32.250217Z",
+      "description": "Main-document responses from this replay attempt, including redirect status and Location. | URL http://127.0.0.1:39175/en/about | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.250217Z"
+    },
+    {
+      "id": "REPLAY-QA-003-a1-console",
+      "path": "evidence/REPLAY-QA-003-a1-console.json",
+      "sha256": "c0b0507e6f8e2a1e629f2743e9909bc47f4dc5d39ebf37e2c97e1c290739ce3d",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:32.254648Z",
+      "description": "Console and page-error observations from this replay attempt. | URL http://127.0.0.1:39175/en/about | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.254648Z"
+    },
+    {
+      "id": "REPLAY-QA-004-a1-opened",
+      "path": "evidence/REPLAY-QA-004-a1-opened.json",
+      "sha256": "6cd2a9c349db7b6c0afde262f7d329e9fd94f2a6775237a6fd6958471eb3183e",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:32.469316Z",
+      "description": "Initial document after the ticket's opening navigation. | URL http://127.0.0.1:39175/fr/contact | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.469316Z"
+    },
+    {
+      "id": "REPLAY-QA-004-a1-validation",
+      "path": "evidence/REPLAY-QA-004-a1-validation.json",
+      "sha256": "687a79ea936383bc24667fd59721a8b452f7ebb2067dc0d22afa6a24cb6576b7",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:32.541249Z",
+      "description": "Validation state after one empty submission. | URL http://127.0.0.1:39175/fr/contact | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.541249Z"
+    },
+    {
+      "id": "REPLAY-QA-004-a1-validation-viewport",
+      "path": "evidence/REPLAY-QA-004-a1-validation-viewport.png",
+      "sha256": "16c90583f756e3ea2ae62e5aec0641453bd06ef1707dfdcef270f95049458f27",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:32.674168Z",
+      "description": "Visible field errors after one empty submission. | URL http://127.0.0.1:39175/fr/contact | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.674168Z"
+    },
+    {
+      "id": "REPLAY-QA-004-a1-network",
+      "path": "evidence/REPLAY-QA-004-a1-network.json",
+      "sha256": "a0411c00af3c6672a46722d79f9e0fffc18d82da257ecfcb0eee8d60f25106fb",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:32.677139Z",
+      "description": "Main-document responses from this replay attempt, including redirect status and Location. | URL http://127.0.0.1:39175/fr/contact | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.677139Z"
+    },
+    {
+      "id": "REPLAY-QA-004-a1-console",
+      "path": "evidence/REPLAY-QA-004-a1-console.json",
+      "sha256": "f0347ab998263eb89c1290783ac242eb094a7bb684fd44140715039086cc706a",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:32.681932Z",
+      "description": "Console and page-error observations from this replay attempt. | URL http://127.0.0.1:39175/fr/contact | language fr | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.681932Z"
+    },
+    {
+      "id": "REPLAY-QA-005-a1-opened",
+      "path": "evidence/REPLAY-QA-005-a1-opened.json",
+      "sha256": "28f76e3b3385a1406c0fec762b8f70f77848307624024b102c524ca67aded5e9",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:32.846457Z",
+      "description": "Initial document after the ticket's opening navigation. | URL http://127.0.0.1:39175/en/contact | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.846457Z"
+    },
+    {
+      "id": "REPLAY-QA-005-a1-name-keyboard",
+      "path": "evidence/REPLAY-QA-005-a1-name-keyboard.json",
+      "sha256": "3ebc3d439642cf2a9cf29c1548288102ea3633be703d37053f9eee4bee6dba42",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:32.925832Z",
+      "description": "Keyboard name entry before the single Tab press. | URL http://127.0.0.1:39175/en/contact | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.925832Z"
+    },
+    {
+      "id": "REPLAY-QA-005-a1-after-one-tab",
+      "path": "evidence/REPLAY-QA-005-a1-after-one-tab.json",
+      "sha256": "b0ad679daf1ea68dba2f59f017c5b950c7440f997dce76b6304f4b4f8a25c2c8",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:32.947384Z",
+      "description": "Focus and field state after exactly one Tab. | URL http://127.0.0.1:39175/en/contact | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:32.947384Z"
+    },
+    {
+      "id": "REPLAY-QA-005-a1-focus-viewport",
+      "path": "evidence/REPLAY-QA-005-a1-focus-viewport.png",
+      "sha256": "89c9639941a576f3d41eca92a2552b4645ffe7a7c48523fa6f923ba918513596",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.062574Z",
+      "description": "Visible focus outline after exactly one Tab from the name field. | URL http://127.0.0.1:39175/en/contact | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.062574Z"
+    },
+    {
+      "id": "REPLAY-QA-005-a1-network",
+      "path": "evidence/REPLAY-QA-005-a1-network.json",
+      "sha256": "53465768f0cae2350da7c4ab4bb9fa2b47d55fd045be627d6c6e7b76e3b5c55c",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:33.067636Z",
+      "description": "Main-document responses from this replay attempt, including redirect status and Location. | URL http://127.0.0.1:39175/en/contact | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.067636Z"
+    },
+    {
+      "id": "REPLAY-QA-005-a1-console",
+      "path": "evidence/REPLAY-QA-005-a1-console.json",
+      "sha256": "3366079163f36ce844ead7b4a46b22160db8faf2c1425a887134eb6066a86b3f",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:33.072864Z",
+      "description": "Console and page-error observations from this replay attempt. | URL http://127.0.0.1:39175/en/contact | language en | profile desktop 1440x900 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.072864Z"
+    },
+    {
+      "id": "REPLAY-QA-006-a1-opened",
+      "path": "evidence/REPLAY-QA-006-a1-opened.json",
+      "sha256": "cc771ea2e69dd0ff46a5c44c12f1d9c45896e04c05d362b1f9f14bafa948e648",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.249014Z",
+      "description": "Initial document after the ticket's opening navigation. | URL http://127.0.0.1:39175/fr/offer | language fr | profile mobile 390x844 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.249014Z"
+    },
+    {
+      "id": "REPLAY-QA-006-a1-offer-viewport",
+      "path": "evidence/REPLAY-QA-006-a1-offer-viewport.png",
+      "sha256": "5bb20195caec707634626cf8035fc96a61d5fb3e1e9b973f45201b085696560e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.384917Z",
+      "description": "Offer card and description before any interaction at 390 by 844 CSS pixels. | URL http://127.0.0.1:39175/fr/offer | language fr | profile mobile 390x844 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.384917Z"
+    },
+    {
+      "id": "REPLAY-QA-006-a1-cta-destination",
+      "path": "evidence/REPLAY-QA-006-a1-cta-destination.json",
+      "sha256": "281391e2142fc9ffc84eaafc9f2e408779b301d5417ed98216957886903ea82d",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.512822Z",
+      "description": "French Contact destination after the visible offer CTA was clicked. | URL http://127.0.0.1:39175/fr/contact | language fr | profile mobile 390x844 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.512822Z"
+    },
+    {
+      "id": "REPLAY-QA-006-a1-contact-viewport",
+      "path": "evidence/REPLAY-QA-006-a1-contact-viewport.png",
+      "sha256": "32500c021a264997f802bb9f0c381b3d818779a9e344bb53749dd552341700cc",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.655581Z",
+      "description": "Destination viewport after the offer CTA click. | URL http://127.0.0.1:39175/fr/contact | language fr | profile mobile 390x844 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.655581Z"
+    },
+    {
+      "id": "REPLAY-QA-006-a1-network",
+      "path": "evidence/REPLAY-QA-006-a1-network.json",
+      "sha256": "2d18628b295c15663e5ce1adfb5ea79e3a469828959bb479146214cfd757c732",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:33.659559Z",
+      "description": "Main-document responses from this replay attempt, including redirect status and Location. | URL http://127.0.0.1:39175/fr/contact | language fr | profile mobile 390x844 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.659559Z"
+    },
+    {
+      "id": "REPLAY-QA-006-a1-console",
+      "path": "evidence/REPLAY-QA-006-a1-console.json",
+      "sha256": "8a596b9b441f033d7b8c9d259ce409fbf8f961de116a53e6ab412d345c43201a",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:33.665969Z",
+      "description": "Console and page-error observations from this replay attempt. | URL http://127.0.0.1:39175/fr/contact | language fr | profile mobile 390x844 | Chromium 151.0.7922.34 | captured 2026-10-08T12:10:33.665969Z"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "QA-001",
+      "title": "French desktop About navigation opens Search",
+      "impact": "A French desktop visitor selecting À propos is taken to Search and cannot reach the intended information through that primary link.",
+      "severity": "MAJOR",
+      "severity_rationale": "The French desktop primary About link reaches the wrong section. This replay does not establish the availability of alternate navigation routes.",
+      "confidence": "HIGH",
+      "scope": {
+        "pages": [
+          "http://127.0.0.1:39175/fr/",
+          "http://127.0.0.1:39175/fr/search"
+        ],
+        "languages": [
+          "fr"
+        ],
+        "profiles": [
+          "desktop"
+        ]
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        "Open http://127.0.0.1:39175/fr/ at 1440 × 900.",
+        "Click the visible À propos link #main-about.",
+        "Inspect the actual URL and #page-heading."
+      ],
+      "expected": "The destination is /fr/about, HTTP 200, html[lang]=fr, heading À propos d’Atlas Studio.",
+      "observed": "#main-about href=/fr/search; actual destination http://127.0.0.1:39175/fr/search. Final URL http://127.0.0.1:39175/fr/search; HTTP 200; html[lang]=fr; heading Rechercher chez Atlas Studio.",
+      "evidence_ids": [
+        "REPLAY-QA-001-a1-opened",
+        "REPLAY-QA-001-a1-destination",
+        "REPLAY-QA-001-a1-destination-viewport",
+        "REPLAY-QA-001-a1-network",
+        "REPLAY-QA-001-a1-console"
+      ],
+      "case_ids": [
+        "REPLAY-QA-001"
+      ],
+      "reproduction": {
+        "reproduced": 1,
+        "attempted": 1
+      },
+      "correction": {
+        "hypothesis": true,
+        "note": "The observed desktop #main-about href points at the search route. Correcting its route binding to /fr/about is a hypothesis to verify in implementation; no source was inspected."
+      },
+      "acceptance_criteria": [
+        "Clicking #main-about from /fr/ reaches /fr/about and the approved localized heading.",
+        "The English desktop primary navigation continues to reach /en/about.",
+        "The already working French mobile #mobile-about route remains /fr/about."
+      ],
+      "retest_steps": [
+        "Repeat the numbered reproduction for REPLAY-QA-001 against the corrected origin in a new campaign.",
+        "Execute the ticket's separate acceptance witness journeys; they were not part of this replay."
+      ]
+    },
+    {
+      "id": "QA-002",
+      "title": "Switching About from English to French loses the internal page",
+      "impact": "A visitor reading the English About page loses that page when selecting French and arrives at the French home page.",
+      "severity": "MAJOR",
+      "severity_rationale": "The English About language switch loses the current page identity when reaching French home.",
+      "confidence": "HIGH",
+      "scope": {
+        "pages": [
+          "http://127.0.0.1:39175/en/about",
+          "http://127.0.0.1:39175/fr/"
+        ],
+        "languages": [
+          "en"
+        ],
+        "profiles": [
+          "desktop"
+        ]
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        "Open http://127.0.0.1:39175/en/about at 1440 × 900.",
+        "Click the Français control #language-switch.",
+        "Read the destination URL, html[lang] and #page-heading."
+      ],
+      "expected": "The destination is /fr/about with html[lang]=fr and heading À propos d’Atlas Studio.",
+      "observed": "#language-switch href=/fr/; actual destination http://127.0.0.1:39175/fr/. Final URL http://127.0.0.1:39175/fr/; HTTP 200; html[lang]=fr; heading Bienvenue chez Atlas Studio.",
+      "evidence_ids": [
+        "REPLAY-QA-002-a1-opened",
+        "REPLAY-QA-002-a1-destination",
+        "REPLAY-QA-002-a1-destination-viewport",
+        "REPLAY-QA-002-a1-network",
+        "REPLAY-QA-002-a1-console"
+      ],
+      "case_ids": [
+        "REPLAY-QA-002"
+      ],
+      "reproduction": {
+        "reproduced": 1,
+        "attempted": 1
+      },
+      "correction": {
+        "hypothesis": true,
+        "note": "The rendered language switch appears to use the French entry route rather than the equivalent About route. Derive the alternate target from the current route; root cause has not been inspected."
+      },
+      "acceptance_criteria": [
+        "EN About → Français reaches /fr/about, preserving page identity.",
+        "FR About → English still reaches /en/about.",
+        "Both destination headings and html languages match their target routes."
+      ],
+      "retest_steps": [
+        "Repeat the numbered reproduction for REPLAY-QA-002 against the corrected origin in a new campaign.",
+        "Execute the ticket's separate acceptance witness journeys; they were not part of this replay."
+      ]
+    },
+    {
+      "id": "QA-003",
+      "title": "French legacy redirect switches the visitor to English",
+      "impact": "A visitor following the French legacy URL receives the English About page and loses the requested language.",
+      "severity": "MAJOR",
+      "severity_rationale": "The French legacy entry redirects to an English document, losing the requested language.",
+      "confidence": "HIGH",
+      "scope": {
+        "pages": [
+          "http://127.0.0.1:39175/fr/legacy",
+          "http://127.0.0.1:39175/en/about"
+        ],
+        "languages": [
+          "fr"
+        ],
+        "profiles": [
+          "desktop"
+        ]
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        "Open http://127.0.0.1:39175/fr/legacy at 1440 × 900.",
+        "Capture the redirect status and Location.",
+        "Inspect the final URL, document language and heading."
+      ],
+      "expected": "/fr/legacy returns HTTP 302 with Location /fr/about; the final page returns HTTP 200, html[lang]=fr and heading À propos d’Atlas Studio.",
+      "observed": "Legacy response HTTP 302; Location /en/about. Final URL http://127.0.0.1:39175/en/about; HTTP 200; html[lang]=en; heading About Atlas Studio.",
+      "evidence_ids": [
+        "REPLAY-QA-003-a1-opened",
+        "REPLAY-QA-003-a1-final-viewport",
+        "REPLAY-QA-003-a1-network",
+        "REPLAY-QA-003-a1-console"
+      ],
+      "case_ids": [
+        "REPLAY-QA-003"
+      ],
+      "reproduction": {
+        "reproduced": 1,
+        "attempted": 1
+      },
+      "correction": {
+        "hypothesis": true,
+        "note": "The redirect Location is visibly bound to the English route. Preserve the incoming language when selecting the About target; this implementation hypothesis has not been source-verified."
+      },
+      "acceptance_criteria": [
+        "French legacy returns HTTP 302 to /fr/about, followed by a 200 French About document.",
+        "English legacy still returns HTTP 302 to /en/about, followed by a 200 English About document."
+      ],
+      "retest_steps": [
+        "Repeat the numbered reproduction for REPLAY-QA-003 against the corrected origin in a new campaign.",
+        "Execute the ticket's separate acceptance witness journeys; they were not part of this replay."
+      ]
+    },
+    {
+      "id": "QA-004",
+      "title": "French form validation errors are displayed in English",
+      "impact": "French visitors receive English instructions for correcting missing name and email fields.",
+      "severity": "MINOR",
+      "severity_rationale": "The empty form is rejected and invalid fields are identified, but the French document shows English correction messages.",
+      "confidence": "HIGH",
+      "scope": {
+        "pages": [
+          "http://127.0.0.1:39175/fr/contact"
+        ],
+        "languages": [
+          "fr"
+        ],
+        "profiles": [
+          "desktop"
+        ]
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {
+        "name": "",
+        "email": ""
+      },
+      "steps": [
+        "Open http://127.0.0.1:39175/fr/contact at 1440 × 900.",
+        "Leave #contact-name and #contact-email empty.",
+        "Click #contact-submit once.",
+        "Read #name-error and #email-error."
+      ],
+      "expected": "Visible messages are Saisissez votre nom. and Saisissez une adresse e-mail valide.; both fields have aria-invalid=true and confirmation stays hidden.",
+      "observed": "contact-name aria-invalid=true; contact-email aria-invalid=true; confirmation candidates=[{'id': 'confirmation', 'visible': False}]. #name-error='Enter your name.'; visible=True; #email-error='Enter a valid email address.'; visible=True.",
+      "evidence_ids": [
+        "REPLAY-QA-004-a1-opened",
+        "REPLAY-QA-004-a1-validation",
+        "REPLAY-QA-004-a1-validation-viewport",
+        "REPLAY-QA-004-a1-network",
+        "REPLAY-QA-004-a1-console"
+      ],
+      "case_ids": [
+        "REPLAY-QA-004"
+      ],
+      "reproduction": {
+        "reproduced": 1,
+        "attempted": 1
+      },
+      "correction": {
+        "hypothesis": true,
+        "note": "The validation messages may be selected independently of the document language. Bind missing-name and missing/invalid-email copy to the active French locale; no validation source was read."
+      },
+      "acceptance_criteria": [
+        "Empty French submission displays both exact approved French messages.",
+        "Invalid fields remain marked aria-invalid=true; confirmation remains hidden.",
+        "English empty validation and the French valid keyboard submission continue to work."
+      ],
+      "retest_steps": [
+        "Repeat the numbered reproduction for REPLAY-QA-004 against the corrected origin in a new campaign.",
+        "Execute the ticket's separate acceptance witness journeys; they were not part of this replay."
+      ]
+    },
+    {
+      "id": "QA-005",
+      "title": "English contact form skips the required email field during keyboard entry",
+      "impact": "The contracted forward keyboard sequence cannot enter the required email, preventing English keyboard-only completion.",
+      "severity": "MAJOR",
+      "severity_rationale": "The required email field is skipped in the specified forward keyboard sequence, stopping completion of that sequence.",
+      "confidence": "HIGH",
+      "scope": {
+        "pages": [
+          "http://127.0.0.1:39175/en/contact"
+        ],
+        "languages": [
+          "en"
+        ],
+        "profiles": [
+          "desktop"
+        ]
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 1440 x 900 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test"
+      },
+      "steps": [
+        "Open http://127.0.0.1:39175/en/contact at 1440 × 900.",
+        "Focus #contact-name and type Alex Test using keyboard input.",
+        "Press Tab exactly once.",
+        "Inspect document.activeElement.id and the visible focus outline. Do not click or fill the skipped email field."
+      ],
+      "expected": "The first Tab reaches #contact-email with a visible outline; after typing alex@example.test, the next Tab reaches #contact-submit and Enter displays the approved English confirmation.",
+      "observed": "Active element after one Tab is #contact-submit. Active element #contact-submit; outline={'style': 'solid', 'width': '3px', 'color': 'rgb(195, 79, 0)', 'offset': '3px'}; email value=''; email tabIndex=-1. Not run because the first Tab did not reach the email field. No click or direct fill was used to bypass the failed transition.",
+      "evidence_ids": [
+        "REPLAY-QA-005-a1-opened",
+        "REPLAY-QA-005-a1-name-keyboard",
+        "REPLAY-QA-005-a1-after-one-tab",
+        "REPLAY-QA-005-a1-focus-viewport",
+        "REPLAY-QA-005-a1-network",
+        "REPLAY-QA-005-a1-console"
+      ],
+      "case_ids": [
+        "REPLAY-QA-005"
+      ],
+      "reproduction": {
+        "reproduced": 1,
+        "attempted": 1
+      },
+      "correction": {
+        "hypothesis": true,
+        "note": "The observed tabindex=-1 on #contact-email is consistent with exclusion from forward Tab order. Restore a normal focusable order and verify the visible focus indicator and complete keyboard submission; application source was not inspected."
+      },
+      "acceptance_criteria": [
+        "The forward order is contact-name → contact-email → contact-submit.",
+        "The focused email field and submit control have visible focus indications.",
+        "Typing the supplied synthetic data and pressing Enter shows Thank you, Alex Test. Your local request is confirmed. without visible validation errors.",
+        "The French keyboard form remains functional."
+      ],
+      "retest_steps": [
+        "Repeat the numbered reproduction for REPLAY-QA-005 against the corrected origin in a new campaign.",
+        "Execute the ticket's separate acceptance witness journeys; they were not part of this replay."
+      ]
+    },
+    {
+      "id": "QA-006",
+      "title": "French mobile offer overflows horizontally and clips its description",
+      "impact": "At 390 CSS pixels, the offer card extends beyond the viewport and its description is clipped until the visitor scrolls horizontally.",
+      "severity": "MINOR",
+      "severity_rationale": "The mobile-width presentation overflows and clips content while the visible CTA still reaches French Contact.",
+      "confidence": "HIGH",
+      "scope": {
+        "pages": [
+          "http://127.0.0.1:39175/fr/offer",
+          "http://127.0.0.1:39175/fr/contact"
+        ],
+        "languages": [
+          "fr"
+        ],
+        "profiles": [
+          "mobile"
+        ]
+      },
+      "preconditions": [
+        "Fresh isolated browser context; Chromium 151.0.7922.34; locale en-GB; time zone UTC.",
+        "Viewport 390 x 844 CSS pixels.",
+        "Synthetic local baseline on port 39175; no login.",
+        "The sole business input is tickets-reviewed.json; no application source or prior case evidence was read."
+      ],
+      "test_data": {},
+      "steps": [
+        "Open http://127.0.0.1:39175/fr/offer with a 390 × 844 Chromium viewport.",
+        "Compare document.documentElement.scrollWidth with window.innerWidth.",
+        "Inspect the right edge of the offer card and description before interacting.",
+        "Click #offer-cta and record whether it remains visible and reaches French Contact."
+      ],
+      "expected": "scrollWidth is no greater than innerWidth + 1, the offer content fits without horizontal scrolling, and the visible CTA reaches /fr/contact.",
+      "observed": "scrollWidth=556; innerWidth=390; overflow=166 CSS pixels. Visible content boxes extending beyond the right viewport edge: [{'id': '', 'text': 'Offre Découverte\\n19,90 € / mois\\n8 octobre 2026\\nUn point de départ clair pour votre prochain site web.\\nContactez-nous', 'right': 556}, {'id': 'offer-title', 'text': 'Offre Découverte', 'right': 539}, {'id': 'offer-price', 'text': '19,90 € / mois', 'right': 539}, {'id': 'offer-date', 'text': '8 octobre 2026', 'right': 539}, {'id': '', 'text': 'Un point de départ clair pour votre prochain site web.', 'right': 539}]. CTA initially visible=True; within horizontal viewport=True; final URL http://127.0.0.1:39175/fr/contact; html[lang]=fr; heading Contacter Atlas Studio.",
+      "evidence_ids": [
+        "REPLAY-QA-006-a1-opened",
+        "REPLAY-QA-006-a1-offer-viewport",
+        "REPLAY-QA-006-a1-cta-destination",
+        "REPLAY-QA-006-a1-contact-viewport",
+        "REPLAY-QA-006-a1-network",
+        "REPLAY-QA-006-a1-console"
+      ],
+      "case_ids": [
+        "REPLAY-QA-006"
+      ],
+      "reproduction": {
+        "reproduced": 1,
+        "attempted": 1
+      },
+      "correction": {
+        "hypothesis": true,
+        "note": "An offer-card width or minimum-width constraint may exceed the French mobile container. Constrain the card/content to available viewport width and allow wrapping; the CSS implementation was not inspected."
+      },
+      "acceptance_criteria": [
+        "At 390 × 844, document scrollWidth <= innerWidth + 1 and the full description fits without horizontal page scrolling.",
+        "Approved French title, price and date remain unchanged.",
+        "The CTA remains inside the viewport, can be clicked and reaches /fr/contact.",
+        "English offer layout and CTA continue to pass."
+      ],
+      "retest_steps": [
+        "Repeat the numbered reproduction for REPLAY-QA-006 against the corrected origin in a new campaign.",
+        "Execute the ticket's separate acceptance witness journeys; they were not part of this replay."
+      ]
+    }
+  ],
+  "summary": {
+    "planned": 6,
+    "counts": {
+      "PASS": 0,
+      "FAIL": 6,
+      "BLOCKED": 0,
+      "NOT_RUN": 0,
+      "NOT_APPLICABLE": 0
+    },
+    "executed": 6,
+    "attempted": 6,
+    "coverage": {
+      "numerator": 6,
+      "denominator": 6
+    },
+    "critical_uncovered": [],
+    "verdict": "ISSUES_FOUND",
+    "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+  }
+}

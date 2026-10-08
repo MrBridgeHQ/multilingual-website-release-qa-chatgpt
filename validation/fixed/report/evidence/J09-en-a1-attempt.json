@@ -1,0 +1,55 @@
+{
+  "case_id": "J09-en",
+  "attempt": 1,
+  "started_at": "2026-10-08T12:10:44.327Z",
+  "finished_at": "2026-10-08T12:10:44.881Z",
+  "status": "PASS",
+  "incident": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open /en/ at 390 by 844",
+      "expected": "Toggle visible, panel hidden, aria-expanded false",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"toggle visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"panel hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"aria-expanded\", \"passed\": true, \"expected\": \"false\", \"actual\": \"false\"}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J09-en-a1-s1-state",
+        "J09-en-a1-s1-viewport"
+      ]
+    },
+    {
+      "number": 2,
+      "action": "Click #menu-toggle",
+      "expected": "Panel visible and aria-expanded true",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"panel visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"aria-expanded\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}], \"details\": {}, \"active_id\": \"menu-toggle\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J09-en-a1-s2-state",
+        "J09-en-a1-s2-viewport"
+      ]
+    },
+    {
+      "number": 3,
+      "action": "Click #mobile-about",
+      "expected": "Same-language /about with localized heading and closed menu",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"panel closed after navigation\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J09-en-a1-s3-state",
+        "J09-en-a1-s3-viewport"
+      ]
+    },
+    {
+      "number": 4,
+      "action": "Reopen menu and press Escape",
+      "expected": "Panel hidden, aria-expanded false, focus returns to toggle",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"panel hidden after Escape\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"aria-expanded after Escape\", \"passed\": true, \"expected\": \"false\", \"actual\": \"false\"}, {\"check\": \"focus returned to toggle\", \"passed\": true, \"expected\": \"menu-toggle\", \"actual\": \"menu-toggle\"}], \"details\": {\"reopened_with_toggle\": true, \"before_escape_panel_visible\": true, \"keys\": [\"Escape\"]}, \"active_id\": \"menu-toggle\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J09-en-a1-s4-state",
+        "J09-en-a1-s4-viewport"
+      ]
+    }
+  ],
+  "final_url": "http://127.0.0.1:39176/en/about"
+}

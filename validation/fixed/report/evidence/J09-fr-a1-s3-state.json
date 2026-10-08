@@ -1,0 +1,297 @@
+{
+  "at": "2026-10-08T12:10:45.417Z",
+  "case_id": "J09-fr",
+  "attempt": 1,
+  "step": 3,
+  "action": "Click #mobile-about",
+  "expected": "Same-language /about with localized heading and closed menu",
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "URL",
+      "passed": true,
+      "expected": "http://127.0.0.1:39176/fr/about",
+      "actual": "http://127.0.0.1:39176/fr/about"
+    },
+    {
+      "check": "html language",
+      "passed": true,
+      "expected": "fr",
+      "actual": "fr"
+    },
+    {
+      "check": "localized heading",
+      "passed": true,
+      "expected": "À propos d’Atlas Studio",
+      "actual": "À propos d’Atlas Studio"
+    },
+    {
+      "check": "last document HTTP status",
+      "passed": true,
+      "expected": 200,
+      "actual": 200
+    },
+    {
+      "check": "panel closed after navigation",
+      "passed": true,
+      "expected": false,
+      "actual": false
+    }
+  ],
+  "details": {},
+  "state": {
+    "url": "http://127.0.0.1:39176/fr/about",
+    "title": "À propos d’Atlas Studio",
+    "html_lang": "fr",
+    "heading": "À propos d’Atlas Studio",
+    "canonical": "http://127.0.0.1:39176/fr/about",
+    "alternates": [
+      {
+        "language": "en",
+        "url": "http://127.0.0.1:39176/en/about"
+      },
+      {
+        "language": "fr",
+        "url": "http://127.0.0.1:39176/fr/about"
+      }
+    ],
+    "active_id": null,
+    "active_tag": "BODY",
+    "scroll_width": 390,
+    "inner_width": 390,
+    "inner_height": 844,
+    "scroll_x": 0,
+    "scroll_y": 0,
+    "result_count": 0,
+    "body_text": "Aller au contenu\nAtlas Studio\nMenu\nEnglish\nÀ propos d’Atlas Studio\n\nAtlas Studio crée des expériences numériques claires et accessibles.\n\nAtlas Studio",
+    "elements": {
+      "page-heading": {
+        "present": true,
+        "text": "À propos d’Atlas Studio",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 16,
+          "y": 137.15625,
+          "width": 358,
+          "height": 69.09375,
+          "right": 374,
+          "bottom": 206.25
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": false,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "language-switch": {
+        "present": true,
+        "text": "English",
+        "value": null,
+        "visible": true,
+        "href": "/en/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 312.609375,
+          "y": 61.671875,
+          "width": 61.390625,
+          "height": 25.5,
+          "right": 374,
+          "bottom": 87.171875
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "menu-toggle": {
+        "present": true,
+        "text": "Menu",
+        "value": "",
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": "false",
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 16,
+          "y": 49.484375,
+          "width": 80.6875,
+          "height": 49.875,
+          "right": 96.6875,
+          "bottom": 99.359375
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(255, 255, 255)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-menu": {
+        "present": true,
+        "text": "AccueilÀ proposRechercheContactOffre",
+        "value": null,
+        "visible": false,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "mobile-about": {
+        "present": true,
+        "text": "À propos",
+        "value": null,
+        "visible": false,
+        "href": "/fr/about",
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "right": 0,
+          "bottom": 0
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(18, 88, 139)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "main-content": {
+        "present": true,
+        "text": "À propos d’Atlas Studio\n\nAtlas Studio crée des expériences numériques claires et accessibles.",
+        "value": null,
+        "visible": true,
+        "href": null,
+        "aria_invalid": null,
+        "aria_expanded": null,
+        "tabindex": null,
+        "disabled": false,
+        "rect": {
+          "x": 0,
+          "y": 113.15625,
+          "width": 390,
+          "height": 204.28125,
+          "right": 390,
+          "bottom": 317.4375
+        },
+        "outline": {
+          "style": "none",
+          "width": "3px",
+          "color": "rgb(23, 50, 74)"
+        },
+        "box_shadow": "none",
+        "labels": []
+      },
+      "search-query": {
+        "present": false
+      },
+      "search-submit": {
+        "present": false
+      },
+      "search-results": {
+        "present": false
+      },
+      "empty-state": {
+        "present": false
+      },
+      "result-about": {
+        "present": false
+      },
+      "contact-name": {
+        "present": false
+      },
+      "contact-email": {
+        "present": false
+      },
+      "contact-submit": {
+        "present": false
+      },
+      "name-error": {
+        "present": false
+      },
+      "email-error": {
+        "present": false
+      },
+      "confirmation": {
+        "present": false
+      },
+      "offer-title": {
+        "present": false
+      },
+      "offer-price": {
+        "present": false
+      },
+      "offer-date": {
+        "present": false
+      },
+      "offer-cta": {
+        "present": false
+      }
+    }
+  }
+}

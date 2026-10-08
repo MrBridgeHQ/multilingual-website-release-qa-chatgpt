@@ -1,0 +1,22 @@
+{
+  "case_id": "J04-fr",
+  "attempt": 2,
+  "responses": [
+    {
+      "at": "2026-10-08T11:43:47.815Z",
+      "url": "http://127.0.0.1:39175/fr/legacy",
+      "status": 302,
+      "resource_type": "document",
+      "location": "/en/about",
+      "redirected_from": null
+    },
+    {
+      "at": "2026-10-08T11:43:47.819Z",
+      "url": "http://127.0.0.1:39175/en/about",
+      "status": 200,
+      "resource_type": "document",
+      "location": null,
+      "redirected_from": "http://127.0.0.1:39175/fr/legacy"
+    }
+  ]
+}

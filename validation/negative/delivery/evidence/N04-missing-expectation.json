@@ -1,0 +1,8 @@
+{
+  "scenario_type": "CONTROLLED_AMBIGUOUS_BUSINESS_REQUIREMENT",
+  "request": "Check whether the localized offer is commercially correct.",
+  "provided_acceptance_criteria": null,
+  "product_question": "Which approved price, tax treatment, billing period, and market should this offer satisfy?",
+  "decision": "Do not assert a required commercial value until the product owner supplies the expectation.",
+  "website_assertion_executed": false
+}

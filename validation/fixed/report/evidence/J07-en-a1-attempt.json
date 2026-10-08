@@ -1,0 +1,55 @@
+{
+  "case_id": "J07-en",
+  "attempt": 1,
+  "started_at": "2026-10-08T12:10:41.109Z",
+  "finished_at": "2026-10-08T12:10:41.683Z",
+  "status": "PASS",
+  "incident": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open /en/contact",
+      "expected": "HTTP 200 and both fields empty",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"contact-name initially empty\", \"passed\": true, \"expected\": \"\", \"actual\": \"\"}, {\"check\": \"contact-email initially empty\", \"passed\": true, \"expected\": \"\", \"actual\": \"\"}], \"details\": {}, \"active_id\": null}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J07-en-a1-s1-state",
+        "J07-en-a1-s1-viewport"
+      ]
+    },
+    {
+      "number": 2,
+      "action": "Click #contact-submit",
+      "expected": "Local validation runs",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [], \"details\": {\"actual_action\": \"Clicked local form submit once with empty fields.\"}, \"active_id\": \"contact-submit\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J07-en-a1-s2-state",
+        "J07-en-a1-s2-viewport"
+      ]
+    },
+    {
+      "number": 3,
+      "action": "Inspect field validity and confirmation",
+      "expected": "Both errors visible, aria-invalid true on both fields, confirmation hidden",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"name-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"email-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-name aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"contact-email aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"confirmation hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J07-en-a1-s3-state",
+        "J07-en-a1-s3-viewport"
+      ]
+    },
+    {
+      "number": 4,
+      "action": "Read validation errors",
+      "expected": "Both approved error messages use the page language",
+      "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"name error copy\", \"passed\": true, \"expected\": \"Enter your name.\", \"actual\": \"Enter your name.\"}, {\"check\": \"email error copy\", \"passed\": true, \"expected\": \"Enter a valid email address.\", \"actual\": \"Enter a valid email address.\"}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+      "status": "PASS",
+      "evidence_ids": [
+        "J07-en-a1-s4-state",
+        "J07-en-a1-s4-viewport"
+      ]
+    }
+  ],
+  "final_url": "http://127.0.0.1:39176/en/contact"
+}

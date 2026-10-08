@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "meaning": "Negative handling assertions passed; this is not a website release verdict.",
+  "case_count": 5,
+  "evidence_files": 6,
+  "actual_http_status": 401,
+  "controlled_missing_executable_error": "FileNotFoundError",
+  "controlled_tool_error": "Error",
+  "summary": {
+    "planned": 5,
+    "counts": {
+      "PASS": 0,
+      "FAIL": 0,
+      "BLOCKED": 4,
+      "NOT_RUN": 1,
+      "NOT_APPLICABLE": 0
+    },
+    "executed": 0,
+    "attempted": 4,
+    "coverage": {
+      "numerator": 0,
+      "denominator": 5
+    },
+    "critical_uncovered": [
+      "N01",
+      "N02",
+      "N03",
+      "N04",
+      "N05"
+    ],
+    "verdict": "NO_EXECUTION",
+    "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+  },
+  "tickets": 0,
+  "helper_returncodes": [
+    0,
+    0,
+    0
+  ],
+  "browser_version": "153.0.8010.12"
+}

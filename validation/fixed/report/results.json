@@ -1,0 +1,4153 @@
+{
+  "schema_version": "1.0",
+  "campaign": {
+    "id": "fixed-retest-20261008",
+    "started_at": "2026-10-08T12:10:32.238Z",
+    "finished_at": "2026-10-08T12:10:46.860Z",
+    "base_url": "http://127.0.0.1:39176",
+    "environment": "LOCAL",
+    "output_language": "en",
+    "capabilities": {
+      "extraction": true,
+      "interaction": true,
+      "screenshots": true,
+      "network": true,
+      "console": true,
+      "traces": false,
+      "geography": false
+    },
+    "limitations": [
+      "Synthetic local demo only; no production-readiness claim.",
+      "Only Chromium with desktop 1440x900 and narrow 390x844 viewports; no physical mobile device.",
+      "No geography verification or traces collected; no performance or comprehensive accessibility/SEO audit.",
+      "Scope interception restricts target requests; browser-level background traffic is not independently firewall-verified.",
+      "Retained Chromium process and profile avoid driver cleanup; each attempt used a fresh context."
+    ]
+  },
+  "evidence": [
+    {
+      "id": "J01-en-a1-s1-state",
+      "path": "evidence/J01-en-a1-s1-state.json",
+      "sha256": "06b6f32039f7a8cd268a9c2f64ff5bb314a58007725b92a7dad3bf52caa51704",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.077Z",
+      "description": "Rendered state and actual checks after Open /en/."
+    },
+    {
+      "id": "J01-en-a1-s1-viewport",
+      "path": "evidence/J01-en-a1-s1-viewport.png",
+      "sha256": "196e30a22ba3758ea132d4046eb3590b7ab1db9ee614b8ce502899404749f3e9",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.174Z",
+      "description": "Actual J01-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J01-en-a1-s2-state",
+      "path": "evidence/J01-en-a1-s2-state.json",
+      "sha256": "3c19fd6f1e7c6361a3261b2cc28b4ac5cd478512860103813f3dc48dc64cfdc5",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.196Z",
+      "description": "Rendered state and actual checks after Inspect language and heading."
+    },
+    {
+      "id": "J01-en-a1-s2-viewport",
+      "path": "evidence/J01-en-a1-s2-viewport.png",
+      "sha256": "196e30a22ba3758ea132d4046eb3590b7ab1db9ee614b8ce502899404749f3e9",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.339Z",
+      "description": "Actual J01-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J01-en-a1-s3-state",
+      "path": "evidence/J01-en-a1-s3-state.json",
+      "sha256": "c379cabfee81b1857697b22920687c085f6118a2a016b7dd8fa6b6bca30a7ac5",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.356Z",
+      "description": "Rendered state and actual checks after Inspect canonical and alternate links."
+    },
+    {
+      "id": "J01-en-a1-s3-viewport",
+      "path": "evidence/J01-en-a1-s3-viewport.png",
+      "sha256": "196e30a22ba3758ea132d4046eb3590b7ab1db9ee614b8ce502899404749f3e9",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.457Z",
+      "description": "Actual J01-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J01-en-a1-network",
+      "path": "evidence/J01-en-a1-network.json",
+      "sha256": "74201a9d2f83bbae0245b561d5c323a47704020dd21d1838d687dbfd0491cfef",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:33.457Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J01-en-a1-console",
+      "path": "evidence/J01-en-a1-console.json",
+      "sha256": "1fe8c65be8bf655d0b07ac4e529ec4c335cd65c9869cc1bf961e531765c52bb0",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:33.457Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J01-en-a1-attempt",
+      "path": "evidence/J01-en-a1-attempt.json",
+      "sha256": "353a1b9b533f3a90fa71c8d836f6000cc93a8922077cfd82e8ba7386be4b5e30",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:33.457Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J01-fr-a1-s1-state",
+      "path": "evidence/J01-fr-a1-s1-state.json",
+      "sha256": "ea024b845574c9f8772ebef74d24cb0f0628357384b02c5c634d330b05ca2236",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.676Z",
+      "description": "Rendered state and actual checks after Open /fr/."
+    },
+    {
+      "id": "J01-fr-a1-s1-viewport",
+      "path": "evidence/J01-fr-a1-s1-viewport.png",
+      "sha256": "87e05f75fb445c219d276b3ae7895b519db78ffa33f75e2b307b6fe39e367ab3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.772Z",
+      "description": "Actual J01-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J01-fr-a1-s2-state",
+      "path": "evidence/J01-fr-a1-s2-state.json",
+      "sha256": "4f3fa475878b2028c42dd71caa64fa6062d4ae562be7fb36a2940e3d35818a0a",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.789Z",
+      "description": "Rendered state and actual checks after Inspect language and heading."
+    },
+    {
+      "id": "J01-fr-a1-s2-viewport",
+      "path": "evidence/J01-fr-a1-s2-viewport.png",
+      "sha256": "87e05f75fb445c219d276b3ae7895b519db78ffa33f75e2b307b6fe39e367ab3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.872Z",
+      "description": "Actual J01-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J01-fr-a1-s3-state",
+      "path": "evidence/J01-fr-a1-s3-state.json",
+      "sha256": "e6f68c6cdd1af24c781905d9ec738ad41a4f42f95aeee34deacdd6e913bbe2ad",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:33.883Z",
+      "description": "Rendered state and actual checks after Inspect canonical and alternate links."
+    },
+    {
+      "id": "J01-fr-a1-s3-viewport",
+      "path": "evidence/J01-fr-a1-s3-viewport.png",
+      "sha256": "87e05f75fb445c219d276b3ae7895b519db78ffa33f75e2b307b6fe39e367ab3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:33.986Z",
+      "description": "Actual J01-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J01-fr-a1-network",
+      "path": "evidence/J01-fr-a1-network.json",
+      "sha256": "6e18bb9f10466a7aaa3e858a8450ef4138a2505a7142fc293e79ac6d3f275330",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:33.986Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J01-fr-a1-console",
+      "path": "evidence/J01-fr-a1-console.json",
+      "sha256": "084bae595101a2eca55890010906e0a0fe6ea280df00d5f1086b71a7bbcaf817",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:33.986Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J01-fr-a1-attempt",
+      "path": "evidence/J01-fr-a1-attempt.json",
+      "sha256": "20985c9dfb4a3ca3e12e8aea83d6ab83aae80ea8ce13eda51e73e1f54aae6985",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:33.986Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J02-en-a1-s1-state",
+      "path": "evidence/J02-en-a1-s1-state.json",
+      "sha256": "1b1e971571d2d3517d7e1fdba1ff8ec5dc44925f620152f96cc37caa40cb3681",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:34.136Z",
+      "description": "Rendered state and actual checks after Open /en/."
+    },
+    {
+      "id": "J02-en-a1-s1-viewport",
+      "path": "evidence/J02-en-a1-s1-viewport.png",
+      "sha256": "196e30a22ba3758ea132d4046eb3590b7ab1db9ee614b8ce502899404749f3e9",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:34.254Z",
+      "description": "Actual J02-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J02-en-a1-s2-state",
+      "path": "evidence/J02-en-a1-s2-state.json",
+      "sha256": "6c5a17c5a63a65ee7bbdf124ffc958bad158dd5ce31118f42c0848d10ee470f3",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:34.386Z",
+      "description": "Rendered state and actual checks after Click #main-about."
+    },
+    {
+      "id": "J02-en-a1-s2-viewport",
+      "path": "evidence/J02-en-a1-s2-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:34.482Z",
+      "description": "Actual J02-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J02-en-a1-s3-state",
+      "path": "evidence/J02-en-a1-s3-state.json",
+      "sha256": "2fd4b50a0f43f74afa1cac89b9c8bdc4c99017da36c98114c3a365efd0b248fa",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:34.491Z",
+      "description": "Rendered state and actual checks after Inspect the destination."
+    },
+    {
+      "id": "J02-en-a1-s3-viewport",
+      "path": "evidence/J02-en-a1-s3-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:34.578Z",
+      "description": "Actual J02-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J02-en-a1-network",
+      "path": "evidence/J02-en-a1-network.json",
+      "sha256": "233e128e5e2e598adc11904e6287efe7fabaf34738bce84c35041715f6de9450",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:34.578Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J02-en-a1-console",
+      "path": "evidence/J02-en-a1-console.json",
+      "sha256": "1da149e6ab6c8d0ad2a4ffc4fcb2a733ad969f4fee7bbfa9a5638daf029f7c1a",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:34.578Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J02-en-a1-attempt",
+      "path": "evidence/J02-en-a1-attempt.json",
+      "sha256": "aa35e6a4dc38adb2224d54865a9c7da0274e939ab9e5f6901e3992bb1675058b",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:34.578Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J02-fr-a1-s1-state",
+      "path": "evidence/J02-fr-a1-s1-state.json",
+      "sha256": "ac29a5482bbc764c3ec2555b54d5961dfc546f91520ec6098ca4ced3f327fac8",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:34.755Z",
+      "description": "Rendered state and actual checks after Open /fr/."
+    },
+    {
+      "id": "J02-fr-a1-s1-viewport",
+      "path": "evidence/J02-fr-a1-s1-viewport.png",
+      "sha256": "87e05f75fb445c219d276b3ae7895b519db78ffa33f75e2b307b6fe39e367ab3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:34.871Z",
+      "description": "Actual J02-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J02-fr-a1-s2-state",
+      "path": "evidence/J02-fr-a1-s2-state.json",
+      "sha256": "9b31ada36e688e237436ccc9254e2ba9a097e8d663e596c60ca6b1451752ff46",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:35.026Z",
+      "description": "Rendered state and actual checks after Click #main-about."
+    },
+    {
+      "id": "J02-fr-a1-s2-viewport",
+      "path": "evidence/J02-fr-a1-s2-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:35.151Z",
+      "description": "Actual J02-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J02-fr-a1-s3-state",
+      "path": "evidence/J02-fr-a1-s3-state.json",
+      "sha256": "70f021bfa46e735210d84a31e1983571db929f09d7bfe0356209daad88e3bff5",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:35.161Z",
+      "description": "Rendered state and actual checks after Inspect the destination."
+    },
+    {
+      "id": "J02-fr-a1-s3-viewport",
+      "path": "evidence/J02-fr-a1-s3-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:35.253Z",
+      "description": "Actual J02-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J02-fr-a1-network",
+      "path": "evidence/J02-fr-a1-network.json",
+      "sha256": "83647e076f09454b9e6bf06c89becf77baa79b77546cfd252949d7b71ee1b15b",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:35.254Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J02-fr-a1-console",
+      "path": "evidence/J02-fr-a1-console.json",
+      "sha256": "063e274fca8bae2b17ee11be29cfdf1c7b80637e4a0c9b9cfbaf86b7b73b9f75",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:35.255Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J02-fr-a1-attempt",
+      "path": "evidence/J02-fr-a1-attempt.json",
+      "sha256": "1038d8d611ac5ccb24e3dff308b2fd27f73935ff5876da2a9ad04ed44089ddf9",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:35.255Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J03-en-a1-s1-state",
+      "path": "evidence/J03-en-a1-s1-state.json",
+      "sha256": "883412d100aabc6cbcb9fa7ed7118f726296c945eb47003f10bcd31d6cdc2ac5",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:35.426Z",
+      "description": "Rendered state and actual checks after Open /en/about."
+    },
+    {
+      "id": "J03-en-a1-s1-viewport",
+      "path": "evidence/J03-en-a1-s1-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:35.550Z",
+      "description": "Actual J03-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J03-en-a1-s2-state",
+      "path": "evidence/J03-en-a1-s2-state.json",
+      "sha256": "bd399a14eb11740511d53ff5fb28431aa2a34fd598c2ccf46d1c49aa8ca52f7b",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:35.721Z",
+      "description": "Rendered state and actual checks after Click #language-switch."
+    },
+    {
+      "id": "J03-en-a1-s2-viewport",
+      "path": "evidence/J03-en-a1-s2-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:35.807Z",
+      "description": "Actual J03-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J03-en-a1-s3-state",
+      "path": "evidence/J03-en-a1-s3-state.json",
+      "sha256": "43d5ee0eaadc63e3325d23b4f8ca723ac3e3a70f473c5a180d8ae01883cfd2d6",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:35.816Z",
+      "description": "Rendered state and actual checks after Inspect destination route."
+    },
+    {
+      "id": "J03-en-a1-s3-viewport",
+      "path": "evidence/J03-en-a1-s3-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:35.901Z",
+      "description": "Actual J03-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J03-en-a1-s4-state",
+      "path": "evidence/J03-en-a1-s4-state.json",
+      "sha256": "d24163c0cc5adec5f47b5e9977945dddf0edae21aa417b9202fdbe3e167b8bb6",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:35.916Z",
+      "description": "Rendered state and actual checks after Inspect destination language and heading."
+    },
+    {
+      "id": "J03-en-a1-s4-viewport",
+      "path": "evidence/J03-en-a1-s4-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:36.019Z",
+      "description": "Actual J03-en attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J03-en-a1-network",
+      "path": "evidence/J03-en-a1-network.json",
+      "sha256": "5a8c8b7afc936663dfb87e4d8f9f2c22136269b53b230b64eab0f18deb19418a",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:36.019Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J03-en-a1-console",
+      "path": "evidence/J03-en-a1-console.json",
+      "sha256": "8d76465ba9bb03a6e09baeb833b6df22875056c0097f33b6503db52e5315b2b1",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:36.020Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J03-en-a1-attempt",
+      "path": "evidence/J03-en-a1-attempt.json",
+      "sha256": "5183d6972f139a66f79f4882837367550c3f895432856f9d383a8e87b486f425",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:36.020Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J03-fr-a1-s1-state",
+      "path": "evidence/J03-fr-a1-s1-state.json",
+      "sha256": "a2a8318ee61d8373eeabb8793547390a516cbbee0fba4b8f7c353483e593fbab",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:36.192Z",
+      "description": "Rendered state and actual checks after Open /fr/about."
+    },
+    {
+      "id": "J03-fr-a1-s1-viewport",
+      "path": "evidence/J03-fr-a1-s1-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:36.279Z",
+      "description": "Actual J03-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J03-fr-a1-s2-state",
+      "path": "evidence/J03-fr-a1-s2-state.json",
+      "sha256": "f71dd4dfe5d100ee3127dd0c7bacab5321ec7e93286b43ae2a36ca7d8e820e12",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:36.419Z",
+      "description": "Rendered state and actual checks after Click #language-switch."
+    },
+    {
+      "id": "J03-fr-a1-s2-viewport",
+      "path": "evidence/J03-fr-a1-s2-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:36.521Z",
+      "description": "Actual J03-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J03-fr-a1-s3-state",
+      "path": "evidence/J03-fr-a1-s3-state.json",
+      "sha256": "59acb254301ee37a3bd6604c59f809163a57012b656dcf0912f51473bf56d779",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:36.529Z",
+      "description": "Rendered state and actual checks after Inspect destination route."
+    },
+    {
+      "id": "J03-fr-a1-s3-viewport",
+      "path": "evidence/J03-fr-a1-s3-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:36.603Z",
+      "description": "Actual J03-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J03-fr-a1-s4-state",
+      "path": "evidence/J03-fr-a1-s4-state.json",
+      "sha256": "5dcd6ba8db46cf176a0f4934d1767748c67a8d87734b299cd9e24f079e8bfc41",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:36.617Z",
+      "description": "Rendered state and actual checks after Inspect destination language and heading."
+    },
+    {
+      "id": "J03-fr-a1-s4-viewport",
+      "path": "evidence/J03-fr-a1-s4-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:36.707Z",
+      "description": "Actual J03-fr attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J03-fr-a1-network",
+      "path": "evidence/J03-fr-a1-network.json",
+      "sha256": "2439b0e76a1a79fc3a717563917c19aa53e8f2e7f8c451adb2fa652a011638bb",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:36.707Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J03-fr-a1-console",
+      "path": "evidence/J03-fr-a1-console.json",
+      "sha256": "6050394703803afccc88887a013f03aa8521c2c1b9fde3d5b3eefca0afaa5fb5",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:36.707Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J03-fr-a1-attempt",
+      "path": "evidence/J03-fr-a1-attempt.json",
+      "sha256": "baebd7c7870332dc63f8a5d92bff3dc44a693cb223e7b2f9c7caf254b21e4824",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:36.707Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J04-en-a1-s1-state",
+      "path": "evidence/J04-en-a1-s1-state.json",
+      "sha256": "3c6a961d21baad04799cd86fcf222cb09493ccfaba2254ddb47cc55db054593c",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:36.869Z",
+      "description": "Rendered state and actual checks after Open /en/legacy."
+    },
+    {
+      "id": "J04-en-a1-s1-viewport",
+      "path": "evidence/J04-en-a1-s1-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:36.972Z",
+      "description": "Actual J04-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J04-en-a1-s2-state",
+      "path": "evidence/J04-en-a1-s2-state.json",
+      "sha256": "855a490eee37e022df3dd072883a0bfbc2c9a01e172280b47dab936c2a9cae3b",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:36.988Z",
+      "description": "Rendered state and actual checks after Inspect the final document."
+    },
+    {
+      "id": "J04-en-a1-s2-viewport",
+      "path": "evidence/J04-en-a1-s2-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:37.108Z",
+      "description": "Actual J04-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J04-en-a1-s3-state",
+      "path": "evidence/J04-en-a1-s3-state.json",
+      "sha256": "d109ed99b7bf2e67db2213475751daf7b1b4f9cf128fcd3fc0326a9bd33c609b",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:37.118Z",
+      "description": "Rendered state and actual checks after Inspect redirect response."
+    },
+    {
+      "id": "J04-en-a1-s3-viewport",
+      "path": "evidence/J04-en-a1-s3-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:37.217Z",
+      "description": "Actual J04-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J04-en-a1-network",
+      "path": "evidence/J04-en-a1-network.json",
+      "sha256": "80a32bb12b14ec6e88a0c2b1c59f086ee02fded32e44d2715beb8bfcbf4cad76",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:37.217Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J04-en-a1-console",
+      "path": "evidence/J04-en-a1-console.json",
+      "sha256": "d6199c1254a26e7cf48791b0cce5d5ca3f94375a15da16f9e0b77354cf70b8d3",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:37.217Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J04-en-a1-attempt",
+      "path": "evidence/J04-en-a1-attempt.json",
+      "sha256": "7802fce98847a6f9efae2895b22f97662ba82388a7546a8b76b708dfb39ea5de",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:37.217Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J04-fr-a1-s1-state",
+      "path": "evidence/J04-fr-a1-s1-state.json",
+      "sha256": "eef1f30109ddeaebc47005416636d9a1f6feb01d6bf6f6d14ff13cc38b440aea",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:37.426Z",
+      "description": "Rendered state and actual checks after Open /fr/legacy."
+    },
+    {
+      "id": "J04-fr-a1-s1-viewport",
+      "path": "evidence/J04-fr-a1-s1-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:37.551Z",
+      "description": "Actual J04-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J04-fr-a1-s2-state",
+      "path": "evidence/J04-fr-a1-s2-state.json",
+      "sha256": "5b27dc5c9be7108d311646e0638a5fb226edb50f0d61f5aacf3c5578d12e4fa1",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:37.568Z",
+      "description": "Rendered state and actual checks after Inspect the final document."
+    },
+    {
+      "id": "J04-fr-a1-s2-viewport",
+      "path": "evidence/J04-fr-a1-s2-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:37.670Z",
+      "description": "Actual J04-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J04-fr-a1-s3-state",
+      "path": "evidence/J04-fr-a1-s3-state.json",
+      "sha256": "28a4c0f1b33c95780456396fbc4b583e060dd9c90cdb792d1e1ffc62266c2ccf",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:37.678Z",
+      "description": "Rendered state and actual checks after Inspect redirect response."
+    },
+    {
+      "id": "J04-fr-a1-s3-viewport",
+      "path": "evidence/J04-fr-a1-s3-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:37.775Z",
+      "description": "Actual J04-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J04-fr-a1-network",
+      "path": "evidence/J04-fr-a1-network.json",
+      "sha256": "58097d66dade4490e917bab8a0ba9363a84449dbe8b6c69322f71cddb7fdcf56",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:37.775Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J04-fr-a1-console",
+      "path": "evidence/J04-fr-a1-console.json",
+      "sha256": "ccd291820a0d5f5f41511f9b03435f6e34d8168f52ad4be34ab8a54f813a60e4",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:37.775Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J04-fr-a1-attempt",
+      "path": "evidence/J04-fr-a1-attempt.json",
+      "sha256": "023a9d62cbac3bfb381173a78e71bce148a797731f932f4f907e902f471fb514",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:37.776Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J05-en-a1-s1-state",
+      "path": "evidence/J05-en-a1-s1-state.json",
+      "sha256": "4445e56c0d2a8bf1de56b807b72141f4efa68b7e1b0b25bee0b524d6ea149aa5",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:37.932Z",
+      "description": "Rendered state and actual checks after Open /en/search."
+    },
+    {
+      "id": "J05-en-a1-s1-viewport",
+      "path": "evidence/J05-en-a1-s1-viewport.png",
+      "sha256": "9a66f0b4bd096b17da8d49f5143bf786eda754eef719df0e81e2e53f5bc31840",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:38.022Z",
+      "description": "Actual J05-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J05-en-a1-s2-state",
+      "path": "evidence/J05-en-a1-s2-state.json",
+      "sha256": "950cbe67550401c0f8af4518c0c9a5cc73afa10a7261b2f3fe72a6376a5eb55f",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:38.199Z",
+      "description": "Rendered state and actual checks after Type atlas in #search-query and click #search-submit."
+    },
+    {
+      "id": "J05-en-a1-s2-viewport",
+      "path": "evidence/J05-en-a1-s2-viewport.png",
+      "sha256": "77d3dbdbc48538656cad222333116c95763228cac4ba656f95a53eb3fc306825",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:38.309Z",
+      "description": "Actual J05-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J05-en-a1-s3-state",
+      "path": "evidence/J05-en-a1-s3-state.json",
+      "sha256": "c752aed662b0b7384fd842315b6de4b5e3d69f7beb683734759b75fd85920766",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:38.332Z",
+      "description": "Rendered state and actual checks after Inspect search results."
+    },
+    {
+      "id": "J05-en-a1-s3-viewport",
+      "path": "evidence/J05-en-a1-s3-viewport.png",
+      "sha256": "77d3dbdbc48538656cad222333116c95763228cac4ba656f95a53eb3fc306825",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:38.464Z",
+      "description": "Actual J05-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J05-en-a1-s4-state",
+      "path": "evidence/J05-en-a1-s4-state.json",
+      "sha256": "4bf2fcd0c640801e8a408a115fd2d343237795a82736c4257e14522ccffad44a",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:38.618Z",
+      "description": "Rendered state and actual checks after Click #result-about."
+    },
+    {
+      "id": "J05-en-a1-s4-viewport",
+      "path": "evidence/J05-en-a1-s4-viewport.png",
+      "sha256": "9a1db585a0a54d58131813211643e0795fba738cd2bbc7ef2f3192543cdc961e",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:38.717Z",
+      "description": "Actual J05-en attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J05-en-a1-network",
+      "path": "evidence/J05-en-a1-network.json",
+      "sha256": "a5a41e44161c6b0f39d88696e3b2d04ab1cb298cf27e522e6fb3e2cb6366a675",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:38.717Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J05-en-a1-console",
+      "path": "evidence/J05-en-a1-console.json",
+      "sha256": "a5b10afd4ae77b39eedcbe80c751417c3d2f7d16879c7d038aa339e2bfc09022",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:38.718Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J05-en-a1-attempt",
+      "path": "evidence/J05-en-a1-attempt.json",
+      "sha256": "0b49a6dfd1883ab6cf7b9c808eeec589ab2e9023ed82bc790b294bc5bc65376c",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:38.718Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J05-fr-a1-s1-state",
+      "path": "evidence/J05-fr-a1-s1-state.json",
+      "sha256": "c0d3088c11b3923b0869efe237b156e8d4e9e01286a5adfde282782cd843d996",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:38.897Z",
+      "description": "Rendered state and actual checks after Open /fr/search."
+    },
+    {
+      "id": "J05-fr-a1-s1-viewport",
+      "path": "evidence/J05-fr-a1-s1-viewport.png",
+      "sha256": "c569c4f83cd559ee075f24a3394a8e33fdfecfd95b6a5f8f6274a864cab04ada",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:38.993Z",
+      "description": "Actual J05-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J05-fr-a1-s2-state",
+      "path": "evidence/J05-fr-a1-s2-state.json",
+      "sha256": "5b20caf2281e79799199490da0217b5aac7760afcc6ded84a281823779942dc4",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:39.178Z",
+      "description": "Rendered state and actual checks after Type atlas in #search-query and click #search-submit."
+    },
+    {
+      "id": "J05-fr-a1-s2-viewport",
+      "path": "evidence/J05-fr-a1-s2-viewport.png",
+      "sha256": "d964568361d9de6b8b447011c5ef8afb7abd5837ec894761e777334767cfec2c",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:39.299Z",
+      "description": "Actual J05-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J05-fr-a1-s3-state",
+      "path": "evidence/J05-fr-a1-s3-state.json",
+      "sha256": "af84627ed115d055caa46917fb0ea0fb1b558f420c2e9a6c3be1d3f3494022a9",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:39.314Z",
+      "description": "Rendered state and actual checks after Inspect search results."
+    },
+    {
+      "id": "J05-fr-a1-s3-viewport",
+      "path": "evidence/J05-fr-a1-s3-viewport.png",
+      "sha256": "d964568361d9de6b8b447011c5ef8afb7abd5837ec894761e777334767cfec2c",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:39.384Z",
+      "description": "Actual J05-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J05-fr-a1-s4-state",
+      "path": "evidence/J05-fr-a1-s4-state.json",
+      "sha256": "e1fc6cd14920227d822b6a33d5c2ea6d08d038bdabde3994772bdee8f3eb4ea1",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:39.522Z",
+      "description": "Rendered state and actual checks after Click #result-about."
+    },
+    {
+      "id": "J05-fr-a1-s4-viewport",
+      "path": "evidence/J05-fr-a1-s4-viewport.png",
+      "sha256": "fc6bbebf5726f4af8d2b1af5c127ff02e10a95977af903e0a553580ae35632b1",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:39.622Z",
+      "description": "Actual J05-fr attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J05-fr-a1-network",
+      "path": "evidence/J05-fr-a1-network.json",
+      "sha256": "26ec42c3bc0ea61ec5b99ff7e949f91c55a6a6430c2d9bb0c525c5125895d5a4",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:39.623Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J05-fr-a1-console",
+      "path": "evidence/J05-fr-a1-console.json",
+      "sha256": "60bc3b6f37fd7d0cf007178642f13af70f58de5bcaffde1bc064a7cae971b811",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:39.623Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J05-fr-a1-attempt",
+      "path": "evidence/J05-fr-a1-attempt.json",
+      "sha256": "40f388b8b34d98d4f438dfdee1aee1977d2d8322d21e5fb9df4449a17009681c",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:39.623Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J06-en-a1-s1-state",
+      "path": "evidence/J06-en-a1-s1-state.json",
+      "sha256": "36a4a09d3d30e38c2b41475e2e06baa5008b0e8ec73d53c200ab034506a80a94",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:39.761Z",
+      "description": "Rendered state and actual checks after Open /en/search."
+    },
+    {
+      "id": "J06-en-a1-s1-viewport",
+      "path": "evidence/J06-en-a1-s1-viewport.png",
+      "sha256": "9a66f0b4bd096b17da8d49f5143bf786eda754eef719df0e81e2e53f5bc31840",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:39.864Z",
+      "description": "Actual J06-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J06-en-a1-s2-state",
+      "path": "evidence/J06-en-a1-s2-state.json",
+      "sha256": "6f585c932d0ca23f42958507ae7e1c6b08fd0e47d18093da1e804fdb95ccd846",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:40.054Z",
+      "description": "Rendered state and actual checks after Type zzzz-no-match and click #search-submit."
+    },
+    {
+      "id": "J06-en-a1-s2-viewport",
+      "path": "evidence/J06-en-a1-s2-viewport.png",
+      "sha256": "d14a3a802d45e54ac4f6d5f7b9f9f17d35506409ef67426cae63824a25e2c38c",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:40.165Z",
+      "description": "Actual J06-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J06-en-a1-s3-state",
+      "path": "evidence/J06-en-a1-s3-state.json",
+      "sha256": "e12a410440696e4e10842ca6b8ae9b5b8df5cab36d34df313ad545ecc4882e67",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:40.185Z",
+      "description": "Rendered state and actual checks after Inspect the empty state."
+    },
+    {
+      "id": "J06-en-a1-s3-viewport",
+      "path": "evidence/J06-en-a1-s3-viewport.png",
+      "sha256": "d14a3a802d45e54ac4f6d5f7b9f9f17d35506409ef67426cae63824a25e2c38c",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:40.287Z",
+      "description": "Actual J06-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J06-en-a1-network",
+      "path": "evidence/J06-en-a1-network.json",
+      "sha256": "e0cb4a73959f704c82ff352282af8c66bb547aa380213d5d93de3d04479e9220",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:40.287Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J06-en-a1-console",
+      "path": "evidence/J06-en-a1-console.json",
+      "sha256": "076fe223aa89d72af9fdad50576a497f7edf9669dc520e0b9c8bdc5772d33391",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:40.287Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J06-en-a1-attempt",
+      "path": "evidence/J06-en-a1-attempt.json",
+      "sha256": "b1417c2b729ad19c253bebde2258af31cad97733a519302b0266dfea7e399b79",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:40.287Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J06-fr-a1-s1-state",
+      "path": "evidence/J06-fr-a1-s1-state.json",
+      "sha256": "879abf4100d6188f3943d547351122bf5000eeceb666717f16e934a3c30859c8",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:40.438Z",
+      "description": "Rendered state and actual checks after Open /fr/search."
+    },
+    {
+      "id": "J06-fr-a1-s1-viewport",
+      "path": "evidence/J06-fr-a1-s1-viewport.png",
+      "sha256": "c569c4f83cd559ee075f24a3394a8e33fdfecfd95b6a5f8f6274a864cab04ada",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:40.541Z",
+      "description": "Actual J06-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J06-fr-a1-s2-state",
+      "path": "evidence/J06-fr-a1-s2-state.json",
+      "sha256": "864c16a98db821bfc1a1248f44d4371fb120719625112bc303d1ad7d16df0564",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:40.731Z",
+      "description": "Rendered state and actual checks after Type zzzz-no-match and click #search-submit."
+    },
+    {
+      "id": "J06-fr-a1-s2-viewport",
+      "path": "evidence/J06-fr-a1-s2-viewport.png",
+      "sha256": "0fd2373fd597beecfbcb42108ffddc84906f9c8ce54cca80f2bd02660d971077",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:40.859Z",
+      "description": "Actual J06-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J06-fr-a1-s3-state",
+      "path": "evidence/J06-fr-a1-s3-state.json",
+      "sha256": "9c09bfb2c12a8f146d02316c2771d4fba9bf04f59a76762a1049bd94477bbde4",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:40.883Z",
+      "description": "Rendered state and actual checks after Inspect the empty state."
+    },
+    {
+      "id": "J06-fr-a1-s3-viewport",
+      "path": "evidence/J06-fr-a1-s3-viewport.png",
+      "sha256": "0fd2373fd597beecfbcb42108ffddc84906f9c8ce54cca80f2bd02660d971077",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:41.002Z",
+      "description": "Actual J06-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J06-fr-a1-network",
+      "path": "evidence/J06-fr-a1-network.json",
+      "sha256": "9a5178edb254f1f228e29815c1bb70b8ba07327528cafdb5fee8338392052221",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:41.002Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J06-fr-a1-console",
+      "path": "evidence/J06-fr-a1-console.json",
+      "sha256": "b83f07a5dc88d2a7f831eaa1d75c2de9e2e9e7475ffee2a1fabb6eb7aed2f407",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:41.003Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J06-fr-a1-attempt",
+      "path": "evidence/J06-fr-a1-attempt.json",
+      "sha256": "6d88046c591403c530ca7af7b1e8ff1cc86f1d4fdda7b01485215fba8acf8351",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:41.003Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J07-en-a1-s1-state",
+      "path": "evidence/J07-en-a1-s1-state.json",
+      "sha256": "be1dd4b9521aff7049e295111bee92ded730b8ee3d7ba80d840249c252571c24",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:41.161Z",
+      "description": "Rendered state and actual checks after Open /en/contact."
+    },
+    {
+      "id": "J07-en-a1-s1-viewport",
+      "path": "evidence/J07-en-a1-s1-viewport.png",
+      "sha256": "2fb84f4150c6735d95d6ac59ee9865bf33fd2010bd7702a55aa5b4bacca595c0",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:41.279Z",
+      "description": "Actual J07-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J07-en-a1-s2-state",
+      "path": "evidence/J07-en-a1-s2-state.json",
+      "sha256": "860d4a49c26de4da8517692a6e8bfd51d21dd27ab8eea02ac4129ca2273af8e2",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:41.378Z",
+      "description": "Rendered state and actual checks after Click #contact-submit."
+    },
+    {
+      "id": "J07-en-a1-s2-viewport",
+      "path": "evidence/J07-en-a1-s2-viewport.png",
+      "sha256": "235eaf43828ec58832604922b7ea033d3ffb1cff67770b79f7369ecacf8844ff",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:41.463Z",
+      "description": "Actual J07-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J07-en-a1-s3-state",
+      "path": "evidence/J07-en-a1-s3-state.json",
+      "sha256": "5d307e17ee3ca5b3751329470eebd5e94e4e0bfe183da1c6b5fc38e1902e3e0c",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:41.483Z",
+      "description": "Rendered state and actual checks after Inspect field validity and confirmation."
+    },
+    {
+      "id": "J07-en-a1-s3-viewport",
+      "path": "evidence/J07-en-a1-s3-viewport.png",
+      "sha256": "235eaf43828ec58832604922b7ea033d3ffb1cff67770b79f7369ecacf8844ff",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:41.582Z",
+      "description": "Actual J07-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J07-en-a1-s4-state",
+      "path": "evidence/J07-en-a1-s4-state.json",
+      "sha256": "4f1e648142b5c17859450f380f39b99adf5d260e15c11f47df4a10791f1e248c",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:41.592Z",
+      "description": "Rendered state and actual checks after Read validation errors."
+    },
+    {
+      "id": "J07-en-a1-s4-viewport",
+      "path": "evidence/J07-en-a1-s4-viewport.png",
+      "sha256": "235eaf43828ec58832604922b7ea033d3ffb1cff67770b79f7369ecacf8844ff",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:41.682Z",
+      "description": "Actual J07-en attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J07-en-a1-network",
+      "path": "evidence/J07-en-a1-network.json",
+      "sha256": "ceb9fefa2ccb076061aecf748f5389f9009b24686ca1c1e5ad926cf4b33248f1",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:41.683Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J07-en-a1-console",
+      "path": "evidence/J07-en-a1-console.json",
+      "sha256": "c551c7c63aeb00e50c4e92d7d5195153e8d2e7c75f62f771cfe7150c0ef4a266",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:41.683Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J07-en-a1-attempt",
+      "path": "evidence/J07-en-a1-attempt.json",
+      "sha256": "98e47dd232110ef5e9bcd9be2f10aa0d302c861f6cb3047b0d9024de36e35465",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:41.683Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J07-fr-a1-s1-state",
+      "path": "evidence/J07-fr-a1-s1-state.json",
+      "sha256": "f54b16a11dfb11717d14e6ecc16a8a4af12f821b08a8767e63476bb5630f7723",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:41.882Z",
+      "description": "Rendered state and actual checks after Open /fr/contact."
+    },
+    {
+      "id": "J07-fr-a1-s1-viewport",
+      "path": "evidence/J07-fr-a1-s1-viewport.png",
+      "sha256": "41144564f1757acda35a21dc2135ad03c73251821fe3483a8cb873c41329d92a",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:42.008Z",
+      "description": "Actual J07-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J07-fr-a1-s2-state",
+      "path": "evidence/J07-fr-a1-s2-state.json",
+      "sha256": "47acad9d9f76d683e5c7aedc52978a4284da9742914c63e835e1d0704d93a88b",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:42.098Z",
+      "description": "Rendered state and actual checks after Click #contact-submit."
+    },
+    {
+      "id": "J07-fr-a1-s2-viewport",
+      "path": "evidence/J07-fr-a1-s2-viewport.png",
+      "sha256": "504a0fe219f15de08a3b725e3ed424007988974f9eb76b32a7987ff47528a851",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:42.212Z",
+      "description": "Actual J07-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J07-fr-a1-s3-state",
+      "path": "evidence/J07-fr-a1-s3-state.json",
+      "sha256": "356e8939952b1e2361ef7ccfefd6e06a7d6b55652e1bfe6abd4c0ef0052d7b7a",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:42.233Z",
+      "description": "Rendered state and actual checks after Inspect field validity and confirmation."
+    },
+    {
+      "id": "J07-fr-a1-s3-viewport",
+      "path": "evidence/J07-fr-a1-s3-viewport.png",
+      "sha256": "504a0fe219f15de08a3b725e3ed424007988974f9eb76b32a7987ff47528a851",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:42.346Z",
+      "description": "Actual J07-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J07-fr-a1-s4-state",
+      "path": "evidence/J07-fr-a1-s4-state.json",
+      "sha256": "067ecfb4161250b6f782f8959bf26cb84dec5b2f9d84bec44f1d5c3f69feafea",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:42.357Z",
+      "description": "Rendered state and actual checks after Read validation errors."
+    },
+    {
+      "id": "J07-fr-a1-s4-viewport",
+      "path": "evidence/J07-fr-a1-s4-viewport.png",
+      "sha256": "504a0fe219f15de08a3b725e3ed424007988974f9eb76b32a7987ff47528a851",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:42.443Z",
+      "description": "Actual J07-fr attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J07-fr-a1-network",
+      "path": "evidence/J07-fr-a1-network.json",
+      "sha256": "aaf966ddef456481ca3fc6542f8bc0c5751162e749aab20a01a863a95d3ed57d",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:42.444Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J07-fr-a1-console",
+      "path": "evidence/J07-fr-a1-console.json",
+      "sha256": "96ef33020e41517dda78ea3133adb9849a7b54e7feb3a09ff0ee507497fa3d71",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:42.444Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J07-fr-a1-attempt",
+      "path": "evidence/J07-fr-a1-attempt.json",
+      "sha256": "9e293a9590ca6f03536e54d771b15dc6190992e734b731216a07f6209ec416fa",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:42.444Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J08-en-a1-s1-state",
+      "path": "evidence/J08-en-a1-s1-state.json",
+      "sha256": "0e79104365f04f9839e0c0099e0d2db2eb5d8c7ec642e4a15f30488307f89ac0",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:42.567Z",
+      "description": "Rendered state and actual checks after Open /en/contact."
+    },
+    {
+      "id": "J08-en-a1-s1-viewport",
+      "path": "evidence/J08-en-a1-s1-viewport.png",
+      "sha256": "2fb84f4150c6735d95d6ac59ee9865bf33fd2010bd7702a55aa5b4bacca595c0",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:42.696Z",
+      "description": "Actual J08-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J08-en-a1-s2-state",
+      "path": "evidence/J08-en-a1-s2-state.json",
+      "sha256": "2d377f27d481d33bac5d9f2c333aadfccb180069b39f7b21e94f3fce9c6083ce",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:42.791Z",
+      "description": "Rendered state and actual checks after Focus #contact-name, type Alex Test and press Tab once."
+    },
+    {
+      "id": "J08-en-a1-s2-viewport",
+      "path": "evidence/J08-en-a1-s2-viewport.png",
+      "sha256": "839fad19957d527564f8584a5fd1bbf91df5a951d87a09bbed8924144f47dd55",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:42.884Z",
+      "description": "Actual J08-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J08-en-a1-s3-state",
+      "path": "evidence/J08-en-a1-s3-state.json",
+      "sha256": "d11ded90d0854824eda1f4a3517b8e37fdeb402277e18529a208589665eb8fba",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:42.909Z",
+      "description": "Rendered state and actual checks after Inspect focus."
+    },
+    {
+      "id": "J08-en-a1-s3-viewport",
+      "path": "evidence/J08-en-a1-s3-viewport.png",
+      "sha256": "ac6677aad23cf2e898aea4b1707e600781685c75a9dd30e0105b85bf07f7c715",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:43.002Z",
+      "description": "Actual J08-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J08-en-a1-s4-state",
+      "path": "evidence/J08-en-a1-s4-state.json",
+      "sha256": "e3c22296130d4f9a30b67f5c7c3cbb5eacaa7e3015493e0083d25350603f73f1",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:43.064Z",
+      "description": "Rendered state and actual checks after Type alex@example.test, press Tab once and Enter."
+    },
+    {
+      "id": "J08-en-a1-s4-viewport",
+      "path": "evidence/J08-en-a1-s4-viewport.png",
+      "sha256": "2a5cbaa385a2f318f47e2debfbd3450a0153b6a2d3b1793955f51b097cd0ba2c",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:43.176Z",
+      "description": "Actual J08-en attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J08-en-a1-s5-state",
+      "path": "evidence/J08-en-a1-s5-state.json",
+      "sha256": "d4a34c503383cbbe62a8f88f868eec4951d4cf6391cbb5d72b4ef2f16b4f7642",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:43.194Z",
+      "description": "Rendered state and actual checks after Inspect confirmation."
+    },
+    {
+      "id": "J08-en-a1-s5-viewport",
+      "path": "evidence/J08-en-a1-s5-viewport.png",
+      "sha256": "2a5cbaa385a2f318f47e2debfbd3450a0153b6a2d3b1793955f51b097cd0ba2c",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:43.287Z",
+      "description": "Actual J08-en attempt 1 step 5 viewport."
+    },
+    {
+      "id": "J08-en-a1-network",
+      "path": "evidence/J08-en-a1-network.json",
+      "sha256": "de2c16aa1005d0c71c6c27e2a6f97e8ad6b1dc333c3a0bd76b3d2b5313f0b0ef",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:43.287Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J08-en-a1-console",
+      "path": "evidence/J08-en-a1-console.json",
+      "sha256": "650c7892a03383d9fde1ee6d4e5f1c955669b328bf22120c3bcdafc6a2e8f5bf",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:43.288Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J08-en-a1-attempt",
+      "path": "evidence/J08-en-a1-attempt.json",
+      "sha256": "dbe25c7cf2c96aa45789257b3ca09d6dab8559f9e8a25fbcca3f25cc96a2fbe3",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:43.288Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J08-fr-a1-s1-state",
+      "path": "evidence/J08-fr-a1-s1-state.json",
+      "sha256": "2d7f48d21f17b0eabe94a4277389ef77623c542f64ed9b4cfdba8985872d1ac5",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:43.466Z",
+      "description": "Rendered state and actual checks after Open /fr/contact."
+    },
+    {
+      "id": "J08-fr-a1-s1-viewport",
+      "path": "evidence/J08-fr-a1-s1-viewport.png",
+      "sha256": "41144564f1757acda35a21dc2135ad03c73251821fe3483a8cb873c41329d92a",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:43.606Z",
+      "description": "Actual J08-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J08-fr-a1-s2-state",
+      "path": "evidence/J08-fr-a1-s2-state.json",
+      "sha256": "fbeb212b596e9b20a470ffa79489e4e3f8835df74a458758007d2769b4b415ea",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:43.684Z",
+      "description": "Rendered state and actual checks after Focus #contact-name, type Alex Test and press Tab once."
+    },
+    {
+      "id": "J08-fr-a1-s2-viewport",
+      "path": "evidence/J08-fr-a1-s2-viewport.png",
+      "sha256": "d26f757dade74cc027bd723390c5cc4881a9e39e47f856273eaa9dd4ac18fb88",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:43.788Z",
+      "description": "Actual J08-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J08-fr-a1-s3-state",
+      "path": "evidence/J08-fr-a1-s3-state.json",
+      "sha256": "e70c6cd80424d844b1de3db5f736a228a595b8aa6fc9071c4e6405993a73555d",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:43.808Z",
+      "description": "Rendered state and actual checks after Inspect focus."
+    },
+    {
+      "id": "J08-fr-a1-s3-viewport",
+      "path": "evidence/J08-fr-a1-s3-viewport.png",
+      "sha256": "4657b792f81513aa298db980a5a3d2ee34428b01f3dad10992950aaa24c200fa",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:43.895Z",
+      "description": "Actual J08-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J08-fr-a1-s4-state",
+      "path": "evidence/J08-fr-a1-s4-state.json",
+      "sha256": "1536f870fddbd62c08cb8516838640b5684c8b1f2a4b91ecd50bfabe763f2892",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:43.960Z",
+      "description": "Rendered state and actual checks after Type alex@example.test, press Tab once and Enter."
+    },
+    {
+      "id": "J08-fr-a1-s4-viewport",
+      "path": "evidence/J08-fr-a1-s4-viewport.png",
+      "sha256": "9067ecb422cddd856c1e0f2318179294f0829e6cede48dcbe4f8c8a2649817c3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:44.079Z",
+      "description": "Actual J08-fr attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J08-fr-a1-s5-state",
+      "path": "evidence/J08-fr-a1-s5-state.json",
+      "sha256": "70999f1d511360c23fc8a779070960e8f20ae50a96c4b7ab3da503a90081d029",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:44.101Z",
+      "description": "Rendered state and actual checks after Inspect confirmation."
+    },
+    {
+      "id": "J08-fr-a1-s5-viewport",
+      "path": "evidence/J08-fr-a1-s5-viewport.png",
+      "sha256": "9067ecb422cddd856c1e0f2318179294f0829e6cede48dcbe4f8c8a2649817c3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:44.212Z",
+      "description": "Actual J08-fr attempt 1 step 5 viewport."
+    },
+    {
+      "id": "J08-fr-a1-network",
+      "path": "evidence/J08-fr-a1-network.json",
+      "sha256": "c7f00b7135b9bb804fa56f5595242c680bd315d9d96cc19ed5af81a3a17e418e",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:44.212Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J08-fr-a1-console",
+      "path": "evidence/J08-fr-a1-console.json",
+      "sha256": "ab387159d597c0fd880ff96e3ae2e1902eda41657d83ff9038fb0058b120b899",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:44.213Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J08-fr-a1-attempt",
+      "path": "evidence/J08-fr-a1-attempt.json",
+      "sha256": "5c355cba78aa6ab05cb100e1db7d2abf0c6a2199c3eb95595ca91b2d550e12a8",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:44.213Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J09-en-a1-s1-state",
+      "path": "evidence/J09-en-a1-s1-state.json",
+      "sha256": "cca7ef622df1122f8d873fcbc4c3cbe8d8a262f079a0ac39ad1d0ae81632c4e6",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:44.369Z",
+      "description": "Rendered state and actual checks after Open /en/ at 390 by 844."
+    },
+    {
+      "id": "J09-en-a1-s1-viewport",
+      "path": "evidence/J09-en-a1-s1-viewport.png",
+      "sha256": "525f36dc87b799270ade9d4d06866d804b178e6383c994062b9746ff8ae5dfb8",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:44.441Z",
+      "description": "Actual J09-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J09-en-a1-s2-state",
+      "path": "evidence/J09-en-a1-s2-state.json",
+      "sha256": "72248eb3cdeb2a811e9d220d2e0000af424ecac49938bf5159c3bfa34857cb0d",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:44.553Z",
+      "description": "Rendered state and actual checks after Click #menu-toggle."
+    },
+    {
+      "id": "J09-en-a1-s2-viewport",
+      "path": "evidence/J09-en-a1-s2-viewport.png",
+      "sha256": "b8857cb13872af8402648f0759c38b8011f338a663d2be34f493dacf4a9d9f8f",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:44.616Z",
+      "description": "Actual J09-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J09-en-a1-s3-state",
+      "path": "evidence/J09-en-a1-s3-state.json",
+      "sha256": "3f5298624b299f7b485ff96f2329d98c023fe667ca68d7d5f1a9e11294bc8fa5",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:44.702Z",
+      "description": "Rendered state and actual checks after Click #mobile-about."
+    },
+    {
+      "id": "J09-en-a1-s3-viewport",
+      "path": "evidence/J09-en-a1-s3-viewport.png",
+      "sha256": "88e557bc9b8a422de66a570528f82da65e89dde7c0792d1849d68fece1e16f65",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:44.737Z",
+      "description": "Actual J09-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J09-en-a1-s4-state",
+      "path": "evidence/J09-en-a1-s4-state.json",
+      "sha256": "ddc02399d91119e8d70467382f36850d1ae57f731855a21cb1424a04d36384cc",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:44.826Z",
+      "description": "Rendered state and actual checks after Reopen menu and press Escape."
+    },
+    {
+      "id": "J09-en-a1-s4-viewport",
+      "path": "evidence/J09-en-a1-s4-viewport.png",
+      "sha256": "6d8d87d48860d2ebb6786fd8192d6b5f0a01ff4d42de129ddf8097b6f951c88a",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:44.881Z",
+      "description": "Actual J09-en attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J09-en-a1-network",
+      "path": "evidence/J09-en-a1-network.json",
+      "sha256": "a578cb837222f2ec1f18c2aa74a317a9b75637252274051d42da3b3593f65753",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:44.881Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J09-en-a1-console",
+      "path": "evidence/J09-en-a1-console.json",
+      "sha256": "20e525d04545ab3145a484eecf901a4e928e0ec0f149e9c9ae15790cdad6a979",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:44.881Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J09-en-a1-attempt",
+      "path": "evidence/J09-en-a1-attempt.json",
+      "sha256": "0a3b6f31dfe22c57dbd07473e213081708571c182b68accfea6d4f9860661113",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:44.882Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J09-fr-a1-s1-state",
+      "path": "evidence/J09-fr-a1-s1-state.json",
+      "sha256": "a8eff61acd1885545a3bf9d823c8b356a18cd43bfdebd10b0a2641094c67e6e3",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:45.047Z",
+      "description": "Rendered state and actual checks after Open /fr/ at 390 by 844."
+    },
+    {
+      "id": "J09-fr-a1-s1-viewport",
+      "path": "evidence/J09-fr-a1-s1-viewport.png",
+      "sha256": "ab47ef5b0e941aa0ac399a28fcff8e6c8d62cdf6324a15e224809a9ea6569a69",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:45.142Z",
+      "description": "Actual J09-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J09-fr-a1-s2-state",
+      "path": "evidence/J09-fr-a1-s2-state.json",
+      "sha256": "a022e396b272fbc84c22adc064f75963d460bfd182e5db6cfd0ddeb4addfd1fa",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:45.248Z",
+      "description": "Rendered state and actual checks after Click #menu-toggle."
+    },
+    {
+      "id": "J09-fr-a1-s2-viewport",
+      "path": "evidence/J09-fr-a1-s2-viewport.png",
+      "sha256": "35267d4d27de2bbfc74c40e9674b66c17c8b6259a200e2ea44f7f05ccd14c8ee",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:45.309Z",
+      "description": "Actual J09-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J09-fr-a1-s3-state",
+      "path": "evidence/J09-fr-a1-s3-state.json",
+      "sha256": "5932f791830393505e6e5f5aa247e04e3af5f64e0e6531e2d3498b5ff7a944b6",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:45.417Z",
+      "description": "Rendered state and actual checks after Click #mobile-about."
+    },
+    {
+      "id": "J09-fr-a1-s3-viewport",
+      "path": "evidence/J09-fr-a1-s3-viewport.png",
+      "sha256": "60e8939a209000f3d6d2f1ef76a802e13aecb02e6bce5d4e81e68fcf0c0ebfb3",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:45.477Z",
+      "description": "Actual J09-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J09-fr-a1-s4-state",
+      "path": "evidence/J09-fr-a1-s4-state.json",
+      "sha256": "0a9b6948e528640afe2483fb4f1b9c1d89aacb21d7ba419b49589fd8249f8529",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:45.568Z",
+      "description": "Rendered state and actual checks after Reopen menu and press Escape."
+    },
+    {
+      "id": "J09-fr-a1-s4-viewport",
+      "path": "evidence/J09-fr-a1-s4-viewport.png",
+      "sha256": "53f65a3a60d18fe1b66a36fadef65c90b458a5e146f1a29b8b6ce48c9fa5bf23",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:45.628Z",
+      "description": "Actual J09-fr attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J09-fr-a1-network",
+      "path": "evidence/J09-fr-a1-network.json",
+      "sha256": "03d8c7fbb6698d673e5a0384e4836b3f3c65290121cb2531798032bd5501a8a7",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:45.628Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J09-fr-a1-console",
+      "path": "evidence/J09-fr-a1-console.json",
+      "sha256": "98ebeb95c3f44b46ee2cf2993008fc3106e027b22256a2a13a7c01f4e6543339",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:45.628Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J09-fr-a1-attempt",
+      "path": "evidence/J09-fr-a1-attempt.json",
+      "sha256": "2d5b20e5dac0bec57a7a69876d31b58fb5a5a3aade0f87916a2b8d301efd74a4",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:45.629Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J10-en-a1-s1-state",
+      "path": "evidence/J10-en-a1-s1-state.json",
+      "sha256": "31d6049ec92549d755ce54076947f7fa454034e6e220042891168f3a040c4745",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:45.764Z",
+      "description": "Rendered state and actual checks after Open /en/offer at 390 by 844."
+    },
+    {
+      "id": "J10-en-a1-s1-viewport",
+      "path": "evidence/J10-en-a1-s1-viewport.png",
+      "sha256": "37f3b313d1ec06180299414b369d919ff2d97e6739e06baf7ba7699310e67c0b",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:45.846Z",
+      "description": "Actual J10-en attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J10-en-a1-s2-state",
+      "path": "evidence/J10-en-a1-s2-state.json",
+      "sha256": "5459ef0ff54a24920d122c5d156743b83ffd2a5646787648ca3a0bca7090ac22",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:45.868Z",
+      "description": "Rendered state and actual checks after Read offer title, price, date and CTA."
+    },
+    {
+      "id": "J10-en-a1-s2-viewport",
+      "path": "evidence/J10-en-a1-s2-viewport.png",
+      "sha256": "37f3b313d1ec06180299414b369d919ff2d97e6739e06baf7ba7699310e67c0b",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:45.928Z",
+      "description": "Actual J10-en attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J10-en-a1-s3-state",
+      "path": "evidence/J10-en-a1-s3-state.json",
+      "sha256": "9c4a1105ec453efbdc834864c55fa5578d5506beb07d54e322186391092cd9e8",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:45.944Z",
+      "description": "Rendered state and actual checks after Measure horizontal page overflow."
+    },
+    {
+      "id": "J10-en-a1-s3-viewport",
+      "path": "evidence/J10-en-a1-s3-viewport.png",
+      "sha256": "37f3b313d1ec06180299414b369d919ff2d97e6739e06baf7ba7699310e67c0b",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:45.996Z",
+      "description": "Actual J10-en attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J10-en-a1-s4-state",
+      "path": "evidence/J10-en-a1-s4-state.json",
+      "sha256": "a42969346cdb08be48362f2bd9696c47003444ab2bd7a9b87d99591874dca6df",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:46.137Z",
+      "description": "Rendered state and actual checks after Click #offer-cta."
+    },
+    {
+      "id": "J10-en-a1-s4-viewport",
+      "path": "evidence/J10-en-a1-s4-viewport.png",
+      "sha256": "5091ef442328d22deb252e15a1c1f5f021b3c932e03eb471eaf194e1cccd270a",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:46.199Z",
+      "description": "Actual J10-en attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J10-en-a1-network",
+      "path": "evidence/J10-en-a1-network.json",
+      "sha256": "38f4eb0c9dc0d452f7af13bf7dd386a9b622f48359a96d58b26cf7defb14f72c",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:46.200Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J10-en-a1-console",
+      "path": "evidence/J10-en-a1-console.json",
+      "sha256": "47492b71f0b36c5ca0867c2f6bd5e3d8213f1790db18bd75b4ed7c1cfa0411e1",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:46.200Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J10-en-a1-attempt",
+      "path": "evidence/J10-en-a1-attempt.json",
+      "sha256": "9e14987b1cdb332d92b80b601ebb01aa569466f4bef575595276075eaa39831b",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:46.200Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    },
+    {
+      "id": "J10-fr-a1-s1-state",
+      "path": "evidence/J10-fr-a1-s1-state.json",
+      "sha256": "9ed59b631b371cae09bd1ad8a03a4cdd1d875d824247315e8b07f6e99f49c0f3",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:46.361Z",
+      "description": "Rendered state and actual checks after Open /fr/offer at 390 by 844."
+    },
+    {
+      "id": "J10-fr-a1-s1-viewport",
+      "path": "evidence/J10-fr-a1-s1-viewport.png",
+      "sha256": "64b42c954638e37fd2050d29791c49474ab96e2f0bbda7983c6a28a36b7efb6a",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:46.449Z",
+      "description": "Actual J10-fr attempt 1 step 1 viewport."
+    },
+    {
+      "id": "J10-fr-a1-s2-state",
+      "path": "evidence/J10-fr-a1-s2-state.json",
+      "sha256": "f9a6672b74c9d57c71bb814a5556d55651c575dfad7f8abd546a76107d525949",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:46.470Z",
+      "description": "Rendered state and actual checks after Read offer title, price, date and CTA."
+    },
+    {
+      "id": "J10-fr-a1-s2-viewport",
+      "path": "evidence/J10-fr-a1-s2-viewport.png",
+      "sha256": "64b42c954638e37fd2050d29791c49474ab96e2f0bbda7983c6a28a36b7efb6a",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:46.557Z",
+      "description": "Actual J10-fr attempt 1 step 2 viewport."
+    },
+    {
+      "id": "J10-fr-a1-s3-state",
+      "path": "evidence/J10-fr-a1-s3-state.json",
+      "sha256": "4ef1e4cc6d63f442616e51435dc57eb0398d21bf3491b5ed17eef27c39cdd651",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:46.575Z",
+      "description": "Rendered state and actual checks after Measure horizontal page overflow."
+    },
+    {
+      "id": "J10-fr-a1-s3-viewport",
+      "path": "evidence/J10-fr-a1-s3-viewport.png",
+      "sha256": "64b42c954638e37fd2050d29791c49474ab96e2f0bbda7983c6a28a36b7efb6a",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:46.643Z",
+      "description": "Actual J10-fr attempt 1 step 3 viewport."
+    },
+    {
+      "id": "J10-fr-a1-s4-state",
+      "path": "evidence/J10-fr-a1-s4-state.json",
+      "sha256": "a4757104026a47876650629cc551d1bdbede9b49ec4d4abef2cb6548b5cc1ebd",
+      "kind": "DOM",
+      "captured_at": "2026-10-08T12:10:46.804Z",
+      "description": "Rendered state and actual checks after Click #offer-cta."
+    },
+    {
+      "id": "J10-fr-a1-s4-viewport",
+      "path": "evidence/J10-fr-a1-s4-viewport.png",
+      "sha256": "32500c021a264997f802bb9f0c381b3d818779a9e344bb53749dd552341700cc",
+      "kind": "SCREENSHOT",
+      "captured_at": "2026-10-08T12:10:46.859Z",
+      "description": "Actual J10-fr attempt 1 step 4 viewport."
+    },
+    {
+      "id": "J10-fr-a1-network",
+      "path": "evidence/J10-fr-a1-network.json",
+      "sha256": "18bedde3c0b28c1602f24a32160381c34e99e30635d952caf21bf7e00cb1bea2",
+      "kind": "NETWORK",
+      "captured_at": "2026-10-08T12:10:46.859Z",
+      "description": "Sanitized response status, redirect Location and request-failure observations; no bodies, cookies or request headers."
+    },
+    {
+      "id": "J10-fr-a1-console",
+      "path": "evidence/J10-fr-a1-console.json",
+      "sha256": "6165579013ae41de23b02ae1e6f15934efe1ac6ff51ca358e21e55dc98b7cadf",
+      "kind": "CONSOLE",
+      "captured_at": "2026-10-08T12:10:46.859Z",
+      "description": "Console and page-error observations captured for this attempt."
+    },
+    {
+      "id": "J10-fr-a1-attempt",
+      "path": "evidence/J10-fr-a1-attempt.json",
+      "sha256": "308daa3fe0f49c1f404093b44d108849bed4da0b91b367465b51bac2107dd529",
+      "kind": "TEXT",
+      "captured_at": "2026-10-08T12:10:46.860Z",
+      "description": "Ordered actual steps and partial states for this complete recorded attempt."
+    }
+  ],
+  "cases": [
+    {
+      "id": "J01-en",
+      "journey_id": "J01",
+      "title": "Open the requested home page",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:33.031Z",
+      "finished_at": "2026-10-08T12:10:33.457Z",
+      "url": "http://127.0.0.1:39176/en/",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/",
+          "expected": "HTTP 200 and the requested home URL",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"home URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J01-en-a1-s1-state",
+            "J01-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Inspect language and heading",
+          "expected": "Requested language and approved localized home heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"Welcome to Atlas Studio\", \"actual\": \"Welcome to Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J01-en-a1-s2-state",
+            "J01-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect canonical and alternate links",
+          "expected": "Current-route canonical without query and equivalent en/fr routes",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"canonical\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}, {\"check\": \"alternate en\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}, {\"check\": \"alternate fr\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/\", \"actual\": \"http://127.0.0.1:39176/fr/\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J01-en-a1-s3-state",
+            "J01-en-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J01-en-a1-s1-state",
+            "J01-en-a1-s1-viewport",
+            "J01-en-a1-s2-state",
+            "J01-en-a1-s2-viewport",
+            "J01-en-a1-s3-state",
+            "J01-en-a1-s3-viewport",
+            "J01-en-a1-network",
+            "J01-en-a1-console",
+            "J01-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J01-en-a1-s1-state",
+        "J01-en-a1-s1-viewport",
+        "J01-en-a1-s2-state",
+        "J01-en-a1-s2-viewport",
+        "J01-en-a1-s3-state",
+        "J01-en-a1-s3-viewport",
+        "J01-en-a1-network",
+        "J01-en-a1-console",
+        "J01-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J01-fr",
+      "journey_id": "J01",
+      "title": "Open the requested home page",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:33.587Z",
+      "finished_at": "2026-10-08T12:10:33.986Z",
+      "url": "http://127.0.0.1:39176/fr/",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/",
+          "expected": "HTTP 200 and the requested home URL",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"home URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/\", \"actual\": \"http://127.0.0.1:39176/fr/\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J01-fr-a1-s1-state",
+            "J01-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Inspect language and heading",
+          "expected": "Requested language and approved localized home heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/\", \"actual\": \"http://127.0.0.1:39176/fr/\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"Bienvenue chez Atlas Studio\", \"actual\": \"Bienvenue chez Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J01-fr-a1-s2-state",
+            "J01-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect canonical and alternate links",
+          "expected": "Current-route canonical without query and equivalent en/fr routes",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/\", \"checks\": [{\"check\": \"canonical\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/\", \"actual\": \"http://127.0.0.1:39176/fr/\"}, {\"check\": \"alternate en\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/\", \"actual\": \"http://127.0.0.1:39176/en/\"}, {\"check\": \"alternate fr\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/\", \"actual\": \"http://127.0.0.1:39176/fr/\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J01-fr-a1-s3-state",
+            "J01-fr-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J01-fr-a1-s1-state",
+            "J01-fr-a1-s1-viewport",
+            "J01-fr-a1-s2-state",
+            "J01-fr-a1-s2-viewport",
+            "J01-fr-a1-s3-state",
+            "J01-fr-a1-s3-viewport",
+            "J01-fr-a1-network",
+            "J01-fr-a1-console",
+            "J01-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J01-fr-a1-s1-state",
+        "J01-fr-a1-s1-viewport",
+        "J01-fr-a1-s2-state",
+        "J01-fr-a1-s2-viewport",
+        "J01-fr-a1-s3-state",
+        "J01-fr-a1-s3-viewport",
+        "J01-fr-a1-network",
+        "J01-fr-a1-console",
+        "J01-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J02-en",
+      "journey_id": "J02",
+      "title": "Follow primary navigation",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:34.098Z",
+      "finished_at": "2026-10-08T12:10:34.578Z",
+      "url": "http://127.0.0.1:39176/en/about",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/",
+          "expected": "HTTP 200 home page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J02-en-a1-s1-state",
+            "J02-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #main-about",
+          "expected": "Navigation actually occurs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"navigation occurred\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J02-en-a1-s2-state",
+            "J02-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect the destination",
+          "expected": "Same-language /about, HTTP 200 and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J02-en-a1-s3-state",
+            "J02-en-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J02-en-a1-s1-state",
+            "J02-en-a1-s1-viewport",
+            "J02-en-a1-s2-state",
+            "J02-en-a1-s2-viewport",
+            "J02-en-a1-s3-state",
+            "J02-en-a1-s3-viewport",
+            "J02-en-a1-network",
+            "J02-en-a1-console",
+            "J02-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J02-en-a1-s1-state",
+        "J02-en-a1-s1-viewport",
+        "J02-en-a1-s2-state",
+        "J02-en-a1-s2-viewport",
+        "J02-en-a1-s3-state",
+        "J02-en-a1-s3-viewport",
+        "J02-en-a1-network",
+        "J02-en-a1-console",
+        "J02-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J02-fr",
+      "journey_id": "J02",
+      "title": "Follow primary navigation",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:34.694Z",
+      "finished_at": "2026-10-08T12:10:35.255Z",
+      "url": "http://127.0.0.1:39176/fr/about",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/",
+          "expected": "HTTP 200 home page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J02-fr-a1-s1-state",
+            "J02-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #main-about",
+          "expected": "Navigation actually occurs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"navigation occurred\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J02-fr-a1-s2-state",
+            "J02-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect the destination",
+          "expected": "Same-language /about, HTTP 200 and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J02-fr-a1-s3-state",
+            "J02-fr-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J02-fr-a1-s1-state",
+            "J02-fr-a1-s1-viewport",
+            "J02-fr-a1-s2-state",
+            "J02-fr-a1-s2-viewport",
+            "J02-fr-a1-s3-state",
+            "J02-fr-a1-s3-viewport",
+            "J02-fr-a1-network",
+            "J02-fr-a1-console",
+            "J02-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J02-fr-a1-s1-state",
+        "J02-fr-a1-s1-viewport",
+        "J02-fr-a1-s2-state",
+        "J02-fr-a1-s2-viewport",
+        "J02-fr-a1-s3-state",
+        "J02-fr-a1-s3-viewport",
+        "J02-fr-a1-network",
+        "J02-fr-a1-console",
+        "J02-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J03-en",
+      "journey_id": "J03",
+      "title": "Switch language from an internal page",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:35.371Z",
+      "finished_at": "2026-10-08T12:10:36.020Z",
+      "url": "http://127.0.0.1:39176/fr/about",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/about",
+          "expected": "HTTP 200 and localized About page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-en-a1-s1-state",
+            "J03-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #language-switch",
+          "expected": "Navigation actually occurs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"navigation occurred\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-en-a1-s2-state",
+            "J03-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect destination route",
+          "expected": "Other-language /about route retains internal page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"equivalent other-language route\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-en-a1-s3-state",
+            "J03-en-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Inspect destination language and heading",
+          "expected": "Other-language document and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-en-a1-s4-state",
+            "J03-en-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J03-en-a1-s1-state",
+            "J03-en-a1-s1-viewport",
+            "J03-en-a1-s2-state",
+            "J03-en-a1-s2-viewport",
+            "J03-en-a1-s3-state",
+            "J03-en-a1-s3-viewport",
+            "J03-en-a1-s4-state",
+            "J03-en-a1-s4-viewport",
+            "J03-en-a1-network",
+            "J03-en-a1-console",
+            "J03-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J03-en-a1-s1-state",
+        "J03-en-a1-s1-viewport",
+        "J03-en-a1-s2-state",
+        "J03-en-a1-s2-viewport",
+        "J03-en-a1-s3-state",
+        "J03-en-a1-s3-viewport",
+        "J03-en-a1-s4-state",
+        "J03-en-a1-s4-viewport",
+        "J03-en-a1-network",
+        "J03-en-a1-console",
+        "J03-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J03-fr",
+      "journey_id": "J03",
+      "title": "Switch language from an internal page",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:36.134Z",
+      "finished_at": "2026-10-08T12:10:36.707Z",
+      "url": "http://127.0.0.1:39176/en/about",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/about",
+          "expected": "HTTP 200 and localized About page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-fr-a1-s1-state",
+            "J03-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #language-switch",
+          "expected": "Navigation actually occurs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"navigation occurred\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-fr-a1-s2-state",
+            "J03-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect destination route",
+          "expected": "Other-language /about route retains internal page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"equivalent other-language route\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-fr-a1-s3-state",
+            "J03-fr-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Inspect destination language and heading",
+          "expected": "Other-language document and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J03-fr-a1-s4-state",
+            "J03-fr-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J03-fr-a1-s1-state",
+            "J03-fr-a1-s1-viewport",
+            "J03-fr-a1-s2-state",
+            "J03-fr-a1-s2-viewport",
+            "J03-fr-a1-s3-state",
+            "J03-fr-a1-s3-viewport",
+            "J03-fr-a1-s4-state",
+            "J03-fr-a1-s4-viewport",
+            "J03-fr-a1-network",
+            "J03-fr-a1-console",
+            "J03-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J03-fr-a1-s1-state",
+        "J03-fr-a1-s1-viewport",
+        "J03-fr-a1-s2-state",
+        "J03-fr-a1-s2-viewport",
+        "J03-fr-a1-s3-state",
+        "J03-fr-a1-s3-viewport",
+        "J03-fr-a1-s4-state",
+        "J03-fr-a1-s4-viewport",
+        "J03-fr-a1-network",
+        "J03-fr-a1-console",
+        "J03-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J04-en",
+      "journey_id": "J04",
+      "title": "Follow a language-preserving redirect",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:36.809Z",
+      "finished_at": "2026-10-08T12:10:37.217Z",
+      "url": "http://127.0.0.1:39176/en/about",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/legacy",
+          "expected": "Redirect occurs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"redirect response captured\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"redirects\": [{\"at\": \"2026-10-08T12:10:36.824Z\", \"url\": \"http://127.0.0.1:39176/en/legacy\", \"status\": 302, \"resource_type\": \"document\", \"location\": \"/en/about\", \"redirected_from\": null}]}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J04-en-a1-s1-state",
+            "J04-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Inspect the final document",
+          "expected": "Same-language /about and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J04-en-a1-s2-state",
+            "J04-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect redirect response",
+          "expected": "Initial HTTP 302, Location to same-language /about, final HTTP 200",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"redirect HTTP status\", \"passed\": true, \"expected\": 302, \"actual\": 302}, {\"check\": \"redirect Location\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}], \"details\": {\"redirects\": [{\"at\": \"2026-10-08T12:10:36.824Z\", \"url\": \"http://127.0.0.1:39176/en/legacy\", \"status\": 302, \"resource_type\": \"document\", \"location\": \"/en/about\", \"redirected_from\": null}]}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J04-en-a1-s3-state",
+            "J04-en-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J04-en-a1-s1-state",
+            "J04-en-a1-s1-viewport",
+            "J04-en-a1-s2-state",
+            "J04-en-a1-s2-viewport",
+            "J04-en-a1-s3-state",
+            "J04-en-a1-s3-viewport",
+            "J04-en-a1-network",
+            "J04-en-a1-console",
+            "J04-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J04-en-a1-s1-state",
+        "J04-en-a1-s1-viewport",
+        "J04-en-a1-s2-state",
+        "J04-en-a1-s2-viewport",
+        "J04-en-a1-s3-state",
+        "J04-en-a1-s3-viewport",
+        "J04-en-a1-network",
+        "J04-en-a1-console",
+        "J04-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J04-fr",
+      "journey_id": "J04",
+      "title": "Follow a language-preserving redirect",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:37.350Z",
+      "finished_at": "2026-10-08T12:10:37.775Z",
+      "url": "http://127.0.0.1:39176/fr/about",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/legacy",
+          "expected": "Redirect occurs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"redirect response captured\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"redirects\": [{\"at\": \"2026-10-08T12:10:37.378Z\", \"url\": \"http://127.0.0.1:39176/fr/legacy\", \"status\": 302, \"resource_type\": \"document\", \"location\": \"/fr/about\", \"redirected_from\": null}]}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J04-fr-a1-s1-state",
+            "J04-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Inspect the final document",
+          "expected": "Same-language /about and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J04-fr-a1-s2-state",
+            "J04-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect redirect response",
+          "expected": "Initial HTTP 302, Location to same-language /about, final HTTP 200",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"redirect HTTP status\", \"passed\": true, \"expected\": 302, \"actual\": 302}, {\"check\": \"redirect Location\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}], \"details\": {\"redirects\": [{\"at\": \"2026-10-08T12:10:37.378Z\", \"url\": \"http://127.0.0.1:39176/fr/legacy\", \"status\": 302, \"resource_type\": \"document\", \"location\": \"/fr/about\", \"redirected_from\": null}]}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J04-fr-a1-s3-state",
+            "J04-fr-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J04-fr-a1-s1-state",
+            "J04-fr-a1-s1-viewport",
+            "J04-fr-a1-s2-state",
+            "J04-fr-a1-s2-viewport",
+            "J04-fr-a1-s3-state",
+            "J04-fr-a1-s3-viewport",
+            "J04-fr-a1-network",
+            "J04-fr-a1-console",
+            "J04-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J04-fr-a1-s1-state",
+        "J04-fr-a1-s1-viewport",
+        "J04-fr-a1-s2-state",
+        "J04-fr-a1-s2-viewport",
+        "J04-fr-a1-s3-state",
+        "J04-fr-a1-s3-viewport",
+        "J04-fr-a1-network",
+        "J04-fr-a1-console",
+        "J04-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J05-en",
+      "journey_id": "J05",
+      "title": "Search with a matching result",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:37.878Z",
+      "finished_at": "2026-10-08T12:10:38.718Z",
+      "url": "http://127.0.0.1:39176/en/about",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/search",
+          "expected": "HTTP 200 search page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/search\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-en-a1-s1-state",
+            "J05-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Type atlas in #search-query and click #search-submit",
+          "expected": "Submitted query stays visible",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/search?q=atlas\", \"checks\": [{\"check\": \"query retained\", \"passed\": true, \"expected\": \"atlas\", \"actual\": \"atlas\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-en-a1-s2-state",
+            "J05-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect search results",
+          "expected": "Exactly one localized result and no empty state",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/search?q=atlas\", \"checks\": [{\"check\": \"result count\", \"passed\": true, \"expected\": 1, \"actual\": 1}, {\"check\": \"empty state absent\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"result title\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-en-a1-s3-state",
+            "J05-en-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Click #result-about",
+          "expected": "Same-language /about and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-en-a1-s4-state",
+            "J05-en-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J05-en-a1-s1-state",
+            "J05-en-a1-s1-viewport",
+            "J05-en-a1-s2-state",
+            "J05-en-a1-s2-viewport",
+            "J05-en-a1-s3-state",
+            "J05-en-a1-s3-viewport",
+            "J05-en-a1-s4-state",
+            "J05-en-a1-s4-viewport",
+            "J05-en-a1-network",
+            "J05-en-a1-console",
+            "J05-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J05-en-a1-s1-state",
+        "J05-en-a1-s1-viewport",
+        "J05-en-a1-s2-state",
+        "J05-en-a1-s2-viewport",
+        "J05-en-a1-s3-state",
+        "J05-en-a1-s3-viewport",
+        "J05-en-a1-s4-state",
+        "J05-en-a1-s4-viewport",
+        "J05-en-a1-network",
+        "J05-en-a1-console",
+        "J05-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J05-fr",
+      "journey_id": "J05",
+      "title": "Search with a matching result",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:38.827Z",
+      "finished_at": "2026-10-08T12:10:39.623Z",
+      "url": "http://127.0.0.1:39176/fr/about",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/search",
+          "expected": "HTTP 200 search page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/search\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-fr-a1-s1-state",
+            "J05-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Type atlas in #search-query and click #search-submit",
+          "expected": "Submitted query stays visible",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/search?q=atlas\", \"checks\": [{\"check\": \"query retained\", \"passed\": true, \"expected\": \"atlas\", \"actual\": \"atlas\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-fr-a1-s2-state",
+            "J05-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect search results",
+          "expected": "Exactly one localized result and no empty state",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/search?q=atlas\", \"checks\": [{\"check\": \"result count\", \"passed\": true, \"expected\": 1, \"actual\": 1}, {\"check\": \"empty state absent\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"result title\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-fr-a1-s3-state",
+            "J05-fr-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Click #result-about",
+          "expected": "Same-language /about and localized About heading",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J05-fr-a1-s4-state",
+            "J05-fr-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J05-fr-a1-s1-state",
+            "J05-fr-a1-s1-viewport",
+            "J05-fr-a1-s2-state",
+            "J05-fr-a1-s2-viewport",
+            "J05-fr-a1-s3-state",
+            "J05-fr-a1-s3-viewport",
+            "J05-fr-a1-s4-state",
+            "J05-fr-a1-s4-viewport",
+            "J05-fr-a1-network",
+            "J05-fr-a1-console",
+            "J05-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J05-fr-a1-s1-state",
+        "J05-fr-a1-s1-viewport",
+        "J05-fr-a1-s2-state",
+        "J05-fr-a1-s2-viewport",
+        "J05-fr-a1-s3-state",
+        "J05-fr-a1-s3-viewport",
+        "J05-fr-a1-s4-state",
+        "J05-fr-a1-s4-viewport",
+        "J05-fr-a1-network",
+        "J05-fr-a1-console",
+        "J05-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J06-en",
+      "journey_id": "J06",
+      "title": "Search with no matching result",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:39.715Z",
+      "finished_at": "2026-10-08T12:10:40.287Z",
+      "url": "http://127.0.0.1:39176/en/search?q=zzzz-no-match",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/search",
+          "expected": "HTTP 200 search page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/search\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J06-en-a1-s1-state",
+            "J06-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Type zzzz-no-match and click #search-submit",
+          "expected": "Submitted query stays visible",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/search?q=zzzz-no-match\", \"checks\": [{\"check\": \"query retained\", \"passed\": true, \"expected\": \"zzzz-no-match\", \"actual\": \"zzzz-no-match\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J06-en-a1-s2-state",
+            "J06-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect the empty state",
+          "expected": "Zero results, visible approved localized empty-state text",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/search?q=zzzz-no-match\", \"checks\": [{\"check\": \"result count\", \"passed\": true, \"expected\": 0, \"actual\": 0}, {\"check\": \"query retained\", \"passed\": true, \"expected\": \"zzzz-no-match\", \"actual\": \"zzzz-no-match\"}, {\"check\": \"empty state visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized empty message\", \"passed\": true, \"expected\": \"No results found.\", \"actual\": \"No results found.\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J06-en-a1-s3-state",
+            "J06-en-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J06-en-a1-s1-state",
+            "J06-en-a1-s1-viewport",
+            "J06-en-a1-s2-state",
+            "J06-en-a1-s2-viewport",
+            "J06-en-a1-s3-state",
+            "J06-en-a1-s3-viewport",
+            "J06-en-a1-network",
+            "J06-en-a1-console",
+            "J06-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J06-en-a1-s1-state",
+        "J06-en-a1-s1-viewport",
+        "J06-en-a1-s2-state",
+        "J06-en-a1-s2-viewport",
+        "J06-en-a1-s3-state",
+        "J06-en-a1-s3-viewport",
+        "J06-en-a1-network",
+        "J06-en-a1-console",
+        "J06-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J06-fr",
+      "journey_id": "J06",
+      "title": "Search with no matching result",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:40.374Z",
+      "finished_at": "2026-10-08T12:10:41.003Z",
+      "url": "http://127.0.0.1:39176/fr/search?q=zzzz-no-match",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/search",
+          "expected": "HTTP 200 search page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/search\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J06-fr-a1-s1-state",
+            "J06-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Type zzzz-no-match and click #search-submit",
+          "expected": "Submitted query stays visible",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/search?q=zzzz-no-match\", \"checks\": [{\"check\": \"query retained\", \"passed\": true, \"expected\": \"zzzz-no-match\", \"actual\": \"zzzz-no-match\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J06-fr-a1-s2-state",
+            "J06-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect the empty state",
+          "expected": "Zero results, visible approved localized empty-state text",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/search?q=zzzz-no-match\", \"checks\": [{\"check\": \"result count\", \"passed\": true, \"expected\": 0, \"actual\": 0}, {\"check\": \"query retained\", \"passed\": true, \"expected\": \"zzzz-no-match\", \"actual\": \"zzzz-no-match\"}, {\"check\": \"empty state visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized empty message\", \"passed\": true, \"expected\": \"Aucun résultat.\", \"actual\": \"Aucun résultat.\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J06-fr-a1-s3-state",
+            "J06-fr-a1-s3-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS",
+          "evidence_ids": [
+            "J06-fr-a1-s1-state",
+            "J06-fr-a1-s1-viewport",
+            "J06-fr-a1-s2-state",
+            "J06-fr-a1-s2-viewport",
+            "J06-fr-a1-s3-state",
+            "J06-fr-a1-s3-viewport",
+            "J06-fr-a1-network",
+            "J06-fr-a1-console",
+            "J06-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J06-fr-a1-s1-state",
+        "J06-fr-a1-s1-viewport",
+        "J06-fr-a1-s2-state",
+        "J06-fr-a1-s2-viewport",
+        "J06-fr-a1-s3-state",
+        "J06-fr-a1-s3-viewport",
+        "J06-fr-a1-network",
+        "J06-fr-a1-console",
+        "J06-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J07-en",
+      "journey_id": "J07",
+      "title": "Submit an invalid local form",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:41.109Z",
+      "finished_at": "2026-10-08T12:10:41.683Z",
+      "url": "http://127.0.0.1:39176/en/contact",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/contact",
+          "expected": "HTTP 200 and both fields empty",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"contact-name initially empty\", \"passed\": true, \"expected\": \"\", \"actual\": \"\"}, {\"check\": \"contact-email initially empty\", \"passed\": true, \"expected\": \"\", \"actual\": \"\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-en-a1-s1-state",
+            "J07-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #contact-submit",
+          "expected": "Local validation runs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [], \"details\": {\"actual_action\": \"Clicked local form submit once with empty fields.\"}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-en-a1-s2-state",
+            "J07-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect field validity and confirmation",
+          "expected": "Both errors visible, aria-invalid true on both fields, confirmation hidden",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"name-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"email-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-name aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"contact-email aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"confirmation hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-en-a1-s3-state",
+            "J07-en-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Read validation errors",
+          "expected": "Both approved error messages use the page language",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"name error copy\", \"passed\": true, \"expected\": \"Enter your name.\", \"actual\": \"Enter your name.\"}, {\"check\": \"email error copy\", \"passed\": true, \"expected\": \"Enter a valid email address.\", \"actual\": \"Enter a valid email address.\"}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-en-a1-s4-state",
+            "J07-en-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J07-en-a1-s1-state",
+            "J07-en-a1-s1-viewport",
+            "J07-en-a1-s2-state",
+            "J07-en-a1-s2-viewport",
+            "J07-en-a1-s3-state",
+            "J07-en-a1-s3-viewport",
+            "J07-en-a1-s4-state",
+            "J07-en-a1-s4-viewport",
+            "J07-en-a1-network",
+            "J07-en-a1-console",
+            "J07-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J07-en-a1-s1-state",
+        "J07-en-a1-s1-viewport",
+        "J07-en-a1-s2-state",
+        "J07-en-a1-s2-viewport",
+        "J07-en-a1-s3-state",
+        "J07-en-a1-s3-viewport",
+        "J07-en-a1-s4-state",
+        "J07-en-a1-s4-viewport",
+        "J07-en-a1-network",
+        "J07-en-a1-console",
+        "J07-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J07-fr",
+      "journey_id": "J07",
+      "title": "Submit an invalid local form",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:41.814Z",
+      "finished_at": "2026-10-08T12:10:42.444Z",
+      "url": "http://127.0.0.1:39176/fr/contact",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/contact",
+          "expected": "HTTP 200 and both fields empty",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"contact-name initially empty\", \"passed\": true, \"expected\": \"\", \"actual\": \"\"}, {\"check\": \"contact-email initially empty\", \"passed\": true, \"expected\": \"\", \"actual\": \"\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-fr-a1-s1-state",
+            "J07-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #contact-submit",
+          "expected": "Local validation runs",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [], \"details\": {\"actual_action\": \"Clicked local form submit once with empty fields.\"}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-fr-a1-s2-state",
+            "J07-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect field validity and confirmation",
+          "expected": "Both errors visible, aria-invalid true on both fields, confirmation hidden",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"name-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"email-error visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-name aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"contact-email aria-invalid\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}, {\"check\": \"confirmation hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-fr-a1-s3-state",
+            "J07-fr-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Read validation errors",
+          "expected": "Both approved error messages use the page language",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"name error copy\", \"passed\": true, \"expected\": \"Saisissez votre nom.\", \"actual\": \"Saisissez votre nom.\"}, {\"check\": \"email error copy\", \"passed\": true, \"expected\": \"Saisissez une adresse e-mail valide.\", \"actual\": \"Saisissez une adresse e-mail valide.\"}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J07-fr-a1-s4-state",
+            "J07-fr-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J07-fr-a1-s1-state",
+            "J07-fr-a1-s1-viewport",
+            "J07-fr-a1-s2-state",
+            "J07-fr-a1-s2-viewport",
+            "J07-fr-a1-s3-state",
+            "J07-fr-a1-s3-viewport",
+            "J07-fr-a1-s4-state",
+            "J07-fr-a1-s4-viewport",
+            "J07-fr-a1-network",
+            "J07-fr-a1-console",
+            "J07-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J07-fr-a1-s1-state",
+        "J07-fr-a1-s1-viewport",
+        "J07-fr-a1-s2-state",
+        "J07-fr-a1-s2-viewport",
+        "J07-fr-a1-s3-state",
+        "J07-fr-a1-s3-viewport",
+        "J07-fr-a1-s4-state",
+        "J07-fr-a1-s4-viewport",
+        "J07-fr-a1-network",
+        "J07-fr-a1-console",
+        "J07-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J08-en",
+      "journey_id": "J08",
+      "title": "Complete the local form using the keyboard",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:42.524Z",
+      "finished_at": "2026-10-08T12:10:43.288Z",
+      "url": "http://127.0.0.1:39176/en/contact",
+      "language": "en",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/contact",
+          "expected": "HTTP 200 with visible associated labels",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"contact-name has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-email has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-en-a1-s1-state",
+            "J08-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Focus #contact-name, type Alex Test and press Tab once",
+          "expected": "Actual keyboard input and Tab event",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [], \"details\": {\"key_sequence\": [\"focus #contact-name\", \"type Alex Test\", \"Tab\"]}, \"active_id\": \"contact-email\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-en-a1-s2-state",
+            "J08-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect focus",
+          "expected": "#contact-email focused with a visible outline",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after first Tab\", \"passed\": true, \"expected\": \"contact-email\", \"actual\": \"contact-email\"}, {\"check\": \"email visible focus outline\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"email_outline\": {\"style\": \"solid\", \"width\": \"3px\", \"color\": \"rgb(195, 79, 0)\"}}, \"active_id\": \"contact-email\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-en-a1-s3-state",
+            "J08-en-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Type alex@example.test, press Tab once and Enter",
+          "expected": "#contact-submit focused before Enter",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"active element after second Tab\", \"passed\": true, \"expected\": \"contact-submit\", \"actual\": \"contact-submit\"}], \"details\": {\"key_sequence\": [\"type alex@example.test\", \"Tab\", \"Enter\"], \"active_before_enter\": \"contact-submit\"}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-en-a1-s4-state",
+            "J08-en-a1-s4-viewport"
+          ]
+        },
+        {
+          "number": 5,
+          "action": "Inspect confirmation",
+          "expected": "Approved localized confirmation visible with no visible validation errors",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"confirmation visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized confirmation\", \"passed\": true, \"expected\": \"Thank you, Alex Test. Your local request is confirmed.\", \"actual\": \"Thank you, Alex Test. Your local request is confirmed.\"}, {\"check\": \"name-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"email-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-en-a1-s5-state",
+            "J08-en-a1-s5-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS, 5 PASS",
+          "evidence_ids": [
+            "J08-en-a1-s1-state",
+            "J08-en-a1-s1-viewport",
+            "J08-en-a1-s2-state",
+            "J08-en-a1-s2-viewport",
+            "J08-en-a1-s3-state",
+            "J08-en-a1-s3-viewport",
+            "J08-en-a1-s4-state",
+            "J08-en-a1-s4-viewport",
+            "J08-en-a1-s5-state",
+            "J08-en-a1-s5-viewport",
+            "J08-en-a1-network",
+            "J08-en-a1-console",
+            "J08-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J08-en-a1-s1-state",
+        "J08-en-a1-s1-viewport",
+        "J08-en-a1-s2-state",
+        "J08-en-a1-s2-viewport",
+        "J08-en-a1-s3-state",
+        "J08-en-a1-s3-viewport",
+        "J08-en-a1-s4-state",
+        "J08-en-a1-s4-viewport",
+        "J08-en-a1-s5-state",
+        "J08-en-a1-s5-viewport",
+        "J08-en-a1-network",
+        "J08-en-a1-console",
+        "J08-en-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J08-fr",
+      "journey_id": "J08",
+      "title": "Complete the local form using the keyboard",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:43.396Z",
+      "finished_at": "2026-10-08T12:10:44.213Z",
+      "url": "http://127.0.0.1:39176/fr/contact",
+      "language": "fr",
+      "profile": {
+        "id": "desktop",
+        "device_class": "DESKTOP",
+        "viewport": {
+          "width": 1440,
+          "height": 900
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/contact",
+          "expected": "HTTP 200 with visible associated labels",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"contact-name has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"contact-email has visible associated label\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-fr-a1-s1-state",
+            "J08-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Focus #contact-name, type Alex Test and press Tab once",
+          "expected": "Actual keyboard input and Tab event",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [], \"details\": {\"key_sequence\": [\"focus #contact-name\", \"type Alex Test\", \"Tab\"]}, \"active_id\": \"contact-email\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-fr-a1-s2-state",
+            "J08-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Inspect focus",
+          "expected": "#contact-email focused with a visible outline",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"active element after first Tab\", \"passed\": true, \"expected\": \"contact-email\", \"actual\": \"contact-email\"}, {\"check\": \"email visible focus outline\", \"passed\": true, \"expected\": true, \"actual\": true}], \"details\": {\"email_outline\": {\"style\": \"solid\", \"width\": \"3px\", \"color\": \"rgb(195, 79, 0)\"}}, \"active_id\": \"contact-email\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-fr-a1-s3-state",
+            "J08-fr-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Type alex@example.test, press Tab once and Enter",
+          "expected": "#contact-submit focused before Enter",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"active element after second Tab\", \"passed\": true, \"expected\": \"contact-submit\", \"actual\": \"contact-submit\"}], \"details\": {\"key_sequence\": [\"type alex@example.test\", \"Tab\", \"Enter\"], \"active_before_enter\": \"contact-submit\"}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-fr-a1-s4-state",
+            "J08-fr-a1-s4-viewport"
+          ]
+        },
+        {
+          "number": 5,
+          "action": "Inspect confirmation",
+          "expected": "Approved localized confirmation visible with no visible validation errors",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"confirmation visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"localized confirmation\", \"passed\": true, \"expected\": \"Merci, Alex Test. Votre demande locale est confirmée.\", \"actual\": \"Merci, Alex Test. Votre demande locale est confirmée.\"}, {\"check\": \"name-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"email-error hidden\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": \"contact-submit\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J08-fr-a1-s5-state",
+            "J08-fr-a1-s5-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS, 5 PASS",
+          "evidence_ids": [
+            "J08-fr-a1-s1-state",
+            "J08-fr-a1-s1-viewport",
+            "J08-fr-a1-s2-state",
+            "J08-fr-a1-s2-viewport",
+            "J08-fr-a1-s3-state",
+            "J08-fr-a1-s3-viewport",
+            "J08-fr-a1-s4-state",
+            "J08-fr-a1-s4-viewport",
+            "J08-fr-a1-s5-state",
+            "J08-fr-a1-s5-viewport",
+            "J08-fr-a1-network",
+            "J08-fr-a1-console",
+            "J08-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J08-fr-a1-s1-state",
+        "J08-fr-a1-s1-viewport",
+        "J08-fr-a1-s2-state",
+        "J08-fr-a1-s2-viewport",
+        "J08-fr-a1-s3-state",
+        "J08-fr-a1-s3-viewport",
+        "J08-fr-a1-s4-state",
+        "J08-fr-a1-s4-viewport",
+        "J08-fr-a1-s5-state",
+        "J08-fr-a1-s5-viewport",
+        "J08-fr-a1-network",
+        "J08-fr-a1-console",
+        "J08-fr-a1-attempt"
+      ],
+      "limitations": [],
+      "uncertainties": []
+    },
+    {
+      "id": "J09-en",
+      "journey_id": "J09",
+      "title": "Open, use, and close the mobile menu",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:44.327Z",
+      "finished_at": "2026-10-08T12:10:44.881Z",
+      "url": "http://127.0.0.1:39176/en/about",
+      "language": "en",
+      "profile": {
+        "id": "mobile",
+        "device_class": "MOBILE_EMULATION",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/ at 390 by 844",
+          "expected": "Toggle visible, panel hidden, aria-expanded false",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"toggle visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"panel hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"aria-expanded\", \"passed\": true, \"expected\": \"false\", \"actual\": \"false\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-en-a1-s1-state",
+            "J09-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #menu-toggle",
+          "expected": "Panel visible and aria-expanded true",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/\", \"checks\": [{\"check\": \"panel visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"aria-expanded\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}], \"details\": {}, \"active_id\": \"menu-toggle\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-en-a1-s2-state",
+            "J09-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Click #mobile-about",
+          "expected": "Same-language /about with localized heading and closed menu",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/about\", \"actual\": \"http://127.0.0.1:39176/en/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"About Atlas Studio\", \"actual\": \"About Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"panel closed after navigation\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-en-a1-s3-state",
+            "J09-en-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Reopen menu and press Escape",
+          "expected": "Panel hidden, aria-expanded false, focus returns to toggle",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/about\", \"checks\": [{\"check\": \"panel hidden after Escape\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"aria-expanded after Escape\", \"passed\": true, \"expected\": \"false\", \"actual\": \"false\"}, {\"check\": \"focus returned to toggle\", \"passed\": true, \"expected\": \"menu-toggle\", \"actual\": \"menu-toggle\"}], \"details\": {\"reopened_with_toggle\": true, \"before_escape_panel_visible\": true, \"keys\": [\"Escape\"]}, \"active_id\": \"menu-toggle\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-en-a1-s4-state",
+            "J09-en-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J09-en-a1-s1-state",
+            "J09-en-a1-s1-viewport",
+            "J09-en-a1-s2-state",
+            "J09-en-a1-s2-viewport",
+            "J09-en-a1-s3-state",
+            "J09-en-a1-s3-viewport",
+            "J09-en-a1-s4-state",
+            "J09-en-a1-s4-viewport",
+            "J09-en-a1-network",
+            "J09-en-a1-console",
+            "J09-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J09-en-a1-s1-state",
+        "J09-en-a1-s1-viewport",
+        "J09-en-a1-s2-state",
+        "J09-en-a1-s2-viewport",
+        "J09-en-a1-s3-state",
+        "J09-en-a1-s3-viewport",
+        "J09-en-a1-s4-state",
+        "J09-en-a1-s4-viewport",
+        "J09-en-a1-network",
+        "J09-en-a1-console",
+        "J09-en-a1-attempt"
+      ],
+      "limitations": [
+        "Mobile profile is viewport emulation only; is_mobile false and has_touch false."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "J09-fr",
+      "journey_id": "J09",
+      "title": "Open, use, and close the mobile menu",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:44.983Z",
+      "finished_at": "2026-10-08T12:10:45.628Z",
+      "url": "http://127.0.0.1:39176/fr/about",
+      "language": "fr",
+      "profile": {
+        "id": "mobile",
+        "device_class": "MOBILE_EMULATION",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/ at 390 by 844",
+          "expected": "Toggle visible, panel hidden, aria-expanded false",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/\", \"checks\": [{\"check\": \"toggle visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"panel hidden\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"aria-expanded\", \"passed\": true, \"expected\": \"false\", \"actual\": \"false\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-fr-a1-s1-state",
+            "J09-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Click #menu-toggle",
+          "expected": "Panel visible and aria-expanded true",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/\", \"checks\": [{\"check\": \"panel visible\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"aria-expanded\", \"passed\": true, \"expected\": \"true\", \"actual\": \"true\"}], \"details\": {}, \"active_id\": \"menu-toggle\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-fr-a1-s2-state",
+            "J09-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Click #mobile-about",
+          "expected": "Same-language /about with localized heading and closed menu",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/about\", \"actual\": \"http://127.0.0.1:39176/fr/about\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"localized heading\", \"passed\": true, \"expected\": \"À propos d’Atlas Studio\", \"actual\": \"À propos d’Atlas Studio\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}, {\"check\": \"panel closed after navigation\", \"passed\": true, \"expected\": false, \"actual\": false}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-fr-a1-s3-state",
+            "J09-fr-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Reopen menu and press Escape",
+          "expected": "Panel hidden, aria-expanded false, focus returns to toggle",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/about\", \"checks\": [{\"check\": \"panel hidden after Escape\", \"passed\": true, \"expected\": false, \"actual\": false}, {\"check\": \"aria-expanded after Escape\", \"passed\": true, \"expected\": \"false\", \"actual\": \"false\"}, {\"check\": \"focus returned to toggle\", \"passed\": true, \"expected\": \"menu-toggle\", \"actual\": \"menu-toggle\"}], \"details\": {\"reopened_with_toggle\": true, \"before_escape_panel_visible\": true, \"keys\": [\"Escape\"]}, \"active_id\": \"menu-toggle\"}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J09-fr-a1-s4-state",
+            "J09-fr-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J09-fr-a1-s1-state",
+            "J09-fr-a1-s1-viewport",
+            "J09-fr-a1-s2-state",
+            "J09-fr-a1-s2-viewport",
+            "J09-fr-a1-s3-state",
+            "J09-fr-a1-s3-viewport",
+            "J09-fr-a1-s4-state",
+            "J09-fr-a1-s4-viewport",
+            "J09-fr-a1-network",
+            "J09-fr-a1-console",
+            "J09-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J09-fr-a1-s1-state",
+        "J09-fr-a1-s1-viewport",
+        "J09-fr-a1-s2-state",
+        "J09-fr-a1-s2-viewport",
+        "J09-fr-a1-s3-state",
+        "J09-fr-a1-s3-viewport",
+        "J09-fr-a1-s4-state",
+        "J09-fr-a1-s4-viewport",
+        "J09-fr-a1-network",
+        "J09-fr-a1-console",
+        "J09-fr-a1-attempt"
+      ],
+      "limitations": [
+        "Mobile profile is viewport emulation only; is_mobile false and has_touch false."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "J10-en",
+      "journey_id": "J10",
+      "title": "Read a localized offer on mobile",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:45.728Z",
+      "finished_at": "2026-10-08T12:10:46.200Z",
+      "url": "http://127.0.0.1:39176/en/contact",
+      "language": "en",
+      "profile": {
+        "id": "mobile",
+        "device_class": "MOBILE_EMULATION",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /en/offer at 390 by 844",
+          "expected": "HTTP 200 offer page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/offer\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-en-a1-s1-state",
+            "J10-en-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Read offer title, price, date and CTA",
+          "expected": "Approved localized offer strings",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/offer\", \"checks\": [{\"check\": \"offer-title\", \"passed\": true, \"expected\": \"Starter plan\", \"actual\": \"Starter plan\"}, {\"check\": \"offer-price\", \"passed\": true, \"expected\": \"€19.90 / month\", \"actual\": \"€19.90 / month\"}, {\"check\": \"offer-date\", \"passed\": true, \"expected\": \"October 8, 2026\", \"actual\": \"October 8, 2026\"}, {\"check\": \"offer-cta\", \"passed\": true, \"expected\": \"Contact us\", \"actual\": \"Contact us\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-en-a1-s2-state",
+            "J10-en-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Measure horizontal page overflow",
+          "expected": "Document scrollWidth <= window.innerWidth + 1",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/offer\", \"checks\": [{\"check\": \"horizontal overflow\", \"passed\": true, \"expected\": \"scrollWidth <= innerWidth + 1\", \"actual\": {\"scrollWidth\": 390, \"innerWidth\": 390}}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-en-a1-s3-state",
+            "J10-en-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Click #offer-cta",
+          "expected": "CTA visible within viewport, actually clickable, reaches same-language /contact",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/en/contact\", \"checks\": [{\"check\": \"CTA initially within viewport\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/en/contact\", \"actual\": \"http://127.0.0.1:39176/en/contact\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"en\", \"actual\": \"en\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {\"cta_before_click\": {\"present\": true, \"text\": \"Contact us\", \"value\": null, \"visible\": true, \"href\": \"/en/contact\", \"aria_invalid\": null, \"aria_expanded\": null, \"tabindex\": null, \"disabled\": false, \"rect\": {\"x\": 33, \"y\": 494.578125, \"width\": 125.1875, \"height\": 49.875, \"right\": 158.1875, \"bottom\": 544.453125}, \"outline\": {\"style\": \"none\", \"width\": \"3px\", \"color\": \"rgb(255, 255, 255)\"}, \"box_shadow\": \"none\", \"labels\": []}, \"viewport_before_click\": {\"width\": 390, \"height\": 844}, \"actual_click\": true}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-en-a1-s4-state",
+            "J10-en-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J10-en-a1-s1-state",
+            "J10-en-a1-s1-viewport",
+            "J10-en-a1-s2-state",
+            "J10-en-a1-s2-viewport",
+            "J10-en-a1-s3-state",
+            "J10-en-a1-s3-viewport",
+            "J10-en-a1-s4-state",
+            "J10-en-a1-s4-viewport",
+            "J10-en-a1-network",
+            "J10-en-a1-console",
+            "J10-en-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J10-en-a1-s1-state",
+        "J10-en-a1-s1-viewport",
+        "J10-en-a1-s2-state",
+        "J10-en-a1-s2-viewport",
+        "J10-en-a1-s3-state",
+        "J10-en-a1-s3-viewport",
+        "J10-en-a1-s4-state",
+        "J10-en-a1-s4-viewport",
+        "J10-en-a1-network",
+        "J10-en-a1-console",
+        "J10-en-a1-attempt"
+      ],
+      "limitations": [
+        "Mobile profile is viewport emulation only; is_mobile false and has_touch false."
+      ],
+      "uncertainties": []
+    },
+    {
+      "id": "J10-fr",
+      "journey_id": "J10",
+      "title": "Read a localized offer on mobile",
+      "critical": true,
+      "started_at": "2026-10-08T12:10:46.303Z",
+      "finished_at": "2026-10-08T12:10:46.859Z",
+      "url": "http://127.0.0.1:39176/fr/contact",
+      "language": "fr",
+      "profile": {
+        "id": "mobile",
+        "device_class": "MOBILE_EMULATION",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "browser": {
+          "name": "Chromium",
+          "version": "151.0.7922.34"
+        },
+        "locale": "en-GB",
+        "timezone": "UTC",
+        "physical_device": false
+      },
+      "preconditions": [
+        "Fresh browser context for each recorded attempt.",
+        "Authorized loopback synthetic fixture; no authentication."
+      ],
+      "test_data": {
+        "name": "Alex Test",
+        "email": "alex@example.test",
+        "matching_query": "atlas",
+        "empty_query": "zzzz-no-match"
+      },
+      "steps": [
+        {
+          "number": 1,
+          "action": "Open /fr/offer at 390 by 844",
+          "expected": "HTTP 200 offer page",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/offer\", \"checks\": [{\"check\": \"HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-fr-a1-s1-state",
+            "J10-fr-a1-s1-viewport"
+          ]
+        },
+        {
+          "number": 2,
+          "action": "Read offer title, price, date and CTA",
+          "expected": "Approved localized offer strings",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/offer\", \"checks\": [{\"check\": \"offer-title\", \"passed\": true, \"expected\": \"Offre Découverte\", \"actual\": \"Offre Découverte\"}, {\"check\": \"offer-price\", \"passed\": true, \"expected\": \"19,90 € / mois\", \"actual\": \"19,90 € / mois\"}, {\"check\": \"offer-date\", \"passed\": true, \"expected\": \"8 octobre 2026\", \"actual\": \"8 octobre 2026\"}, {\"check\": \"offer-cta\", \"passed\": true, \"expected\": \"Contactez-nous\", \"actual\": \"Contactez-nous\"}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-fr-a1-s2-state",
+            "J10-fr-a1-s2-viewport"
+          ]
+        },
+        {
+          "number": 3,
+          "action": "Measure horizontal page overflow",
+          "expected": "Document scrollWidth <= window.innerWidth + 1",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/offer\", \"checks\": [{\"check\": \"horizontal overflow\", \"passed\": true, \"expected\": \"scrollWidth <= innerWidth + 1\", \"actual\": {\"scrollWidth\": 390, \"innerWidth\": 390}}], \"details\": {}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-fr-a1-s3-state",
+            "J10-fr-a1-s3-viewport"
+          ]
+        },
+        {
+          "number": 4,
+          "action": "Click #offer-cta",
+          "expected": "CTA visible within viewport, actually clickable, reaches same-language /contact",
+          "observed": "{\"url\": \"http://127.0.0.1:39176/fr/contact\", \"checks\": [{\"check\": \"CTA initially within viewport\", \"passed\": true, \"expected\": true, \"actual\": true}, {\"check\": \"URL\", \"passed\": true, \"expected\": \"http://127.0.0.1:39176/fr/contact\", \"actual\": \"http://127.0.0.1:39176/fr/contact\"}, {\"check\": \"html language\", \"passed\": true, \"expected\": \"fr\", \"actual\": \"fr\"}, {\"check\": \"last document HTTP status\", \"passed\": true, \"expected\": 200, \"actual\": 200}], \"details\": {\"cta_before_click\": {\"present\": true, \"text\": \"Contactez-nous\", \"value\": null, \"visible\": true, \"href\": \"/fr/contact\", \"aria_invalid\": null, \"aria_expanded\": null, \"tabindex\": null, \"disabled\": false, \"rect\": {\"x\": 33, \"y\": 494.578125, \"width\": 166.46875, \"height\": 49.875, \"right\": 199.46875, \"bottom\": 544.453125}, \"outline\": {\"style\": \"none\", \"width\": \"3px\", \"color\": \"rgb(255, 255, 255)\"}, \"box_shadow\": \"none\", \"labels\": []}, \"viewport_before_click\": {\"width\": 390, \"height\": 844}, \"actual_click\": true}, \"active_id\": null}",
+          "status": "PASS",
+          "evidence_ids": [
+            "J10-fr-a1-s4-state",
+            "J10-fr-a1-s4-viewport"
+          ]
+        }
+      ],
+      "status": "PASS",
+      "classification": "NONE",
+      "attempts": [
+        {
+          "number": 1,
+          "status": "PASS",
+          "observed": "Actual step outcomes: 1 PASS, 2 PASS, 3 PASS, 4 PASS",
+          "evidence_ids": [
+            "J10-fr-a1-s1-state",
+            "J10-fr-a1-s1-viewport",
+            "J10-fr-a1-s2-state",
+            "J10-fr-a1-s2-viewport",
+            "J10-fr-a1-s3-state",
+            "J10-fr-a1-s3-viewport",
+            "J10-fr-a1-s4-state",
+            "J10-fr-a1-s4-viewport",
+            "J10-fr-a1-network",
+            "J10-fr-a1-console",
+            "J10-fr-a1-attempt"
+          ]
+        }
+      ],
+      "country": {
+        "requested": null,
+        "verified": null,
+        "status": "NOT_APPLICABLE",
+        "same_network_context": false,
+        "evidence_ids": [],
+        "note": "No geographic verification requested."
+      },
+      "evidence_ids": [
+        "J10-fr-a1-s1-state",
+        "J10-fr-a1-s1-viewport",
+        "J10-fr-a1-s2-state",
+        "J10-fr-a1-s2-viewport",
+        "J10-fr-a1-s3-state",
+        "J10-fr-a1-s3-viewport",
+        "J10-fr-a1-s4-state",
+        "J10-fr-a1-s4-viewport",
+        "J10-fr-a1-network",
+        "J10-fr-a1-console",
+        "J10-fr-a1-attempt"
+      ],
+      "limitations": [
+        "Mobile profile is viewport emulation only; is_mobile false and has_touch false."
+      ],
+      "uncertainties": []
+    }
+  ],
+  "tickets": [],
+  "summary": {
+    "planned": 20,
+    "counts": {
+      "PASS": 20,
+      "FAIL": 0,
+      "BLOCKED": 0,
+      "NOT_RUN": 0,
+      "NOT_APPLICABLE": 0
+    },
+    "executed": 20,
+    "attempted": 20,
+    "coverage": {
+      "numerator": 20,
+      "denominator": 20
+    },
+    "critical_uncovered": [],
+    "verdict": "READY_FOR_TESTED_SCOPE",
+    "scope_note": "This verdict applies only to the explicitly planned cases and observed environment."
+  }
+}
