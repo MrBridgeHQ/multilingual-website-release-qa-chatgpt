@@ -65,8 +65,10 @@ Write report and ticket narrative in output_language (English by default); prese
 
 Store observations in the defined JSON contract and author a separate ticket array. The helper copies evidence into a new destination and derives all exports from results.json:
 
-    python3 -B scripts/qa.py finalize observations.json tickets.json --output campaign-delivery --output-language en
-    python3 -B scripts/qa.py validate-results campaign-delivery/results.json
+    python3 -B scripts/qa.py finalize observations.json tickets.json --output /absolute/new-campaign --output-language en
+    python3 -B scripts/qa.py validate-results /absolute/new-campaign/results.json
+
+Replace /absolute/new-campaign with an absolute new directory whose parent already exists.
 
 Deliver:
 

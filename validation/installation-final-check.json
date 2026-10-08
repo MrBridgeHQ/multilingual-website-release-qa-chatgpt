@@ -1,0 +1,83 @@
+{
+  "started_at": "2026-10-08T14:58:45.118156+00:00",
+  "finished_at": "2026-10-08T14:59:32.879897+00:00",
+  "command": [
+    "codex",
+    "exec",
+    "--sandbox",
+    "read-only",
+    "--ephemeral",
+    "--json",
+    "--color",
+    "never",
+    "-C",
+    "<canonical-project>",
+    "-o",
+    "<private-log>",
+    "<explicit-skill-invocation>"
+  ],
+  "returncode": 0,
+  "skill_name": "recette-web-multilingue",
+  "public_title": "Multilingual Website Release QA",
+  "resolved_to_canonical_skill": true,
+  "resources_actually_read": [
+    "SKILL.md",
+    "assets/config.example.json",
+    "references/data-contract.md",
+    "references/execution.md",
+    "references/checks.md",
+    "references/statuses-and-severity.md",
+    "references/evidence-and-safety.md",
+    "assets/ticket-template.md",
+    "assets/report-template.md"
+  ],
+  "resource_paths_verified": true,
+  "output_artifacts": {
+    "documented_campaign_outputs": [
+      "audit-report.md",
+      "results.json",
+      "tickets.csv",
+      "evidence/"
+    ],
+    "created_during_this_check": []
+  },
+  "scope_limits": {
+    "installation_check": "The skill registered in the available-skills catalog and all resources listed above were accessible.",
+    "documented_workflow": [
+      "Establish authorized scope, acceptance criteria, configuration, and tool capabilities.",
+      "Validate configuration and plan an explicit journey/language/profile/country matrix.",
+      "Execute authorized checks and preserve observations, attempts, and evidence.",
+      "Triage demonstrated defects into reproducible tickets with severity and acceptance criteria.",
+      "Validate structured results and derive consistent report, CSV, and evidence exports.",
+      "Retest in a new campaign while preserving original history."
+    ],
+    "actions_performed": "Local file reads only; no website browsing, audit, file changes, software installation, tests, script execution, or delegation.",
+    "verification_limits": "Schemas, helper implementation, dependencies, and runtime capabilities were not verified.",
+    "workflow_boundaries": [
+      "Functional and multilingual acceptance checks; no complete SEO audit, penetration test, or accessibility/legal certification.",
+      "Missing capabilities require BLOCKED or NOT_RUN outcomes; extraction alone does not prove interaction.",
+      "Geography requires explicit scope and evidence from the same network context.",
+      "External ticket publication requires an explicit request.",
+      "Automatic export headings support English and French; narrative translation is separate."
+    ]
+  },
+  "source_matches_installation": true,
+  "installed_files_sha256": {
+    "SKILL.md": "92c3c787b9c499e4ec3acdb7836fc140bc14d8e1a2d276f39a518cb3b1b27bee",
+    "agents/openai.yaml": "08e7b064b4c15779d199286fceee3dc72b17cdb38c943cf05fca2594acf8974f",
+    "assets/config.example.json": "9894b3ab379b7e124fc249c4aace639ba1dc7cedf479624ad07f5a5fafe26d6f",
+    "assets/report-template.md": "b021ae8bae3377093b9c4e4e757c9a3324575435c5c172a35532cc354004a0c4",
+    "assets/ticket-template.md": "393a9226d3dcef583b83e19c24b6a7de71de47ff0150567575b2c153d9de73d1",
+    "references/checks.md": "d8104ccb53194fac8c249106bb89fbe3753dfd2846263036aaaeca1f1017aa15",
+    "references/data-contract.md": "696b2bd3d4c986a29561a51f0973229b5d8e3a934637fa587155b070fa5568ed",
+    "references/evidence-and-safety.md": "1ffc3858f46c5b232236f4dbbd5cab4d7e3ffd898e1491aadb38405b8baee7e2",
+    "references/execution.md": "6f6e7f3e9e2bae2ab4fb11ad2a6b7dc2227a95d27db1563299da6a137f9b52b7",
+    "references/statuses-and-severity.md": "2e27f50ee8ea6057696933c6b89e19137749613ae1fdd5d5b58db9efbc756b05",
+    "schemas/config.schema.json": "2f70b3bdd5b36e3503e271f7efbd7a1ad37710234c6917ddc5a3b1ae21f2bd18",
+    "schemas/results.schema.json": "70e6cbd3b3f882660b1b07e2e426bf5b8be4f74ac92071eee27a8d9e9371dc85",
+    "scripts/qa.py": "87d8b9f9d5217ca164b7cb8d141722c68b45debae40c955647b649577350b31d"
+  },
+  "transcript_sha256": "a3c9a1376f876a541f43b028e56063abb020492100c098c49b5cc84eae67e820",
+  "probe_passed": true,
+  "limitation": "This checks explicit invocation and resource access, not implicit selection or browser behavior."
+}

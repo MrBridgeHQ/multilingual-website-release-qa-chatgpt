@@ -74,3 +74,7 @@ A separate French functional request selected the skill; a translation-only requ
 Public freeze manifests contain only publishable synthetic report artifacts with portable paths. Full local manifests, browser profiles, raw observations, machine configuration, and private command logs remain on the validation host. The reviewed synthetic ticket array is the one explicitly included source input for reproducing the ticket-only replay.
 
 The README describes invocation, prerequisites, local installation, and updates. Final publication and installed-versus-published commit matching must be recorded after the pending canonical promotion.
+
+## Resolution of the historical pending state — 2026-10-08
+
+The six approved operations have completed. All canonical helper checks and the final explicit installation invocation passed. The earlier pending statements describe the preserved initial snapshot. See [the final verification](../docs/RELEASE.md), [release-checks.json](release-checks.json), and [installation-final-check.json](installation-final-check.json). Existing browser evidence and its limits remain unchanged.

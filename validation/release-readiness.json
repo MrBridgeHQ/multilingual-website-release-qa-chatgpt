@@ -1,0 +1,57 @@
+{
+  "verified_at": "2026-10-08T15:07:25.769313+00:00",
+  "state": "LOCAL_VERIFIED",
+  "supersedes_local_pending_state_in": [
+    "validation/validation-summary.json",
+    "validation/VALIDATION.md",
+    "README.md"
+  ],
+  "approved_operations_completed": 6,
+  "contract_checks_passed": 37,
+  "all_validation_commands_passed": true,
+  "explicit_invocation_passed": true,
+  "installed_files": 13,
+  "installed_files_sha256": {
+    "SKILL.md": "92c3c787b9c499e4ec3acdb7836fc140bc14d8e1a2d276f39a518cb3b1b27bee",
+    "assets/config.example.json": "9894b3ab379b7e124fc249c4aace639ba1dc7cedf479624ad07f5a5fafe26d6f",
+    "assets/report-template.md": "b021ae8bae3377093b9c4e4e757c9a3324575435c5c172a35532cc354004a0c4",
+    "assets/ticket-template.md": "393a9226d3dcef583b83e19c24b6a7de71de47ff0150567575b2c153d9de73d1",
+    "schemas/results.schema.json": "70e6cbd3b3f882660b1b07e2e426bf5b8be4f74ac92071eee27a8d9e9371dc85",
+    "schemas/config.schema.json": "2f70b3bdd5b36e3503e271f7efbd7a1ad37710234c6917ddc5a3b1ae21f2bd18",
+    "agents/openai.yaml": "08e7b064b4c15779d199286fceee3dc72b17cdb38c943cf05fca2594acf8974f",
+    "scripts/qa.py": "87d8b9f9d5217ca164b7cb8d141722c68b45debae40c955647b649577350b31d",
+    "references/evidence-and-safety.md": "1ffc3858f46c5b232236f4dbbd5cab4d7e3ffd898e1491aadb38405b8baee7e2",
+    "references/data-contract.md": "696b2bd3d4c986a29561a51f0973229b5d8e3a934637fa587155b070fa5568ed",
+    "references/statuses-and-severity.md": "2e27f50ee8ea6057696933c6b89e19137749613ae1fdd5d5b58db9efbc756b05",
+    "references/execution.md": "6f6e7f3e9e2bae2ab4fb11ad2a6b7dc2227a95d27db1563299da6a137f9b52b7",
+    "references/checks.md": "d8104ccb53194fac8c249106bb89fbe3753dfd2846263036aaaeca1f1017aa15"
+  },
+  "baseline_counts": {
+    "planned": 20,
+    "counts": {
+      "PASS": 14,
+      "FAIL": 6,
+      "BLOCKED": 0,
+      "NOT_RUN": 0,
+      "NOT_APPLICABLE": 0
+    },
+    "tickets": 6
+  },
+  "corrected_counts": {
+    "planned": 20,
+    "counts": {
+      "PASS": 20,
+      "FAIL": 0,
+      "BLOCKED": 0,
+      "NOT_RUN": 0,
+      "NOT_APPLICABLE": 0
+    },
+    "tickets": 0
+  },
+  "detected_seeded_defects": 6,
+  "expected_seeded_defects": 6,
+  "missed": [],
+  "control_false_failures": [],
+  "frozen_baseline_and_retest_unchanged": true,
+  "publication_note": "Remote commit equality and anonymous access are checked after the final commit is pushed; this record describes verified local readiness."
+}

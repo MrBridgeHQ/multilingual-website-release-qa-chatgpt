@@ -31,13 +31,13 @@ A case records its actual URL, language, viewport/device class, observed browser
 
 The aggregate status follows actual step outcomes: a demonstrated `FAIL` remains a failure even if later steps are `NOT_RUN`; otherwise an obstacle produces `BLOCKED`, remaining unexecuted steps produce `NOT_RUN`, completed relevant steps can produce `PASS`, and a fully inapplicable case is `NOT_APPLICABLE`. An inapplicable step needs an observed explanation. A browser/tool incident is `BLOCKED` with classification `TOOLING_INCIDENT`, not a website defect.
 
-Attempt numbers and step numbers start at 1 and are consecutive. The latest attempt agrees with the final case outcome. Preserve earlier attempts and their evidence; do not discard inconvenient failures. A case is not a success merely because one early step passed.
+Attempt numbers and step numbers start at 1 and are consecutive. If any attempt demonstrates a website defect, the case remains `FAIL`, including a later `PASS` or `BLOCKED` attempt in the same campaign. Otherwise the final attempt determines the case outcome. Detailed case steps describe the decisive attempt and must agree with the aggregate case status; retain the chronological attempts, their observed outcomes, and their actual evidence. Every failed attempt requires evidence. An intermittent defect observed once in two attempts stays visible with frequency `1/2`; neither a successful retry nor a tool failure erases it. Verify a corrected site in a separate retest campaign. A case is not a success merely because one early step passed.
 
 ## Evidence
 
 Each evidence record contains `id`, `path`, `sha256`, `kind`, `captured_at`, and `description`. Paths start with `evidence/` and are relative to the observation/results file's directory. Kinds are `SCREENSHOT`, `DOM`, `NETWORK`, `CONSOLE`, `TRACE`, and `TEXT`. Calculate SHA-256 from the actual bytes after redaction.
 
-The helper verifies file presence, hash, normalized relative paths, absence of symlinks, and referential integrity. Finalization copies only registered evidence into the new bundle. Failed steps require evidence. Unregistered files are not exported. A hash proves that bytes match a record; it does not prove that the observation is truthful or sufficient.
+The helper verifies file presence, hash, normalized relative paths with portable English ASCII filenames, capture timestamps within the campaign, absence of symlinks, and referential integrity. Finalization copies only registered evidence into the new bundle. Failed steps require evidence. Unregistered files are not exported. A hash proves that bytes match a record; it does not prove that the observation is truthful or sufficient.
 
 Remove passwords, cookies, tokens, authorization headers, and unnecessary personal data before capture/export. Crop or mask screenshots before registering their final checksum. The helper rejects obvious credential fields and token-shaped text; this is a limited detection heuristic, not comprehensive redaction. It cannot inspect screenshots or safely sanitize browser trace archives. Prefer minimal synthetic evidence and have the agent review every file intended for delivery.
 

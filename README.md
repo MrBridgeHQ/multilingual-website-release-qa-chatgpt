@@ -152,3 +152,7 @@ Read [source notes](docs/source-notes.md) for the official references and the di
 ## Validation snapshot status
 
 The local discovery and browser exercises have been executed. Read [the validation snapshot](validation/VALIDATION.md) before use: reviewed runtime replacements are still awaiting the exact preservation-policy approval, and this snapshot does not claim a completed public release. The synthetic input for [ticket-only replay](tests/replay_from_tickets.py) is [the reviewed ticket array](validation/baseline/source/tickets-reviewed.json). Other raw campaign inputs stay local.
+
+## Final verification — 2026-10-08
+
+The pending status in the historical snapshot above is resolved. The six approved operations completed; the canonical helper passed all 37 contract checks and all four campaign validations. A new Codex invocation loaded the final installed version. Use the [final release verification](docs/RELEASE.md), [current installation receipt](validation/installation-final-check.json), and [canonical validation receipts](validation/release-checks.json) as the current local state. Public commit and anonymous-access checks are performed after pushing the final commit.

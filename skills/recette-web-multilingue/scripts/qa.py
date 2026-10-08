@@ -23,7 +23,7 @@ from jsonschema import Draft7Validator, FormatChecker
 ROOT = Path(__file__).resolve().parents[1]
 STATUSES = ("PASS", "FAIL", "BLOCKED", "NOT_RUN", "NOT_APPLICABLE")
 SECRET_KEYS = {"password", "passwd", "access_token", "refresh_token", "api_key",
-               "authorization", "cookie", "set-cookie", "secret"}
+               "authorization", "cookie", "set-cookie", "secret", "token"}
 SECRET_PATTERN = re.compile(
     r"(?i)(?:bearer\s+[a-z0-9._-]{12,}|(?:password|api[_-]?key|access[_-]?token)"
     r"\s*[:=]\s*[\"']?[^\s\"',;]{6,})"
@@ -55,8 +55,10 @@ def load_json(path):
                              ContractError("Non-finite JSON value: " + value)))
 
 
-def schema_check(data, name):
+def schema_check(data, name, observations=False):
     schema = load_json(ROOT / "schemas" / name)
+    if observations:
+        schema["required"] = [key for key in schema["required"] if key != "summary"]
     validator = Draft7Validator(schema, format_checker=FormatChecker())
     errors = sorted(validator.iter_errors(data), key=lambda e: str(list(e.path)))
     if errors:
@@ -69,7 +71,10 @@ def secret_check(value, location="<root>"):
     """Reject obvious credential material; this is not a complete privacy audit."""
     if isinstance(value, dict):
         for key, item in value.items():
-            require(key.lower() not in SECRET_KEYS,
+            authorization_note = (key == "authorization" and re.fullmatch(
+                r"<root>\.authorized_actions\[\d+\]", location) is not None)
+            masked = isinstance(item, str) and item in ("[REDACTED]", "<REDACTED>", "***")
+            require(key.lower() not in SECRET_KEYS or authorization_note or masked,
                     location + ": credential-like field must be removed or masked")
             secret_check(item, location + "." + key)
     elif isinstance(value, list):
@@ -150,7 +155,7 @@ def validate_config(data):
         require(numbers == list(range(1, len(numbers) + 1)),
                 "Journey step numbers must be consecutive from 1")
         for step in journey["steps"]:
-            require(step["expected"] is not None
+            require((isinstance(step["expected"], str) and step["expected"].strip())
                     or step["expectation_basis"] == "PRODUCT_QUESTION",
                     "A missing expected result must be a PRODUCT_QUESTION")
     for case in data["cases"]:
@@ -218,6 +223,8 @@ def safe_evidence_path(base, relative):
             and path.parts[0] == "evidence" and ".." not in path.parts
             and "\\" not in relative and ":" not in relative,
             "Evidence path must remain beneath evidence/: " + relative)
+    require(re.fullmatch(r"[A-Za-z0-9_./-]+", relative) is not None,
+            "Evidence filenames must use portable English ASCII characters")
     require(str(path) == relative and "." not in path.parts,
             "Evidence path must be normalized: " + relative)
     base = Path(base).resolve()
@@ -237,11 +244,11 @@ def check_refs(refs, known, label):
 
 def validate_results(data, base, observations=False):
     candidate = copy.deepcopy(data)
+    schema_check(candidate, "results.schema.json", observations=observations)
+    secret_check(candidate)
     computed = summarize(candidate)
     if observations and "summary" not in candidate:
         candidate["summary"] = computed
-    schema_check(candidate, "results.schema.json")
-    secret_check(candidate)
     require(candidate["summary"] == computed, "Summary does not reconcile with case results")
     campaign = candidate["campaign"]
     chronological(campaign["started_at"], campaign["finished_at"], "Campaign")
@@ -252,6 +259,9 @@ def validate_results(data, base, observations=False):
     evidence_paths = [item["path"] for item in candidate["evidence"]]
     require(len(evidence_paths) == len(set(evidence_paths)), "Duplicate evidence paths")
     for evidence in candidate["evidence"]:
+        require(timestamp(campaign["started_at"]) <= timestamp(evidence["captured_at"])
+                <= timestamp(campaign["finished_at"]),
+                evidence["id"] + ": capture time is outside the campaign")
         path = safe_evidence_path(base, evidence["path"])
         digest = hashlib.sha256(path.read_bytes()).hexdigest()
         require(digest == evidence["sha256"], "Evidence checksum mismatch: " + evidence["path"])
@@ -283,6 +293,8 @@ def validate_results(data, base, observations=False):
         for step in case["steps"]:
             check_refs(step["evidence_ids"], evidence_ids, label + " step")
             all_case_evidence.update(step["evidence_ids"])
+            require(step["expected"].strip() and step["observed"].strip(),
+                    label + ": step expectations and observations cannot be blank")
             if step["status"] == "FAIL":
                 require(step["evidence_ids"], label + ": failed step has no evidence")
         attempts = case["attempts"]
@@ -291,9 +303,16 @@ def validate_results(data, base, observations=False):
         for attempt in attempts:
             check_refs(attempt["evidence_ids"], evidence_ids, label + " attempt")
             all_case_evidence.update(attempt["evidence_ids"])
-        if case["status"] in ("PASS", "FAIL", "BLOCKED"):
-            require(attempts and attempts[-1]["status"] == case["status"],
-                    label + ": latest attempt must match the reported outcome")
+            if attempt["status"] == "FAIL":
+                require(attempt["evidence_ids"], label + ": failed attempt has no evidence")
+        if attempts:
+            decisive_status = ("FAIL" if any(a["status"] == "FAIL" for a in attempts)
+                               else attempts[-1]["status"])
+            require(decisive_status == case["status"],
+                    label + ": decisive attempt must match the reported outcome; preserve intermittent failures")
+        else:
+            require(case["status"] not in ("PASS", "FAIL", "BLOCKED"),
+                    label + ": an executed or blocked outcome needs an attempt record")
         if case["status"] == "FAIL":
             require(case["classification"] == "DEFECT",
                     label + ": FAIL denotes a demonstrated site defect")
@@ -318,6 +337,8 @@ def validate_results(data, base, observations=False):
             require((country["verified"] == country["requested"])
                     == (country["status"] == "PASS"),
                     label + ": country result contradicts requested/verified country")
+            require(country["status"] != "FAIL" or case["status"] in ("FAIL", "BLOCKED"),
+                    label + ": a failed required geographic check prevents a passing case")
         else:
             require(country["status"] in ("BLOCKED", "NOT_RUN")
                     and country["verified"] is None and not country["same_network_context"],
